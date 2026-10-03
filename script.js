@@ -1,8 +1,43 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
+
+// Mantém a navegação pública consistente em todas as páginas.
+if (mainNav) {
+  const oldProjectsLink = [...mainNav.querySelectorAll("a")].find(link =>
+    (link.getAttribute("href") || "").endsWith("projetos.html")
+  );
+  if (oldProjectsLink) {
+    oldProjectsLink.href = "areas-de-atuacao.html";
+    oldProjectsLink.textContent = "Atuação";
+  }
+
+  const knowledgeLink = [...mainNav.querySelectorAll("a")].find(link => {
+    const href = link.getAttribute("href") || "";
+    return href === "#conhecimento" || href === "index.html#conhecimento";
+  });
+
+  if (knowledgeLink) {
+    knowledgeLink.href = "base-legal-ambiental.html";
+    knowledgeLink.classList.add("nav-legal-link");
+    knowledgeLink.innerHTML = 'Base Legal <span class="nav-new-badge" aria-label="Novidade">Novo</span>';
+  }
+}
+
 const navLinks = document.querySelectorAll(".main-nav a");
 const yearEl = document.querySelector("#ano");
 const revealElements = document.querySelectorAll(".reveal");
+
+// Atalho fixo de contato. Enquanto o WhatsApp corporativo não estiver definido,
+// o botão direciona para a seção de contato do site.
+if (!document.querySelector(".floating-contact")) {
+  const isHome = /(^|\/)index\.html$/.test(window.location.pathname) || window.location.pathname.endsWith("/");
+  const contact = document.createElement("a");
+  contact.className = "floating-contact";
+  contact.href = isHome ? "#contato" : "index.html#contato";
+  contact.setAttribute("aria-label", "Falar com a JSB");
+  contact.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.7 9.7 0 0 1-3.8-.8L3 21l1.7-4.4A8.3 8.3 0 0 1 3 11.5 8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5Z"/><path d="M8.2 10.1h7.6M8.2 13.5h5.2"/></svg><span>Fale conosco</span>';
+  document.body.appendChild(contact);
+}
 
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
