@@ -276,12 +276,12 @@ h3 {
   right: auto;
   bottom: 24px;
   width: 146px;
-  padding: 0;
-  border-radius: 0;
-  background: transparent;
+  padding: 24px;
+  border-radius: 14px;
+  background: #15552a;
   color: white;
-  box-shadow: none;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, .58);
+  box-shadow: var(--shadow);
+  text-shadow: none;
 }
 .experience-badge strong {
   display: block;
