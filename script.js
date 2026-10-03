@@ -47,10 +47,28 @@ if (stateLawSelect && stateLawResult) {
   const stateLawData = {
     BA: [
       {
+        badge: "Bahia · Política Ambiental",
+        title: "Lei Estadual nº 10.431/2006",
+        text: "Institui a Política de Meio Ambiente e de Proteção à Biodiversidade do Estado da Bahia e compõe a base legal estadual para proteção ambiental e licenciamento.",
+        url: "https://www.ba.gov.br/meioambiente/sites/site-sema/files/migracao_2024/arquivos/File/Legislacao/Leis/lei10431.pdf"
+      },
+      {
+        badge: "Bahia · Regulamento",
+        title: "Decreto Estadual nº 14.024/2012",
+        text: "Aprova o regulamento da Política Estadual de Meio Ambiente e disciplina procedimentos relacionados ao licenciamento ambiental no Estado da Bahia.",
+        url: "https://www.ba.gov.br/meioambiente/sites/site-sema/files/migracao_2024/arquivos/File/FERFA/Legislacao/novo14024.pdf"
+      },
+      {
         badge: "Bahia · INEMA",
         title: "IN INEMA nº 001/2016",
-        text: "Estabelece diretrizes, critérios e procedimentos para a Autorização para Manejo de Fauna Silvestre no licenciamento ambiental no Estado da Bahia, incluindo atividades como levantamento, salvamento, afugentamento, monitoramento, soltura e ações correlatas.",
+        text: "Estabelece diretrizes, critérios e procedimentos para a Autorização para Manejo de Fauna Silvestre no licenciamento ambiental estadual, incluindo levantamento, salvamento, afugentamento, monitoramento, soltura e ações correlatas.",
         url: "https://www.ba.gov.br/inema/sites/site-inema/files/migracao_2024/arquivos/wp-content/files/IN_INEMA_n001_2016_-_AMF.pdf"
+      },
+      {
+        badge: "Bahia · Destinação",
+        title: "Portaria INEMA nº 22.129/2021",
+        text: "Regulamenta a destinação de animais silvestres e o cadastro de Áreas de Soltura de Animais Silvestres, incluindo critérios para avaliação e cadastramento das ASAS.",
+        url: "https://www.ba.gov.br/inema/sites/site-inema/files/migracao_2024/arquivos/wp-content/files/Portaria_22129-2021_Destinao_Fauna_Silvestre.pdf"
       }
     ]
   };
