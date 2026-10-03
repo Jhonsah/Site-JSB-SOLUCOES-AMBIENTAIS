@@ -391,6 +391,19 @@ window.JSB_LEGAL_DATABASE = [
     verified: "out/2026"
   },
   {
+    id: "ba-sema-40-2017",
+    title: "Portaria SEMA nº 40/2017 — Flora Ameaçada da Bahia",
+    scope: "Estadual",
+    uf: "BA",
+    authority: "SEMA Bahia",
+    themes: ["flora", "ameacadas", "supressao", "biodiversidade"],
+    keywords: ["bahia", "flora ameacada", "especies ameacadas", "especies endemicas", "extincao", "supressao vegetal", "inventario florestal"],
+    summary: "Torna pública a lista estadual de espécies endêmicas da flora ameaçadas de extinção na Bahia e constitui referência para análise de registros florísticos e intervenções em vegetação.",
+    relevance: "É uma referência estadual importante para inventários, levantamentos florísticos e avaliação de áreas sujeitas a intervenção ou supressão vegetal.",
+    url: "https://www.ba.gov.br/meioambiente/284/lista-de-especies-ameacadas-de-extincao",
+    verified: "out/2026"
+  },
+  {
     id: "ba-sema-supressao",
     title: "SEMA Bahia — Orientação sobre Supressão de Vegetação Nativa",
     scope: "Estadual",
