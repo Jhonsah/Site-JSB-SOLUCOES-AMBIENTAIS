@@ -1316,3 +1316,134 @@ h3 {
     min-height: 0;
   }
 }
+
+
+/* Consulta de legislação estadual */
+.state-law-box {
+  margin-top: 34px;
+  padding: 28px;
+  border: 1px solid #cfdad3;
+  border-radius: var(--radius);
+  background: #ffffff;
+  box-shadow: 0 10px 28px rgba(16,55,39,.07);
+}
+
+.state-law-copy {
+  max-width: 820px;
+}
+
+.state-law-copy h3 {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -.025em;
+}
+
+.state-law-copy p {
+  margin: 12px 0 0;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.state-law-control {
+  margin-top: 22px;
+  max-width: 420px;
+}
+
+.state-law-control label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--ink);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.state-law-control select {
+  width: 100%;
+  padding: 13px 42px 13px 14px;
+  border: 1px solid #c9d5cd;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: .9rem;
+}
+
+.state-law-control select:focus {
+  outline: 2px solid rgba(28,107,57,.18);
+  border-color: var(--green-500);
+}
+
+.state-law-result {
+  margin-top: 20px;
+}
+
+.state-law-result > p {
+  margin: 0;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: var(--soft);
+  color: var(--text);
+  font-size: .86rem;
+}
+
+.state-law-card {
+  padding: 20px;
+  border: 1px solid #d5e0d8;
+  border-radius: 14px;
+  background: #f9fcfa;
+}
+
+.state-law-card h4 {
+  margin: 16px 0 10px;
+  font-size: 1.05rem;
+}
+
+.state-law-card p,
+.state-law-empty p {
+  margin: 0;
+  color: var(--text);
+  font-size: .86rem;
+  line-height: 1.65;
+}
+
+.state-law-card a {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--green-500);
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.state-law-empty {
+  padding: 18px;
+  border: 1px dashed #c9d5cd;
+  border-radius: 12px;
+  background: #fbfdfb;
+}
+
+.state-law-empty strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.state-law-disclaimer {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: #fff8e8;
+  border: 1px solid #ead9ad;
+}
+
+.state-law-disclaimer strong {
+  color: #6b531a;
+  font-size: .82rem;
+}
+
+.state-law-disclaimer p {
+  margin: 6px 0 0;
+  color: #6a6251;
+  font-size: .78rem;
+  line-height: 1.6;
+}
