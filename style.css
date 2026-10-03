@@ -3264,3 +3264,243 @@ h3 {
     flex-direction: column;
   }
 }
+
+
+/* Páginas técnicas — flora e geotecnologias */
+.service-depth-grid,
+.technical-data-grid,
+.technical-reference-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 13px;
+  margin-top: 20px;
+}
+
+.service-depth-grid article,
+.technical-reference-grid article,
+.technical-data-grid > div {
+  padding: 18px;
+  border: 1px solid #d7e1da;
+  border-radius: 14px;
+  background: #fbfdfb;
+}
+
+.service-depth-grid article > span,
+.technical-reference-grid article > span {
+  display: inline-flex;
+  min-height: 25px;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #e8f3e9;
+  color: var(--green-700);
+  font-size: .67rem;
+  font-weight: 700;
+}
+
+.service-depth-grid strong,
+.technical-data-grid strong,
+.technical-reference-grid strong {
+  display: block;
+  margin-top: 11px;
+  color: var(--ink);
+  font-size: .9rem;
+}
+
+.technical-data-grid strong {
+  margin-top: 0;
+}
+
+.service-depth-grid p,
+.technical-reference-grid p {
+  margin: 6px 0 0;
+  color: var(--text);
+  font-size: .79rem;
+  line-height: 1.6;
+}
+
+.technical-data-grid span {
+  display: block;
+  margin-top: 5px;
+  color: var(--text);
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
+.technical-reference-grid a {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--green-500);
+  font-size: .76rem;
+  font-weight: 700;
+}
+
+.page-insight-box {
+  margin-top: 18px;
+  padding: 18px 20px;
+  border-left: 4px solid var(--green-500);
+  border-radius: 0 13px 13px 0;
+  background: #f3f8f4;
+}
+
+.page-insight-box strong {
+  color: var(--green-700);
+  font-size: .84rem;
+}
+
+.page-insight-box p {
+  margin: 5px 0 0;
+  color: var(--text);
+  font-size: .8rem;
+  line-height: 1.62;
+}
+
+.integration-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 11px;
+  margin-top: 18px;
+}
+
+.integration-links a {
+  padding: 16px;
+  border: 1px solid #d7e1da;
+  border-radius: 13px;
+  background: #fbfdfb;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+.integration-links a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(28,107,57,.35);
+  box-shadow: 0 8px 20px rgba(16,55,39,.07);
+}
+
+.integration-links strong,
+.integration-links span {
+  display: block;
+}
+
+.integration-links strong {
+  color: var(--ink);
+  font-size: .84rem;
+}
+
+.integration-links span {
+  margin-top: 5px;
+  color: var(--text);
+  font-size: .72rem;
+  line-height: 1.5;
+}
+
+.side-reference-list,
+.side-check-list {
+  display: grid;
+  gap: 9px;
+  margin-top: 17px;
+}
+
+.side-reference-list a {
+  padding: 12px;
+  border: 1px solid #dbe4dd;
+  border-radius: 11px;
+  background: #fbfdfb;
+}
+
+.side-reference-list strong,
+.side-reference-list span {
+  display: block;
+}
+
+.side-reference-list strong {
+  color: var(--ink);
+  font-size: .78rem;
+}
+
+.side-reference-list span {
+  margin-top: 3px;
+  color: var(--text);
+  font-size: .7rem;
+  line-height: 1.45;
+}
+
+.side-reference-note {
+  margin: 14px 0 0;
+  color: var(--text);
+  font-size: .72rem;
+  line-height: 1.55;
+}
+
+.side-check-list span {
+  padding: 10px 12px;
+  border: 1px solid #dbe4dd;
+  border-radius: 10px;
+  background: #fbfdfb;
+  color: var(--ink);
+  font-size: .76rem;
+  font-weight: 600;
+}
+
+.technical-pipeline {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.technical-pipeline > div {
+  min-height: 178px;
+  padding: 16px;
+  border: 1px solid #d7e1da;
+  border-radius: 14px;
+  background: #fbfdfb;
+}
+
+.technical-pipeline > div > span {
+  display: inline-grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 9px;
+  background: #e8f3e9;
+  color: var(--green-700);
+  font-size: .68rem;
+  font-weight: 700;
+}
+
+.technical-pipeline strong {
+  display: block;
+  margin-top: 16px;
+  color: var(--ink);
+  font-size: .82rem;
+}
+
+.technical-pipeline p {
+  margin: 5px 0 0;
+  color: var(--text);
+  font-size: .72rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 960px) {
+  .technical-pipeline {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+
+  .integration-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .service-depth-grid,
+  .technical-data-grid,
+  .technical-reference-grid,
+  .technical-pipeline {
+    grid-template-columns: 1fr;
+  }
+
+  .technical-pipeline > div {
+    min-height: 0;
+  }
+}
