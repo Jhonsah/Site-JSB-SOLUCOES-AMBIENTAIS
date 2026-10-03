@@ -3678,3 +3678,116 @@ summary:focus-visible {
     transition-duration: .01ms !important;
   }
 }
+
+
+/* Navegação — Base Legal e contato flutuante */
+.nav-legal-link {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-new-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 18px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: #d7f0bd;
+  color: #0d4f2b;
+  font-size: .56rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.floating-contact {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 80;
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 18px 0 15px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 999px;
+  background: linear-gradient(145deg, #1c6b39, #0d4f2b);
+  color: #fff;
+  box-shadow: 0 12px 32px rgba(13,79,43,.28);
+  font-size: .78rem;
+  font-weight: 700;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.floating-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 38px rgba(13,79,43,.34);
+  color: #fff;
+}
+
+.floating-contact svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 640px) {
+  .floating-contact {
+    width: 54px;
+    height: 54px;
+    min-height: 54px;
+    padding: 0;
+    justify-content: center;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .floating-contact span {
+    display: none;
+  }
+}
+
+/* Base Legal — destaque para normas publicadas no ano atual */
+.legal-result-card.is-current-year {
+  position: relative;
+  border-color: rgba(60,171,72,.58);
+  box-shadow: 0 10px 28px rgba(28,107,57,.10);
+}
+
+.legal-result-card.is-current-year::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  border-radius: 16px 0 0 16px;
+  background: var(--green-500);
+}
+
+.legal-result-meta-right {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.legal-new-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 23px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #e6f6d7;
+  color: #0d4f2b;
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
