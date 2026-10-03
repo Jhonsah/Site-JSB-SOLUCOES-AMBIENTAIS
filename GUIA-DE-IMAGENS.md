@@ -111,3 +111,9 @@ Para ter maior impacto visual com poucas fotos próprias, enviar primeiro:
 7. Educação ambiental.
 
 Com essas 7 categorias já é possível compor boa parte do site sem recorrer excessivamente a imagens de banco.
+
+
+## Atualização — fotos enviadas em 03/10/2026
+
+- **Análises e Monitoramentos Ambientais → Monitoramento de ruído:** fotografia original `IMG_4154(1).jpeg`, publicada como `assets/img/monitoramento-ruido-campo.webp`, sem retoque da cena e com enquadramento completo.
+- **Pendentes:** trilha florestal (`TC_06972.jpeg`, duplicada no envio) e três imagens de medição em campo (`TC_08472(1).jpeg`, `TC_08473(1).jpeg`, `TC_08468.jpeg`). Usar versões sem carimbos ou retoque localizado que preserve os demais detalhes; versões regeneradas não foram publicadas.

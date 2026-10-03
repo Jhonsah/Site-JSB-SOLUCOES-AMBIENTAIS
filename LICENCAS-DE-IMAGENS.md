@@ -54,3 +54,14 @@ Os créditos públicos estão na Home, em “Créditos das fotografias”. Os ar
 - Não é fotografia de banco público nem está coberta pela licença Unsplash.
 - O uso ilustra a atividade técnica, sem atribuir o registro a um contrato executado pela JSB.
 - A fotografia de Vitória Migliano foi substituída no card; arquivo e registro de procedência preservados.
+
+
+## Fotografia de monitoramento de ruído — 03/10/2026
+
+- Arquivo: `assets/img/monitoramento-ruido-campo.webp`.
+- Origem: `IMG_4154(1).jpeg`, enviada pelo usuário para preenchimento do site.
+- Aplicação: seção Monitoramento de ruído da página Análises e Monitoramentos Ambientais.
+- Preparação: redimensionamento proporcional para 900 × 1200 e conversão WebP; sem retoque, remoção de elementos ou geração de conteúdo. Metadados EXIF não incluídos.
+- Fotografia fornecida pelo usuário; não é imagem de banco público nem licenciada pela Unsplash.
+- Legenda descritiva da atividade, sem atribuição do registro a contrato executado pela JSB.
+- As outras fotografias deste lote com logos/carimbos permanecem fora do site: as tentativas de remoção com IA alteraram detalhes além das áreas solicitadas.
