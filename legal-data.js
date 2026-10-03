@@ -182,6 +182,46 @@ window.JSB_LEGAL_DATABASE = [
     verified: "out/2026"
   },
   {
+    id: "anac-rbac-100-2026",
+    title: "RBAC nº 100/2026 — Aeronaves Não Tripuladas",
+    scope: "Federal",
+    uf: "BR",
+    authority: "ANAC",
+    themes: ["geotecnologia", "drone", "aeronave nao tripulada"],
+    keywords: ["drone", "drones", "uas", "aeronave nao tripulada", "mapeamento aereo", "voo"],
+    summary: "Estabelece requisitos gerais para aeronaves não tripuladas de uso civil e organiza as categorias e condições de operação aplicáveis.",
+    relevance: "É referência regulatória federal para operações profissionais com drones realizadas no Brasil.",
+    url: "https://www.anac.gov.br/assuntos/legislacao/legislacao-1/boletim-de-pessoal/2026/bps-v-21-no-24-15-a-19-06-2026/rbac-100-emd-00/visualizar_ato_normativo",
+    verified: "out/2026"
+  },
+  {
+    id: "decea-ica-100-40-2026",
+    title: "ICA 100-40/2026 — Acesso ao Espaço Aéreo por Aeronaves Não Tripuladas",
+    scope: "Federal",
+    uf: "BR",
+    authority: "DECEA",
+    themes: ["geotecnologia", "drone", "espaco aereo"],
+    keywords: ["drone", "drones", "sarpas", "espaco aereo", "aeronave nao tripulada", "autorizacao voo"],
+    summary: "Estabelece procedimentos e responsabilidades para o acesso seguro ao Espaço Aéreo Brasileiro por aeronaves não tripuladas.",
+    relevance: "É referência operacional para planejamento e solicitação de acesso ao espaço aéreo em voos com drones.",
+    url: "https://publicacoes.decea.mil.br/publicacao/ica-100-40",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-inema-tr-inventario-florestal",
+    title: "INEMA — Termo de Referência para Inventário Florestal",
+    scope: "Estadual",
+    uf: "BA",
+    authority: "INEMA",
+    themes: ["flora", "inventario florestal", "supressao"],
+    keywords: ["bahia", "inventario florestal", "asv", "supressao vegetacao", "amostragem", "volume florestal"],
+    summary: "Referência técnica disponibilizada pelo INEMA para orientar a elaboração de inventários florestais em processos administrativos florestais, com critérios conforme a finalidade do levantamento.",
+    relevance: "É uma referência direta para inventários vinculados a processos florestais estaduais na Bahia.",
+    url: "https://www.ba.gov.br/inema/sites/site-inema/files/migracao_2024/arquivos/wp-content/files/IN-ATD-002-00_Termo_de_Referncia_para_a_Elaborao_de_Inventrio_Florestal.pdf",
+    verified: "out/2026"
+  },
+
+  {
     id: "ba-10431-2006",
     title: "Lei Estadual nº 10.431/2006 — Bahia",
     scope: "Estadual",
