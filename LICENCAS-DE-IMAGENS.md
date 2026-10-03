@@ -42,3 +42,15 @@ Os créditos públicos estão na Home, em “Créditos das fotografias”. Os ar
 - SHA-256 do arquivo publicado: `eaf4383919567250f88f3b853045d275e71939e5e4ed3a997d04f01e54981d6c`
 - Consulta e inclusão: 03/10/2026.
 
+
+## Fotografia fornecida por Jônathas Sá
+
+- Arquivo: `assets/img/jonathas-inventario-florestal.webp`.
+- Origem: fotografia pessoal enviada pelo usuário, IMG_8219.jpeg.
+- Uso no site expressamente autorizado por Jônathas Sá em 03/10/2026.
+- Edição solicitada e aprovada: fechamento do bolso e alteração do capacete para branco, com IA.
+- Preparação para web: conversão para WebP, 1000 × 1333 pixels.
+- Aplicação: card Flora e Supressão Vegetal e galeria de Inventário Florestal.
+- Não é fotografia de banco público nem está coberta pela licença Unsplash.
+- O uso ilustra a atividade técnica, sem atribuir o registro a um contrato executado pela JSB.
+- A fotografia de Vitória Migliano foi substituída no card; arquivo e registro de procedência preservados.

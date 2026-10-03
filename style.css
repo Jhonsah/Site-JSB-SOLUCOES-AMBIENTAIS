@@ -3838,3 +3838,9 @@ summary:focus-visible {
 .photo-credits p { max-width: 760px; }
 .photo-credits a { text-decoration: underline; text-underline-offset: 3px; }
 .photo-credits li + li { margin-top: 8px; }
+
+/* Fotografia autorizada de mensuração florestal */
+.service-photo img.field-photo-preview { object-position: center 30%; }
+.field-photo { margin: 20px 0 0; max-width: 560px; }
+.field-photo img { width: 100%; height: auto; border-radius: 16px; }
+.field-photo figcaption { margin-top: 10px; color: var(--text); font-size: .8rem; }
