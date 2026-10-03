@@ -2119,15 +2119,20 @@ h3 {
 
 .legal-search-form {
   margin-top: 34px;
-  padding: 18px;
+  padding: 20px;
   display: grid;
-  grid-template-columns: minmax(0,1fr) 210px 220px auto;
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 14px;
   align-items: end;
   border: 1px solid rgba(255,255,255,.14);
   border-radius: 18px;
   background: rgba(255,255,255,.08);
   backdrop-filter: blur(8px);
+}
+
+/* A pergunta ocupa uma linha inteira; os filtros se reorganizam conforme a largura real do card. */
+.legal-search-form > .legal-search-field:first-child {
+  grid-column: 1 / -1;
 }
 
 .legal-search-field label {
@@ -2152,7 +2157,17 @@ h3 {
 }
 
 .legal-search-submit {
+  width: 100%;
+  min-width: 0;
   min-height: 48px;
+}
+
+.legal-search-scope-note {
+  grid-column: 1 / -1;
+  margin: 2px 0 0;
+  color: rgba(255,255,255,.66);
+  font-size: .72rem;
+  line-height: 1.55;
 }
 
 .legal-quick-search {
