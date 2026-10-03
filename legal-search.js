@@ -22,7 +22,12 @@ const topicRules = [
   { topic: "recuperacao", terms: ["prad","recuperacao","area degradada","reabilitacao","remediacao","desativacao","encerramento"] },
   { topic: "ruido", terms: ["ruido","ruído","poluicao sonora","pressao sonora","som ambiental","monitoramento de ruido"] },
   { topic: "educacao ambiental", terms: ["educacao ambiental","educação ambiental","pea","dds ambiental","palestra ambiental","oficina ambiental","treinamento ambiental"] },
-  { topic: "exoticas", terms: ["especie exotica","espécie exótica","exotica invasora","exótica invasora","invasora","apis mellifera","abelha africana","abelha africanizada","enxame","fauna sinantropica","fauna sinantrópica"] }
+  { topic: "exoticas", terms: ["especie exotica","espécie exótica","exotica invasora","exótica invasora","invasora","apis mellifera","abelha africana","abelha africanizada","enxame","fauna sinantropica","fauna sinantrópica"] },
+  { topic: "residuos", terms: ["residuo","resíduo","residuos","resíduos","lixo","pgrs","coleta seletiva","logistica reversa","logística reversa","aterro","rejeito"] },
+  { topic: "unidades_conservacao", terms: ["unidade de conservacao","unidade de conservação","uc","parque","apa","rppn","snuc","zona de amortecimento"] },
+  { topic: "pesquisa_uc", terms: ["pesquisa cientifica","pesquisa científica","coleta biologica","coleta biológica","atividade didatica","atividade didática","pesquisa em uc"] },
+  { topic: "emergencia", terms: ["emergencia ambiental","emergência ambiental","acidente ambiental","vazamento","derramamento","grave risco","iminente perigo"] },
+  { topic: "florestal", terms: ["politica florestal","política florestal","manejo florestal","produto florestal","reposicao florestal","reposição florestal","codigo florestal estadual"] }
 ];
 
 const relatedServicesByTopic = {
@@ -78,6 +83,31 @@ const relatedServicesByTopic = {
     ["servicos-fauna.html", "Serviços de Fauna"],
     ["projeto-manejo-fauna.html", "Manejo e Resgate de Fauna"],
     ["index.html#contato", "Avaliação técnica da ocorrência"]
+  ],
+  residuos: [
+    ["analises-ambientais.html", "Análises e Monitoramentos Ambientais"],
+    ["licenciamento-ambiental.html", "Licenciamento Ambiental"],
+    ["index.html#contato", "Avaliação técnica da demanda"]
+  ],
+  unidades_conservacao: [
+    ["licenciamento-ambiental.html", "Licenciamento Ambiental"],
+    ["projeto-elaboracao-mapas.html", "Elaboração de Mapas"],
+    ["servicos-fauna.html", "Serviços de Fauna"]
+  ],
+  pesquisa_uc: [
+    ["servicos-fauna.html", "Serviços de Fauna"],
+    ["biomonitoramento-ambiental.html", "Biomonitoramento Ambiental"],
+    ["index.html#contato", "Avaliação técnica da pesquisa"]
+  ],
+  emergencia: [
+    ["analises-ambientais.html", "Análises e Monitoramentos Ambientais"],
+    ["licenciamento-ambiental.html", "Licenciamento Ambiental"],
+    ["index.html#contato", "Avaliação técnica da ocorrência"]
+  ],
+  florestal: [
+    ["flora-supressao-vegetal.html", "Flora e Supressão Vegetal"],
+    ["projeto-inventario-florestal.html", "Inventário Florestal"],
+    ["projeto-elaboracao-mapas.html", "Elaboração de Mapas"]
   ]
 };
 
