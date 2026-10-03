@@ -37,6 +37,7 @@
         <a href="#servicos">Serviços</a>
         <a href="projetos.html">Projetos</a>
         <a href="#tecnologia">Tecnologia</a>
+        <a href="base-legal-ambiental.html">Base Legal Ambiental</a>
         <a href="#contato">Contato</a>
         <a class="btn btn-small btn-primary" href="#contato">Solicitar Orçamento</a>
       </nav>
@@ -352,6 +353,33 @@
           <span>Base Legal Ambiental</span>
           <span>Atualizações da Legislação</span>
           <span>Dúvidas Frequentes</span>
+        </div>
+
+        <div class="knowledge-search-teaser reveal">
+          <div class="knowledge-search-copy">
+            <span class="knowledge-search-badge">Nova ferramenta</span>
+            <h3>Consulte a Base Legal Ambiental</h3>
+            <p>Descreva sua dúvida em linguagem comum e localize referências federais e estaduais relacionadas, sempre com acesso à fonte oficial.</p>
+            <div class="knowledge-search-examples">
+              <a href="base-legal-ambiental.html?q=resgate%20de%20fauna&uf=BA">Resgate de fauna na Bahia</a>
+              <a href="base-legal-ambiental.html?q=preciso%20construir%20em%20um%20terreno%20com%2050%20arvores&uf=BA">Terreno com árvores</a>
+            </div>
+          </div>
+          <form class="knowledge-search-form" action="base-legal-ambiental.html" method="get">
+            <label for="home-legal-query">O que você precisa saber?</label>
+            <input id="home-legal-query" type="search" name="q" placeholder="Ex.: preciso fazer uma supressão vegetal" />
+            <div class="knowledge-search-row">
+              <select name="uf" aria-label="Estado">
+                <option value="">Estado (opcional)</option>
+                <option value="BA">Bahia</option>
+                <option value="MA">Maranhão</option>
+                <option value="TO">Tocantins</option>
+                <option value="GO">Goiás</option>
+                <option value="PI">Piauí</option>
+              </select>
+              <button class="btn btn-primary" type="submit">Pesquisar</button>
+            </div>
+          </form>
         </div>
 
         <div class="knowledge-grid">
