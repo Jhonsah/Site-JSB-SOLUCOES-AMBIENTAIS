@@ -71,3 +71,13 @@ Estes itens não devem ser tratados como tarefas a refazer:
 - [ ] Ajustar o layout conforme as preferências do usuário após inserir as fotografias.
 
 Os testes de lógica foram simulados; não substituem a revisão visual e os testes de toque em dispositivo real.
+
+## Fotografias públicas licenciadas — primeiro lote, 03/10/2026
+
+- [x] Selecionar 3 fotografias gratuitas sob licença Unsplash, com uso comercial permitido.
+- [x] Conferir páginas originais, autoria, licença e conteúdo visual.
+- [x] Adicionar fotografias na imagem principal e nos cards de Análises Ambientais e Flora.
+- [x] Salvar arquivos WebP junto ao site e publicar créditos no rodapé.
+- [x] Documentar origem, licença, data e identificação dos arquivos em LICENCAS-DE-IMAGENS.md.
+- [ ] Continuar a seleção conforme as próximas seções; fotos de equipe e execução dependem do acervo próprio da JSB.
+- [ ] Validar visualmente o conjunto da página no navegador.

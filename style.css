@@ -3809,3 +3809,32 @@ summary:focus-visible {
   font-weight: 800;
   letter-spacing: .04em;
 }
+
+
+/* Fotografias licenciadas — primeiro lote, 03/10/2026 */
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero::after {
+  background: linear-gradient(90deg, rgba(3,34,43,.90), rgba(3,34,43,.65));
+}
+.service-photo { margin: 0 0 20px; }
+.service-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.service-photo figcaption { margin-top: 6px; font-size: .75rem; color: var(--text); }
+.service-photo figcaption a { text-decoration: underline; text-underline-offset: 3px; }
+.photo-credits { padding-top: 24px; padding-bottom: 24px; font-size: .875rem; color: rgba(255,255,255,.85); }
+.photo-credits summary { cursor: pointer; }
+.photo-credits p { max-width: 760px; }
+.photo-credits a { text-decoration: underline; text-underline-offset: 3px; }
+.photo-credits li + li { margin-top: 8px; }
