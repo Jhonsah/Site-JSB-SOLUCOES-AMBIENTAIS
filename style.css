@@ -1092,3 +1092,65 @@ h3 {
   .activity-list,
   .project-gallery { grid-template-columns: 1fr; }
 }
+
+
+/* Navegação temática das páginas de serviços */
+.service-topic-nav {
+  margin-bottom: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(16,55,39,.07);
+}
+
+.service-topic-nav-title {
+  padding: 17px 18px;
+  background: linear-gradient(135deg, #0d4f2b, #176b3b);
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: .95rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+
+.service-topic-nav a {
+  display: block;
+  position: relative;
+  padding: 13px 16px 13px 20px;
+  border-bottom: 1px solid #e7ece8;
+  color: var(--ink);
+  font-size: .86rem;
+  line-height: 1.35;
+  transition: background .18s ease, color .18s ease, padding-left .18s ease;
+}
+
+.service-topic-nav a:last-child {
+  border-bottom: 0;
+}
+
+.service-topic-nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: transparent;
+}
+
+.service-topic-nav a:hover {
+  padding-left: 24px;
+  background: #f3f8f4;
+  color: var(--green-700);
+}
+
+.service-topic-nav a.active {
+  background: #edf6ef;
+  color: var(--green-700);
+  font-weight: 700;
+}
+
+.service-topic-nav a.active::before {
+  background: var(--green-500);
+}
