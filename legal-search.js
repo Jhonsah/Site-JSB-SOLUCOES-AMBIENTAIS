@@ -19,7 +19,9 @@ const topicRules = [
   { topic: "recursos_hidricos", terms: ["agua","outorga","captacao","poco","pocos","barramento","irrigacao","recurso hidrico","recursos hidricos","efluente"] },
   { topic: "rural", terms: ["cefir","car","imovel rural","propriedade rural","reserva legal","app","regularizacao rural"] },
   { topic: "geotecnologia", terms: ["drone","drones","mapa","mapas","geoprocessamento","gis","georreferenciamento","cartografia"] },
-  { topic: "recuperacao", terms: ["prad","recuperacao","area degradada","reabilitacao","remediacao","desativacao","encerramento"] }
+  { topic: "recuperacao", terms: ["prad","recuperacao","area degradada","reabilitacao","remediacao","desativacao","encerramento"] },
+  { topic: "ruido", terms: ["ruido","ruído","poluicao sonora","pressao sonora","som ambiental","monitoramento de ruido"] },
+  { topic: "educacao ambiental", terms: ["educacao ambiental","educação ambiental","pea","dds ambiental","palestra ambiental","oficina ambiental","treinamento ambiental"] }
 ];
 
 const relatedServicesByTopic = {
@@ -34,7 +36,7 @@ const relatedServicesByTopic = {
     ["index.html#contato", "Avaliação técnica da demanda"]
   ],
   licenciamento: [
-    ["index.html#servicos", "Licenciamento Ambiental"],
+    ["licenciamento-ambiental.html", "Licenciamento Ambiental"],
     ["projeto-elaboracao-mapas.html", "Elaboração de Mapas"],
     ["index.html#contato", "Avaliação técnica da demanda"]
   ],
@@ -57,9 +59,17 @@ const relatedServicesByTopic = {
     ["projeto-elaboracao-mapas.html", "Elaboração de Mapas"]
   ],
   recuperacao: [
-    ["index.html#servicos", "Recuperação de Áreas Degradadas"],
+    ["recuperacao-areas-degradadas.html", "Recuperação de Áreas Degradadas"],
     ["projeto-elaboracao-mapas.html", "Elaboração de Mapas"],
     ["index.html#contato", "Avaliação técnica da demanda"]
+  ],
+  ruido: [
+    ["analises-ambientais.html", "Análises e Monitoramentos Ambientais"],
+    ["index.html#contato", "Avaliação técnica da demanda"]
+  ],
+  "educacao ambiental": [
+    ["educacao-ambiental.html", "Educação Ambiental"],
+    ["licenciamento-ambiental.html", "Licenciamento Ambiental"]
   ]
 };
 
