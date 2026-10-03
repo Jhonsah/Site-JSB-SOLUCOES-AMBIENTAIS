@@ -21,6 +21,18 @@ Object.values(legalMunicipalities).forEach(cities =>
 const normalizeLegalText = (value = "") =>
   value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
 
+
+const getLawYear = (law) => {
+  if (law.id === "cf-225") return 1988;
+  const titleYear = String(law.title || "").match(/\b(19|20)\d{2}\b/g);
+  if (titleYear?.length) return Number(titleYear[titleYear.length - 1]);
+
+  const idYear = String(law.id || "").match(/\b(19|20)\d{2}\b/g);
+  if (idYear?.length) return Number(idYear[idYear.length - 1]);
+
+  return 0;
+};
+
 const topicRules = [
   { topic: "fauna", terms: ["fauna","animal","animais","resgate","afugentamento","salvamento","captura","soltura","manejo"] },
   { topic: "supressao", terms: ["supressao","vegetacao","arvore","arvores","cortar","corte","retirar","terreno","desmatamento","limpeza","farmacia"] },
@@ -251,7 +263,8 @@ function renderResults(query, uf, municipality = "") {
     .filter(item => item.score > 0)
     .sort((a, b) => {
       const scopeRank = { Municipal: 3, Estadual: 2, Federal: 1 };
-      return b.score - a.score || (scopeRank[b.law.scope] || 0) - (scopeRank[a.law.scope] || 0);
+      const yearDiff = getLawYear(b.law) - getLawYear(a.law);
+      return yearDiff || b.score - a.score || (scopeRank[b.law.scope] || 0) - (scopeRank[a.law.scope] || 0);
     });
 
   resultsTitle.textContent = scored.length
@@ -270,11 +283,17 @@ function renderResults(query, uf, municipality = "") {
     return;
   }
 
-  resultsEl.innerHTML = scored.map(({ law }) => `
-    <article class="legal-result-card">
+  const currentYear = new Date().getFullYear();
+
+  resultsEl.innerHTML = scored.map(({ law }) => {
+    const lawYear = getLawYear(law);
+    const isCurrentYear = lawYear === currentYear;
+
+    return `
+    <article class="legal-result-card${isCurrentYear ? " is-current-year" : ""}">
       <div class="legal-result-meta">
         <span class="legal-result-scope ${law.scope === "Municipal" ? "municipal" : (law.scope === "Estadual" ? "state" : "federal")}">${law.scope}${law.uf !== "BR" ? " · " + law.uf : ""}${law.scope === "Municipal" && law.municipality ? " · " + law.municipality : ""}</span>
-        <span>${law.authority}</span>
+        <span class="legal-result-meta-right">${isCurrentYear ? `<strong class="legal-new-badge">NOVO · ${currentYear}</strong>` : ""}<span>${law.authority}</span></span>
       </div>
       <h3>${law.title}</h3>
       <div class="legal-result-block">
@@ -290,7 +309,8 @@ function renderResults(query, uf, municipality = "") {
         <a href="${law.url}" target="_blank" rel="noopener">Consultar fonte oficial ↗</a>
       </div>
     </article>
-  `).join("");
+  `;
+  }).join("");
 
   renderRelatedServices(topics);
 }
