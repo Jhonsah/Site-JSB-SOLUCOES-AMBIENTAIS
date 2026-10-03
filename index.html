@@ -193,60 +193,73 @@
 
     <section class="section section-white" id="projetos">
       <div class="container">
-        <div class="section-intro reveal">
-          <div class="section-kicker">Projetos</div>
-          <h2>Nosso trabalho em campo</h2>
-          <p>Projetos e frentes de atuação que refletem experiência de campo, rigor técnico e soluções aplicadas às necessidades de cada empreendimento.</p>
+        <div class="project-carousel-heading reveal">
+          <div class="section-intro">
+            <div class="section-kicker">Projetos</div>
+            <h2>Nosso trabalho em campo</h2>
+            <p>Projetos e frentes de atuação que refletem experiência de campo, rigor técnico e soluções aplicadas às necessidades de cada empreendimento.</p>
+          </div>
+
+          <div class="project-carousel-controls" aria-label="Controles dos projetos">
+            <button type="button" data-project-carousel-prev aria-label="Projetos anteriores">←</button>
+            <button type="button" data-project-carousel-next aria-label="Próximos projetos">→</button>
+          </div>
         </div>
 
-        <div class="project-grid">
-          <article class="project-card reveal">
-            <div class="project-visual"><span>Resgate de Fauna Silvestre</span></div>
-            <div class="project-body">
-              <h3>Resgate de Fauna Silvestre</h3>
-              <p>Atividades de afugentamento, resgate, manejo e soltura de fauna silvestre durante intervenções ambientais.</p>
-              <a href="projeto-manejo-fauna.html">Conhecer projeto →</a>
-            </div>
-          </article>
+        <div class="project-carousel reveal" data-project-carousel>
+          <div class="project-carousel-viewport">
+            <div class="project-carousel-track" data-project-carousel-track>
+              <article class="project-card">
+                <div class="project-visual"><span>Resgate de Fauna Silvestre</span></div>
+                <div class="project-body">
+                  <h3>Resgate de Fauna Silvestre</h3>
+                  <p>Atividades de afugentamento, resgate, manejo e soltura de fauna silvestre durante intervenções ambientais.</p>
+                  <a href="projeto-manejo-fauna.html">Conhecer projeto →</a>
+                </div>
+              </article>
 
-          <article class="project-card reveal">
-            <div class="project-visual"><span>Fauna</span></div>
-            <div class="project-body">
-              <h3>Monitoramento de Fauna</h3>
-              <p>Monitoramento de diferentes grupos faunísticos, incluindo aves, mamíferos, répteis e anfíbios, conforme o escopo e as exigências de cada projeto.</p>
-              <a href="projeto-monitoramento-fauna.html">Conhecer projeto →</a>
-            </div>
-          </article>
+              <article class="project-card">
+                <div class="project-visual"><span>Fauna</span></div>
+                <div class="project-body">
+                  <h3>Monitoramento de Fauna</h3>
+                  <p>Monitoramento de diferentes grupos faunísticos, incluindo aves, mamíferos, répteis e anfíbios, conforme o escopo e as exigências de cada projeto.</p>
+                  <a href="projeto-monitoramento-fauna.html">Conhecer projeto →</a>
+                </div>
+              </article>
 
-          <article class="project-card reveal">
-            <div class="project-visual"><span>Geotecnologias</span></div>
-            <div class="project-body">
-              <h3>Mapeamento com Drones</h3>
-              <p>Levantamentos aéreos e geração de produtos cartográficos para apoio ao planejamento e às análises ambientais.</p>
-              <a href="projeto-mapeamento-drones.html">Conhecer projeto →</a>
-            </div>
-          </article>
+              <article class="project-card">
+                <div class="project-visual"><span>Geotecnologias</span></div>
+                <div class="project-body">
+                  <h3>Mapeamento com Drones</h3>
+                  <p>Levantamentos aéreos e geração de produtos cartográficos para apoio ao planejamento e às análises ambientais.</p>
+                  <a href="projeto-mapeamento-drones.html">Conhecer projeto →</a>
+                </div>
+              </article>
 
-          <article class="project-card reveal">
-            <div class="project-visual"><span>Flora</span></div>
-            <div class="project-body">
-              <h3>Inventário Florestal</h3>
-              <p>Levantamento quali-quantitativo da vegetação para caracterização, planejamento e suporte a estudos ambientais.</p>
-              <a href="projeto-inventario-florestal.html">Conhecer projeto →</a>
-            </div>
-          </article>
+              <article class="project-card">
+                <div class="project-visual"><span>Flora</span></div>
+                <div class="project-body">
+                  <h3>Inventário Florestal</h3>
+                  <p>Levantamento quali-quantitativo da vegetação para caracterização, planejamento e suporte a estudos ambientais.</p>
+                  <a href="projeto-inventario-florestal.html">Conhecer projeto →</a>
+                </div>
+              </article>
 
-          <article class="project-card reveal">
-            <div class="project-visual"><span>Geoprocessamento</span></div>
-            <div class="project-body">
-              <h3>Elaboração de Mapas</h3>
-              <p>Produção de mapas temáticos e produtos geoespaciais para estudos, relatórios e planejamento ambiental.</p>
-              <a href="projeto-elaboracao-mapas.html">Conhecer projeto →</a>
+              <article class="project-card">
+                <div class="project-visual"><span>Geoprocessamento</span></div>
+                <div class="project-body">
+                  <h3>Elaboração de Mapas</h3>
+                  <p>Produção de mapas temáticos e produtos geoespaciais para estudos, relatórios e planejamento ambiental.</p>
+                  <a href="projeto-elaboracao-mapas.html">Conhecer projeto →</a>
+                </div>
+              </article>
             </div>
-          </article>
-        </div>
-        <div class="projects-more reveal">
-          <a class="btn btn-ghost btn-on-light" href="projetos.html">Ver todos os projetos</a>
+          </div>
+
+          <div class="project-carousel-footer">
+            <div class="project-carousel-dots" data-project-carousel-dots aria-label="Posição do carrossel"></div>
+            <a href="projetos.html">Ver todos os projetos →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -498,6 +511,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="projects-carousel.js"></script>
   <script src="legal-data.js"></script>
   <script src="knowledge-carousel.js"></script>
 </body>
