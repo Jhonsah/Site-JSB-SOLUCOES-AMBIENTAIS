@@ -130,6 +130,19 @@ window.JSB_LEGAL_DATABASE = [
     verified: "out/2026"
   },
   {
+    id: "in-ibama-141-2006",
+    title: "IN Ibama nº 141/2006 — Fauna Sinantrópica Nociva",
+    scope: "Federal",
+    uf: "BR",
+    authority: "Ibama",
+    themes: ["fauna", "exoticas", "sinantropica", "abelhas", "controle"],
+    keywords: ["fauna sinantropica", "fauna sinantrópica", "abelhas", "apis mellifera", "abelha africana", "abelha africanizada", "especie exotica", "espécie exótica", "controle fauna", "remocao enxame", "remoção enxame"],
+    summary: "Regulamenta o controle e o manejo ambiental da fauna sinantrópica nociva. A norma inclui abelhas entre os artrópodes nocivos que, quando enquadrados como fauna sinantrópica nociva e observadas as demais regras aplicáveis, podem ser controlados por pessoas físicas ou jurídicas devidamente habilitadas sem autorização específica do Ibama.",
+    relevance: "É referência importante para ocorrências de abelhas em ambiente antrópico quando houver risco, transtorno significativo ou necessidade de controle. A simples identificação de uma abelha como exótica não significa, por si só, que qualquer método de remoção ou eliminação esteja automaticamente autorizado.",
+    url: "https://www.ibama.gov.br/component/legislacao/?legislacao=112966&view=legislacao",
+    verified: "out/2026"
+  },
+  {
     id: "in-ibama-8-2017",
     title: "IN Ibama nº 8/2017 — Abio",
     scope: "Federal",
@@ -349,6 +362,19 @@ window.JSB_LEGAL_DATABASE = [
     summary: "Regulamenta a Política Estadual de Meio Ambiente e disciplina procedimentos relacionados ao licenciamento e às autorizações ambientais no Estado da Bahia.",
     relevance: "Complementa a Lei Estadual nº 10.431/2006 na análise de procedimentos ambientais estaduais.",
     url: "https://www.ba.gov.br/meioambiente/sites/site-sema/files/migracao_2024/arquivos/File/FERFA/Legislacao/novo14024.pdf",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-sema-inema-051-2023",
+    title: "Portaria Conjunta SEMA/INEMA nº 051/2023 — Espécies Exóticas Invasoras da Bahia",
+    scope: "Estadual",
+    uf: "BA",
+    authority: "SEMA Bahia / INEMA",
+    themes: ["fauna", "flora", "exoticas", "invasoras", "abelhas", "controle"],
+    keywords: ["bahia", "especies exoticas invasoras", "espécies exóticas invasoras", "apis mellifera", "abelha europeia", "abelha africanizada", "controle especie invasora", "categoria 2", "soltura especie exotica"],
+    summary: "Reconhece a Lista Estadual de Espécies Exóticas Invasoras da Bahia e estabelece categorias e regras de prevenção, uso, controle e soltura. A Apis mellifera consta no Anexo 2 como espécie exótica invasora de Categoria 2, isto é, passível de utilização em condições controladas e sujeita à regulamentação específica. A portaria também proíbe a liberação ou soltura na natureza de espécies exóticas invasoras.",
+    relevance: "É a principal referência estadual cadastrada para analisar ocorrências de Apis mellifera e outras espécies exóticas invasoras na Bahia. A conduta concreta deve considerar se o enxame está em ambiente antrópico ou natural, se há risco, o objetivo do manejo e as regras específicas aplicáveis.",
+    url: "https://www.ba.gov.br/inema/sites/site-inema/files/migracao_2024/arquivos/wp-content/files/PORTARIA_SEMA_INEMA_051_2023_Lista_espcies_exticas_invasoras.pdf",
     verified: "out/2026"
   },
   {
