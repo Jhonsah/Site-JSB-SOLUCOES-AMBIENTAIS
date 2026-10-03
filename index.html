@@ -23,6 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="services-carousel.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -114,15 +115,21 @@
     </section>
 
     <section class="section section-soft" id="servicos">
-      <div class="container">
-        <div class="section-intro reveal">
-          <div class="section-kicker">Nossos Serviços</div>
-          <h2>Soluções técnicas integradas em meio ambiente</h2>
-          <p>Atuamos em diferentes etapas da gestão ambiental, integrando estudos, campo, monitoramento, geotecnologias e elaboração técnica.</p>
+      <div class="container service-carousel" data-services-carousel role="region" aria-roledescription="carrossel" aria-labelledby="services-title">
+        <div class="service-carousel-heading">
+          <div class="section-intro reveal">
+            <div class="section-kicker">Nossos Serviços</div>
+            <h2 id="services-title">Soluções técnicas integradas em meio ambiente</h2>
+            <p>Atuamos em diferentes etapas da gestão ambiental, integrando estudos, campo, monitoramento, geotecnologias e elaboração técnica.</p>
+          </div>
+          <div class="service-carousel-controls" aria-label="Navegação dos serviços">
+            <button type="button" data-services-prev aria-controls="services-track" aria-label="Ver serviços anteriores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+            <button type="button" data-services-next aria-controls="services-track" aria-label="Ver próximos serviços"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+          </div>
         </div>
 
-        <div class="service-grid">
-          <article class="service-card reveal">
+        <div class="service-carousel-track" id="services-track" data-services-track tabindex="0" role="group" aria-label="Serviços; use as setas do teclado ou deslize para navegar">
+          <article class="service-card">
             <div class="service-icon">01</div>
             <h3>Licenciamento Ambiental</h3>
             <p>Estudos, relatórios e apoio técnico voltados ao atendimento das exigências ambientais aplicáveis a cada etapa do empreendimento.</p>
@@ -132,7 +139,7 @@
             <a class="service-card-action" href="licenciamento-ambiental.html">Conhecer serviço →</a>
           </article>
 
-          <article class="service-card reveal">
+          <article class="service-card">
             <div class="service-icon">02</div>
             <h3>Manejo de Fauna</h3>
             <p>Resgate, monitoramento e proteção da fauna silvestre com equipe especializada em campo.</p>
@@ -142,7 +149,7 @@
             <a class="service-card-action" href="servicos-fauna.html">Conhecer serviço →</a>
           </article>
 
-          <article class="service-card reveal">
+          <article class="service-card">
             <div class="service-icon">03</div>
             <h3>Biomonitoramento</h3>
             <p>Avaliação contínua de fauna, flora e qualidade ambiental por meio de bioindicadores.</p>
@@ -152,7 +159,7 @@
             <a class="service-card-action" href="biomonitoramento-ambiental.html">Conhecer serviço →</a>
           </article>
 
-          <article class="service-card reveal">
+          <article class="service-card">
             <div class="service-icon">04</div>
             <h3>Análises Ambientais</h3>
             <p>Avaliação e monitoramento de parâmetros ambientais, incluindo análises de água, solo, sedimentos, resíduos, efluentes, qualidade do ar e níveis de ruído.</p>
@@ -162,7 +169,7 @@
             <a class="service-card-action" href="analises-ambientais.html">Conhecer serviço →</a>
           </article>
 
-          <article class="service-card reveal">
+          <article class="service-card">
             <div class="service-icon">05</div>
             <h3>Educação Ambiental</h3>
             <p>Ações de educação ambiental para conscientizar, capacitar e engajar trabalhadores, comunidades e públicos envolvidos nos empreendimentos.</p>
@@ -172,7 +179,7 @@
             <a class="service-card-action" href="educacao-ambiental.html">Conhecer serviço →</a>
           </article>
 
-          <article class="service-card reveal">
+          <article class="service-card">
             <div class="service-icon">06</div>
             <h3>Geotecnologias</h3>
             <p>Mapeamento e análise territorial com drones, GIS e sensoriamento remoto.</p>
@@ -182,7 +189,7 @@
             <a class="service-card-action" href="geotecnologias-ambientais.html">Conhecer serviço →</a>
           </article>
 
-          <article class="service-card reveal">
+          <article class="service-card">
             <div class="service-icon">07</div>
             <h3>Recuperação de Áreas Degradadas</h3>
             <p>Planejamento e acompanhamento de medidas de recuperação, revegetação e monitoramento de áreas impactadas.</p>
@@ -192,7 +199,7 @@
             <a class="service-card-action" href="recuperacao-areas-degradadas.html">Conhecer serviço →</a>
           </article>
 
-          <article class="service-card reveal">
+          <article class="service-card">
             <div class="service-icon">08</div>
             <h3>Flora e Supressão Vegetal</h3>
             <p>Apoio técnico para caracterização da vegetação, inventários, acompanhamento ambiental de supressão e medidas associadas.</p>
@@ -202,6 +209,7 @@
             <a class="service-card-action" href="flora-supressao-vegetal.html">Conhecer serviço →</a>
           </article>
         </div>
+        <p class="service-carousel-status" data-services-status role="status" aria-live="polite" aria-atomic="true"></p>
       </div>
     </section>
 
@@ -561,6 +569,7 @@
 
   <script src="script.js"></script>
   <script src="projects-carousel.js"></script>
+  <script src="services-carousel.js"></script>
   <script src="legal-data.js"></script>
   <script src="knowledge-carousel.js"></script>
 </body>
