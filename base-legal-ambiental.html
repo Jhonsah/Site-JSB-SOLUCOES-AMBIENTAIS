@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Base Legal Ambiental da JSB: pesquise temas, dúvidas e atividades e consulte referências oficiais federais e estaduais relacionadas." />
+  <meta name="theme-color" content="#123f4d" />
+  <title>Base Legal Ambiental | JSB Soluções Ambientais</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#inicio" aria-label="JSB Soluções Ambientais - Início">
+        <span class="brand-mark">JSB</span>
+        <span class="brand-text"><strong>Soluções Ambientais</strong><small>Ciência • Tecnologia • Sustentabilidade</small></span>
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
+        <a href="index.html#inicio">Início</a>
+        <a href="index.html#quem-somos">Quem Somos</a>
+        <a href="index.html#servicos">Serviços</a>
+        <a href="projetos.html">Projetos</a>
+        <a class="active" href="base-legal-ambiental.html">Base Legal</a>
+        <a href="index.html#contato">Contato</a>
+        <a class="btn btn-small btn-primary" href="index.html#contato">Solicitar Orçamento</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="legal-search-hero">
+      <div class="container">
+        <div class="legal-search-hero-copy reveal">
+          <div class="eyebrow-pill">Consulta Ambiental • Fontes Oficiais</div>
+          <h1>Base Legal Ambiental</h1>
+          <p>Pesquise uma atividade, uma dúvida ou descreva o que pretende fazer. A ferramenta organiza referências legais relacionadas para você consultar diretamente nas fontes oficiais.</p>
+        </div>
+
+        <form class="legal-search-form reveal" data-legal-search-form>
+          <div class="legal-search-field">
+            <label for="legal-query">O que você precisa saber?</label>
+            <input id="legal-query" name="q" type="search" autocomplete="off" placeholder="Ex.: preciso construir em um terreno com 50 árvores" data-legal-query />
+          </div>
+          <div class="legal-search-field legal-search-state">
+            <label for="legal-uf">Estado do empreendimento</label>
+            <select id="legal-uf" name="uf" data-legal-uf>
+              <option value="">Todos / não informado</option>
+              <option value="BA">Bahia</option>
+              <option value="AC">Acre</option><option value="AL">Alagoas</option><option value="AP">Amapá</option><option value="AM">Amazonas</option>
+              <option value="CE">Ceará</option><option value="DF">Distrito Federal</option><option value="ES">Espírito Santo</option><option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option><option value="MT">Mato Grosso</option><option value="MS">Mato Grosso do Sul</option><option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option><option value="PB">Paraíba</option><option value="PR">Paraná</option><option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option><option value="RJ">Rio de Janeiro</option><option value="RN">Rio Grande do Norte</option><option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option><option value="RR">Roraima</option><option value="SC">Santa Catarina</option><option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option><option value="TO">Tocantins</option>
+            </select>
+          </div>
+          <button class="btn btn-primary legal-search-submit" type="submit">Pesquisar referências</button>
+        </form>
+
+        <div class="legal-quick-search reveal" aria-label="Pesquisas sugeridas">
+          <span>Exemplos:</span>
+          <button type="button" data-legal-example="resgate de fauna">Resgate de fauna</button>
+          <button type="button" data-legal-example="preciso fazer supressão vegetal">Supressão vegetal</button>
+          <button type="button" data-legal-example="preciso contratar biólogo para supressão">Profissional para supressão</button>
+          <button type="button" data-legal-example="espécies ameaçadas">Espécies ameaçadas</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white legal-results-section">
+      <div class="container">
+        <div class="legal-search-status reveal">
+          <div>
+            <div class="section-kicker">Referências relacionadas</div>
+            <h2 data-legal-results-title>Faça uma busca para consultar a base</h2>
+          </div>
+          <div class="legal-verified-badge">Base inicial verificada • out/2026</div>
+        </div>
+
+        <div class="legal-query-context" data-legal-query-context hidden></div>
+        <div class="legal-professional-note" data-professional-note hidden>
+          <strong>Sobre a contratação de profissional</strong>
+          <p>A legislação encontrada pode exigir estudo, autorização ou responsabilidade técnica, mas a busca não conclui automaticamente qual categoria profissional deve ser contratada. Isso depende do produto técnico, das atribuições profissionais e das exigências do órgão competente.</p>
+        </div>
+
+        <div class="legal-search-results" data-legal-results>
+          <div class="legal-search-empty">
+            <strong>Você pode pesquisar em linguagem comum.</strong>
+            <p>Exemplo: “Preciso construir uma farmácia em um terreno com cerca de 50 árvores. O que devo verificar?” A ferramenta não dará uma decisão jurídica pronta; ela mostrará as referências legais potencialmente relacionadas.</p>
+          </div>
+        </div>
+
+        <aside class="related-services-box" data-related-services hidden>
+          <div>
+            <span>Serviços relacionados à busca</span>
+            <strong>Se a legislação indicar necessidade de estudos ou produtos técnicos, conheça as frentes da JSB.</strong>
+          </div>
+          <div data-related-service-links></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container legal-method-grid">
+        <div class="reveal">
+          <div class="section-kicker">Como funciona</div>
+          <h2>Informação legal sem transformar a busca em parecer jurídico</h2>
+        </div>
+        <div class="legal-method-cards reveal">
+          <article><span>01</span><strong>Você descreve a situação</strong><p>A busca identifica temas ambientais relacionados ao texto informado.</p></article>
+          <article><span>02</span><strong>A base organiza referências</strong><p>São exibidas normas federais e, quando cadastradas, referências do estado selecionado.</p></article>
+          <article><span>03</span><strong>Você confere a fonte oficial</strong><p>Cada resultado leva ao texto oficial ou à página institucional correspondente.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white">
+      <div class="container legal-ai-note reveal">
+        <div>
+          <div class="section-kicker">Transparência</div>
+          <h2>Resumos em linguagem simples, sempre ligados à fonte oficial</h2>
+        </div>
+        <p>Os resumos desta base são preparados com apoio de inteligência artificial a partir das referências oficiais indicadas. Servem para facilitar a leitura inicial e a localização das normas. Não substituem o texto legal, parecer jurídico, manifestação do órgão ambiental ou análise técnica do processo concreto.</p>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-grid">
+        <div class="reveal">
+          <div class="section-kicker light">Precisa avançar?</div>
+          <h2>Da referência legal ao produto técnico</h2>
+          <p>Se sua consulta indicar necessidade de levantamento, plano, mapa, monitoramento ou acompanhamento ambiental, a JSB pode avaliar o escopo técnico da demanda.</p>
+        </div>
+        <div class="contact-card reveal">
+          <span>Atendimento técnico</span>
+          <a href="mailto:contato@jsbsolucoesambientais.com.br">contato@jsbsolucoesambientais.com.br</a>
+          <a class="btn btn-primary btn-full" href="index.html#contato">Falar com a JSB</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <span>© <span id="ano"></span> JSB Soluções Ambientais. Todos os direitos reservados.</span>
+      <a href="index.html">Voltar para a página inicial</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="legal-search.js"></script>
+</body>
+</html>
