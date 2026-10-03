@@ -3587,3 +3587,48 @@ h3 {
     display: none;
   }
 }
+
+
+/* Página 404 */
+.not-found-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(circle at 80% 18%, rgba(60,171,72,.18), transparent 30%),
+    linear-gradient(145deg, #082f3a, #0d4f2b 62%, #123f4d);
+  color: #fff;
+}
+.not-found-inner { width: min(100%, 820px); text-align: center; }
+.not-found-code {
+  display: block;
+  margin-bottom: 12px;
+  color: rgba(255,255,255,.16);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: clamp(5rem, 18vw, 11rem);
+  font-weight: 700;
+  line-height: .8;
+  letter-spacing: -.08em;
+}
+.not-found-inner h1 {
+  margin: 8px 0 12px;
+  font-size: clamp(2.2rem, 5vw, 4.8rem);
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+.not-found-inner > p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: rgba(255,255,255,.72);
+  line-height: 1.7;
+}
+.not-found-actions,.not-found-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.not-found-actions { margin-top: 26px; }
+.not-found-links { margin-top: 22px; }
+.not-found-links a { color: #d7f0bd; font-size: .8rem; font-weight: 700; }
