@@ -3143,3 +3143,124 @@ h3 {
     flex-direction: column;
   }
 }
+
+
+/* Home — carrossel de projetos */
+.project-carousel-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 24px;
+}
+
+.project-carousel-heading .section-intro {
+  margin-bottom: 0;
+}
+
+.project-carousel-controls {
+  display: flex;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.project-carousel-controls button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #cedbd1;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--green-700);
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.08rem;
+  transition: transform .18s ease, background .18s ease, color .18s ease;
+}
+
+.project-carousel-controls button:hover {
+  transform: translateY(-2px);
+  background: var(--green-700);
+  color: #fff;
+}
+
+.project-carousel-viewport {
+  overflow: hidden;
+}
+
+.project-carousel-track {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-inline: contain;
+}
+
+.project-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.project-carousel-track .project-card {
+  flex: 0 0 calc((100% - 36px) / 3);
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.project-carousel-footer {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.project-carousel-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.project-carousel-dots button {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: #c8d5cc;
+  cursor: pointer;
+  transition: width .18s ease, background .18s ease;
+}
+
+.project-carousel-dots button.active {
+  width: 24px;
+  background: var(--green-500);
+}
+
+.project-carousel-footer > a {
+  color: var(--green-700);
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+@media (max-width: 960px) {
+  .project-carousel-track .project-card {
+    flex-basis: calc((100% - 18px) / 2);
+  }
+}
+
+@media (max-width: 640px) {
+  .project-carousel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .project-carousel-track .project-card {
+    flex-basis: 100%;
+  }
+
+  .project-carousel-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
