@@ -1828,3 +1828,128 @@ h3 {
     height: 36px;
   }
 }
+
+
+/* Levantamento faunístico: listas de espécies ameaçadas */
+.threat-list-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.threat-list-card {
+  min-height: 260px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d4dfd7;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.threat-list-card.featured {
+  border-color: transparent;
+  background: linear-gradient(145deg, #0d4f2b, #123f4d);
+  color: #fff;
+}
+
+.threat-list-card.featured .legal-badge {
+  background: rgba(255,255,255,.13);
+  color: #d7f0bd;
+}
+
+.threat-list-card h3 {
+  margin: 20px 0 10px;
+  font-size: 1.04rem;
+}
+
+.threat-list-card p {
+  margin: 0;
+  color: var(--text);
+  font-size: .83rem;
+  line-height: 1.65;
+}
+
+.threat-list-card.featured p {
+  color: rgba(255,255,255,.76);
+}
+
+.threat-list-card a {
+  margin-top: auto;
+  padding-top: 18px;
+  color: var(--green-500);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.threat-list-card.featured a {
+  color: #d7f0bd;
+}
+
+.threat-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.threat-categories span {
+  padding: 5px 8px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  font-size: .68rem;
+  font-weight: 700;
+}
+
+.threat-analysis-box {
+  margin-top: 16px;
+  padding: 20px 22px;
+  border-left: 4px solid var(--green-500);
+  border-radius: 0 14px 14px 0;
+  background: #f4f8f5;
+}
+
+.threat-analysis-box strong {
+  color: var(--green-700);
+  font-size: .84rem;
+}
+
+.threat-analysis-box p {
+  margin: 6px 0 0;
+  color: var(--text);
+  font-size: .82rem;
+  line-height: 1.65;
+}
+
+.threat-disclaimer {
+  margin-top: 14px;
+  padding: 16px 18px;
+  border: 1px solid #e5d8b6;
+  border-radius: 12px;
+  background: #fff9ec;
+}
+
+.threat-disclaimer strong {
+  color: #6b531a;
+  font-size: .8rem;
+}
+
+.threat-disclaimer p {
+  margin: 5px 0 0;
+  color: #6a6251;
+  font-size: .76rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .threat-list-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .threat-list-card {
+    min-height: 0;
+  }
+}
