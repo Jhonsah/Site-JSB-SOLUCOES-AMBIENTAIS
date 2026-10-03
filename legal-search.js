@@ -15,7 +15,11 @@ const topicRules = [
   { topic: "supressao", terms: ["supressao","vegetacao","arvore","arvores","cortar","corte","retirar","terreno","desmatamento","limpeza","farmacia"] },
   { topic: "licenciamento", terms: ["licenciamento","licenca","obra","empreendimento","construir","construcao","farmacia"] },
   { topic: "ameacadas", terms: ["ameacada","ameacadas","extincao","conservacao"] },
-  { topic: "levantamento", terms: ["levantamento","inventario","diagnostico","estudo fauna"] }
+  { topic: "levantamento", terms: ["levantamento","inventario","diagnostico","estudo fauna","inventario florestal"] },
+  { topic: "recursos_hidricos", terms: ["agua","outorga","captacao","poco","pocos","barramento","irrigacao","recurso hidrico","recursos hidricos","efluente"] },
+  { topic: "rural", terms: ["cefir","car","imovel rural","propriedade rural","reserva legal","app","regularizacao rural"] },
+  { topic: "geotecnologia", terms: ["drone","drones","mapa","mapas","geoprocessamento","gis","georreferenciamento","cartografia"] },
+  { topic: "recuperacao", terms: ["prad","recuperacao","area degradada","reabilitacao","remediacao","desativacao","encerramento"] }
 ];
 
 const relatedServicesByTopic = {
@@ -37,6 +41,25 @@ const relatedServicesByTopic = {
   levantamento: [
     ["levantamento-faunistico.html", "Levantamento Faunístico"],
     ["projeto-monitoramento-fauna.html", "Monitoramento de Fauna"]
+  ],
+  recursos_hidricos: [
+    ["index.html#servicos", "Soluções Ambientais"],
+    ["projeto-elaboracao-mapas.html", "Elaboração de Mapas"],
+    ["index.html#contato", "Avaliação técnica da demanda"]
+  ],
+  rural: [
+    ["projeto-inventario-florestal.html", "Inventário Florestal"],
+    ["projeto-elaboracao-mapas.html", "Elaboração de Mapas"],
+    ["index.html#contato", "Avaliação técnica da demanda"]
+  ],
+  geotecnologia: [
+    ["projeto-mapeamento-drones.html", "Mapeamento com Drones"],
+    ["projeto-elaboracao-mapas.html", "Elaboração de Mapas"]
+  ],
+  recuperacao: [
+    ["index.html#servicos", "Recuperação de Áreas Degradadas"],
+    ["projeto-elaboracao-mapas.html", "Elaboração de Mapas"],
+    ["index.html#contato", "Avaliação técnica da demanda"]
   ]
 };
 
