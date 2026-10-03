@@ -1,0 +1,60 @@
+/* Carrossel de Serviços — mantém os cards atuais e permite ajustes com as fotos. */
+.service-carousel-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.service-carousel-heading .section-intro { margin-bottom: 0; }
+.service-carousel-controls { display: none; gap: 8px; flex-shrink: 0; }
+.service-carousel.is-enhanced .service-carousel-controls { display: flex; }
+.service-carousel-controls button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: white;
+  color: var(--green-700);
+  cursor: pointer;
+}
+.service-carousel-controls button svg { width: 20px; height: 20px; }
+.service-carousel-controls button:hover:not(:disabled) { background: var(--green-700); color: white; }
+.service-carousel-controls button:disabled { opacity: .4; cursor: default; }
+.service-carousel-track {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding: 8px 4px 20px;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--green-700) var(--line);
+}
+.service-carousel-track .service-card {
+  flex: 0 0 calc((100% - 54px) / 4);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+}
+.service-carousel-track .service-card p { font-size: 1rem; }
+.service-carousel-track .service-card .tags { margin-bottom: 20px; }
+.service-carousel-track .service-card-action {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: .875rem;
+  color: var(--green-700);
+}
+.service-carousel-status { margin: 12px 0 0; color: var(--text); font-size: .875rem; }
+@media (max-width: 1100px) {
+  .service-carousel-track .service-card { flex-basis: calc((100% - 18px) / 2); }
+}
+@media (max-width: 640px) {
+  .service-carousel-heading { align-items: flex-start; flex-direction: column; gap: 16px; }
+  .service-carousel-track .service-card { flex-basis: 100%; }
+}
