@@ -7,14 +7,14 @@ const legalCarouselDots = document.querySelector("[data-legal-carousel-dots]");
 if (legalCarousel && legalCarouselTrack && window.JSB_LEGAL_DATABASE) {
   const featuredIds = [
     "lei-15190-2025",
-    "ba-10431-2006",
-    "ba-inema-001-2016",
+    "cf-225",
+    "lei-6938-1981",
+    "lc-140-2011",
     "lei-12651-2012",
     "lei-11428-2006",
-    "ba-inema-22129-2021",
-    "ba-sema-37-2017",
-    "lc-140-2011",
-    "in-ibama-8-2017"
+    "in-ibama-146-2007",
+    "in-ibama-8-2017",
+    "mma-1704-2026"
   ];
 
   const laws = featuredIds
@@ -30,7 +30,7 @@ if (legalCarousel && legalCarouselTrack && window.JSB_LEGAL_DATABASE) {
   legalCarouselTrack.innerHTML = laws.map((law, index) => `
     <article class="law-carousel-card${index === 0 ? " featured" : ""}">
       <div class="law-carousel-meta">
-        <span class="law-carousel-badge">${index === 0 ? "Atualização regulatória" : law.scope === "Estadual" ? "Bahia · Estadual" : "Base legal"}</span>
+        <span class="law-carousel-badge">${index === 0 ? "Atualização regulatória" : "Âmbito federal"}</span>
         <span>${law.authority}</span>
       </div>
       <h3>${law.title}</h3>
