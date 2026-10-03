@@ -5,12 +5,13 @@ Alterações pequenas, verificadas e salvas diretamente no GitHub.
 
 ## 1. Projetos / Frentes Técnicas — prioridade atual
 
-- [ ] Reformular projetos.html como catálogo de atividades, com escopo e produtos técnicos por frente.
-- [ ] Manter o menu Atuação e diferenciar o catálogo das áreas gerais de serviços.
-- [ ] Alinhar os nomes: Manejo de Fauna (sem vincular a um tipo de empreendimento), Monitoramento de Fauna e Análise e Coleta de Água.
-- [ ] Não utilizar Análises de Laboratório como frente de Projetos.
-- [ ] Integrar o catálogo ao carrossel da Home e conferir os links de acesso.
-- [ ] Verificar leitura, navegação e layout em desktop e celular.
+- [x] Reformular projetos.html como catálogo de atividades, com escopo e produtos técnicos por frente.
+- [x] Manter o menu Atuação e diferenciar o catálogo das áreas gerais de serviços.
+- [x] Alinhar os nomes: Manejo de Fauna (sem vincular a um tipo de empreendimento), Monitoramento de Fauna e Análise e Coleta de Água.
+- [x] Não utilizar Análises de Laboratório como frente de Projetos.
+- [x] Integrar o catálogo ao carrossel da Home e conferir os links de acesso.
+- [x] Verificar estrutura HTML, nomes, links internos e âncoras do catálogo e da Home.
+- [ ] Concluir verificação visual e interativa em desktop e celular (navegador indisponível neste ambiente).
 
 ## 2. Conteúdo técnico — pendências recuperadas do chat anterior
 
@@ -54,3 +55,7 @@ Estes itens não devem ser tratados como tarefas a refazer:
 ## Registro das entregas
 
 - 03/10/2026: checklist inicial recuperado do histórico e confrontado com o código atual.
+
+- 03/10/2026: catálogo de Projetos reformulado com 8 frentes, escopos e produtos técnicos; layout com 2 colunas em desktop e 1 em telas até 640px.
+- 03/10/2026: Home integrada ao catálogo; nomes alinhados e Análise e Coleta de Água incluída no carrossel.
+- Validação realizada: estrutura HTML, títulos, IDs únicos, nomes, links, âncoras locais e sintaxe dos scripts. A revisão visual e interativa permanece pendente.
