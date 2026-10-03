@@ -1067,5 +1067,46 @@ window.JSB_LEGAL_DATABASE = [
     url: "https://adema.se.gov.br/leis/",
     verified: "out/2026"
   }
+,
+
+  {
+    id: "ma-8149-2004",
+    title: "Lei Estadual nº 8.149/2004 — Política Estadual de Recursos Hídricos do Maranhão",
+    scope: "Estadual",
+    uf: "MA",
+    authority: "Estado do Maranhão / SEMA",
+    themes: ["recursos_hidricos", "outorga", "agua"],
+    keywords: ["maranhao", "maranhão", "recursos hidricos", "outorga", "agua", "bacia hidrografica", "conerh"],
+    summary: "Dispõe sobre a Política Estadual de Recursos Hídricos e o Sistema de Gerenciamento Integrado de Recursos Hídricos do Maranhão.",
+    relevance: "É a base legal estadual para planejamento, gestão, outorga e proteção dos recursos hídricos no Maranhão.",
+    url: "https://www.sema.ma.gov.br/uploads/sema/docs/Lei_Estadual_8.149.2004_-_Disp%C3%B5e_sobre_a_Pol%C3%ADtica_Estadual_de_Recursos_H%C3%ADdricos%2C_o_Sistema_de_Gerenciamento_.pdf",
+    verified: "out/2026"
+  },
+  {
+    id: "rn-conema-04-2006-atualizacoes",
+    title: "Resolução CONEMA nº 04/2006 e atualizações — Enquadramento do Licenciamento no RN",
+    scope: "Estadual",
+    uf: "RN",
+    authority: "CONEMA / IDEMA",
+    themes: ["licenciamento", "estudos ambientais", "competencia"],
+    keywords: ["rio grande do norte", "rn", "idema", "conema 04 2006", "conema 02 2014", "conema 01 2017", "porte", "potencial poluidor", "dispensa licença"],
+    summary: "Estabelece bases de enquadramento por porte e potencial poluidor ou degradador no licenciamento estadual do Rio Grande do Norte. Tabelas e critérios receberam alterações posteriores, inclusive pelas Resoluções CONEMA nº 02/2014, nº 01/2017 e nº 01/2024.",
+    relevance: "É referência para o enquadramento de atividades no IDEMA, mas a análise deve utilizar as tabelas e alterações vigentes para a tipologia específica.",
+    url: "https://webdisk.diariooficial.rn.gov.br/Jornal/12024-12-17.pdf",
+    verified: "out/2026"
+  },
+  {
+    id: "pi-4854-1996",
+    title: "Lei Estadual nº 4.854/1996 — Política de Meio Ambiente do Piauí",
+    scope: "Estadual",
+    uf: "PI",
+    authority: "Estado do Piauí / SEMARH",
+    themes: ["licenciamento", "gestao ambiental", "fauna", "flora"],
+    keywords: ["piaui", "piauí", "politica meio ambiente", "licenciamento", "controle ambiental", "fauna", "flora"],
+    summary: "Dispõe sobre a Política de Meio Ambiente do Estado do Piauí e integra a base normativa estadual para proteção e gestão ambiental.",
+    relevance: "É referência estrutural para interpretação dos instrumentos estaduais de gestão e controle ambiental no Piauí.",
+    url: "https://www.semarh.pi.gov.br/legislacao",
+    verified: "out/2026"
+  }
 
 ];
