@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://SEU-USUARIO.github.io/Site/sitemap.xml
+Sitemap: https://jhonsah.github.io/Site-JSB-SOLUCOES-AMBIENTAIS/sitemap.xml
