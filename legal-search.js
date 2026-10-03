@@ -9,7 +9,7 @@ const legalStateNames = {
 
 const legalMunicipalities = {
   AL: ["Maceió"],
-  BA: ["Salvador"],
+  BA: ["Salvador", "Barreiras", "Camaçari", "Feira de Santana", "Ilhéus", "Itabuna", "Lauro de Freitas", "Simões Filho", "Vitória da Conquista"],
   CE: ["Fortaleza"],
   MA: ["São Luís"],
   PB: ["João Pessoa"],
