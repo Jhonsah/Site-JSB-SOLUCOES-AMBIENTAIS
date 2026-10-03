@@ -21,7 +21,8 @@ const topicRules = [
   { topic: "geotecnologia", terms: ["drone","drones","mapa","mapas","geoprocessamento","gis","georreferenciamento","cartografia"] },
   { topic: "recuperacao", terms: ["prad","recuperacao","area degradada","reabilitacao","remediacao","desativacao","encerramento"] },
   { topic: "ruido", terms: ["ruido","ruído","poluicao sonora","pressao sonora","som ambiental","monitoramento de ruido"] },
-  { topic: "educacao ambiental", terms: ["educacao ambiental","educação ambiental","pea","dds ambiental","palestra ambiental","oficina ambiental","treinamento ambiental"] }
+  { topic: "educacao ambiental", terms: ["educacao ambiental","educação ambiental","pea","dds ambiental","palestra ambiental","oficina ambiental","treinamento ambiental"] },
+  { topic: "exoticas", terms: ["especie exotica","espécie exótica","exotica invasora","exótica invasora","invasora","apis mellifera","abelha africana","abelha africanizada","enxame","fauna sinantropica","fauna sinantrópica"] }
 ];
 
 const relatedServicesByTopic = {
@@ -72,6 +73,11 @@ const relatedServicesByTopic = {
   "educacao ambiental": [
     ["educacao-ambiental.html", "Educação Ambiental"],
     ["licenciamento-ambiental.html", "Licenciamento Ambiental"]
+  ],
+  exoticas: [
+    ["servicos-fauna.html", "Serviços de Fauna"],
+    ["projeto-manejo-fauna.html", "Manejo e Resgate de Fauna"],
+    ["index.html#contato", "Avaliação técnica da ocorrência"]
   ]
 };
 
