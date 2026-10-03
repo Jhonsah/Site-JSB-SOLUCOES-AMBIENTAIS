@@ -7,6 +7,18 @@ const legalStateNames = {
   RS:"Rio Grande do Sul", RO:"Rondônia", RR:"Roraima", SC:"Santa Catarina", SP:"São Paulo", SE:"Sergipe", TO:"Tocantins"
 };
 
+const legalMunicipalities = {
+  AL: ["Maceió"],
+  BA: ["Salvador"],
+  CE: ["Fortaleza"],
+  MA: ["São Luís"],
+  PB: ["João Pessoa"],
+  PE: ["Recife"],
+  PI: ["Teresina"],
+  RN: ["Natal"],
+  SE: ["Aracaju"]
+};
+
 const normalizeLegalText = (value = "") =>
   value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
 
@@ -114,6 +126,8 @@ const relatedServicesByTopic = {
 const searchForm = document.querySelector("[data-legal-search-form]");
 const queryInput = document.querySelector("[data-legal-query]");
 const ufSelect = document.querySelector("[data-legal-uf]");
+const municipalitySelect = document.querySelector("[data-legal-municipality]");
+const municipalityWrap = document.querySelector("[data-legal-municipality-wrap]");
 const resultsEl = document.querySelector("[data-legal-results]");
 const resultsTitle = document.querySelector("[data-legal-results-title]");
 const contextEl = document.querySelector("[data-legal-query-context]");
@@ -152,7 +166,7 @@ function scoreLaw(law, query, topics) {
   return score;
 }
 
-function renderResults(query, uf) {
+function renderResults(query, uf, municipality = "") {
   const normalizedQuery = normalizeLegalText(query);
   const topics = detectTopics(query);
   const isProfessionalQuery = /\b(biologo|biólogo|profissional|responsavel tecnico|responsável técnico)\b/i.test(query);
@@ -168,7 +182,15 @@ function renderResults(query, uf) {
   }
 
   const scored = legalDatabase
-    .filter(law => uf ? (law.uf === "BR" || law.uf === uf) : law.uf === "BR")
+    .filter(law => {
+      if (!uf) return law.uf === "BR";
+      if (law.uf === "BR") return true;
+      if (law.uf !== uf) return false;
+      if (law.scope === "Municipal") {
+        return municipality && normalizeLegalText(law.municipality || "") === normalizeLegalText(municipality);
+      }
+      return true;
+    })
     .map(law => ({ law, score: scoreLaw(law, query, topics) }))
     .filter(item => item.score > 0)
     .sort((a, b) => b.score - a.score || (a.law.scope === "Estadual" ? -1 : 1));
@@ -178,9 +200,10 @@ function renderResults(query, uf) {
     : "Nenhuma referência cadastrada foi localizada";
 
   const stateText = uf ? " • Estado selecionado: " + legalStateNames[uf] : " • Abrangência: federal";
+  const municipalityText = municipality ? " • Município: " + municipality : "";
   const topicText = topics.length ? " • Temas identificados: " + topics.join(", ") : "";
   contextEl.hidden = false;
-  contextEl.innerHTML = "<strong>Busca:</strong> " + query.replace(/[<>]/g, "") + stateText + topicText;
+  contextEl.innerHTML = "<strong>Busca:</strong> " + query.replace(/[<>]/g, "") + stateText + municipalityText + topicText;
 
   if (!scored.length) {
     resultsEl.innerHTML = '<div class="legal-search-empty"><strong>A base ainda não encontrou uma correspondência cadastrada.</strong><p>Isso não significa ausência de legislação aplicável. Tente usar termos como “resgate de fauna”, “supressão vegetal”, “licenciamento” ou selecione um estado.</p></div>';
@@ -191,7 +214,7 @@ function renderResults(query, uf) {
   resultsEl.innerHTML = scored.map(({ law }) => `
     <article class="legal-result-card">
       <div class="legal-result-meta">
-        <span class="legal-result-scope ${law.scope === "Estadual" ? "state" : "federal"}">${law.scope}${law.uf !== "BR" ? " · " + law.uf : ""}</span>
+        <span class="legal-result-scope ${law.scope === "Municipal" ? "municipal" : (law.scope === "Estadual" ? "state" : "federal")}">${law.scope}${law.uf !== "BR" ? " · " + law.uf : ""}${law.scope === "Municipal" && law.municipality ? " · " + law.municipality : ""}</span>
         <span>${law.authority}</span>
       </div>
       <h3>${law.title}</h3>
@@ -232,24 +255,53 @@ function renderRelatedServices(topics) {
   servicesBox.hidden = false;
 }
 
-function updateUrl(query, uf) {
+function updateMunicipalityOptions(uf, selectedMunicipality = "") {
+  if (!municipalitySelect || !municipalityWrap) return;
+
+  const municipalities = legalMunicipalities[uf] || [];
+  municipalitySelect.innerHTML = '<option value="">Estado inteiro — não incluir normas municipais</option>' +
+    municipalities.map(city => '<option value="' + city + '">' + city + ' — incluir normas municipais</option>').join("");
+
+  municipalityWrap.hidden = municipalities.length === 0;
+  municipalitySelect.disabled = municipalities.length === 0;
+
+  if (selectedMunicipality && municipalities.includes(selectedMunicipality)) {
+    municipalitySelect.value = selectedMunicipality;
+  }
+}
+
+function updateUrl(query, uf, municipality) {
   const url = new URL(window.location.href);
   if (query) url.searchParams.set("q", query); else url.searchParams.delete("q");
   if (uf) url.searchParams.set("uf", uf); else url.searchParams.delete("uf");
+  if (municipality) url.searchParams.set("municipio", municipality); else url.searchParams.delete("municipio");
   window.history.replaceState({}, "", url);
 }
 
 function runSearch() {
   const query = queryInput.value.trim();
   const uf = ufSelect.value;
-  updateUrl(query, uf);
-  renderResults(query, uf);
+  const municipality = municipalitySelect && !municipalitySelect.disabled ? municipalitySelect.value : "";
+  updateUrl(query, uf, municipality);
+  renderResults(query, uf, municipality);
 }
 
 if (searchForm && queryInput && ufSelect) {
   const params = new URLSearchParams(window.location.search);
   queryInput.value = params.get("q") || "";
   ufSelect.value = params.get("uf") || "";
+  updateMunicipalityOptions(ufSelect.value, params.get("municipio") || "");
+
+  ufSelect.addEventListener("change", () => {
+    updateMunicipalityOptions(ufSelect.value);
+    if (queryInput.value.trim()) runSearch();
+  });
+
+  if (municipalitySelect) {
+    municipalitySelect.addEventListener("change", () => {
+      if (queryInput.value.trim()) runSearch();
+    });
+  }
 
   searchForm.addEventListener("submit", event => {
     event.preventDefault();
@@ -265,6 +317,6 @@ if (searchForm && queryInput && ufSelect) {
   });
 
   if (queryInput.value) {
-    renderResults(queryInput.value, ufSelect.value);
+    renderResults(queryInput.value, ufSelect.value, municipalitySelect && !municipalitySelect.disabled ? municipalitySelect.value : "");
   }
 }
