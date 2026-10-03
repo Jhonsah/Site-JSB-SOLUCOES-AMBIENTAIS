@@ -625,3 +625,74 @@ h3 {
 
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
 }
+
+/* Correção visual: reforça as caixas de conteúdo */
+.service-card,
+.project-card,
+.testimonial-card,
+.article-card,
+.sector-box,
+.technology-list div,
+.contact-card {
+  border: 1px solid #cfdad3;
+  box-shadow: 0 8px 24px rgba(16, 55, 39, .08);
+}
+
+.service-card,
+.project-card,
+.testimonial-card,
+.contact-card {
+  background: #ffffff;
+}
+
+.article-card {
+  background: #fdfefd;
+}
+
+.sector-box,
+.technology-list div {
+  background: #ffffff;
+}
+
+.service-card:hover,
+.project-card:hover,
+.testimonial-card:hover,
+.article-card:hover,
+.sector-box:hover,
+.technology-list div:hover {
+  border-color: rgba(28, 107, 57, .42);
+  box-shadow: 0 14px 34px rgba(16, 55, 39, .13);
+}
+
+.project-body {
+  background: #ffffff;
+  border-top: 1px solid #e4ebe6;
+}
+
+.differential-item {
+  background: rgba(255,255,255,.095);
+  border: 1px solid rgba(255,255,255,.15);
+  box-shadow: 0 8px 24px rgba(0,0,0,.10);
+}
+
+.differential-item:hover {
+  background: rgba(255,255,255,.13);
+  border-color: rgba(81,191,90,.34);
+}
+
+.tags span,
+.article-meta span {
+  border: 1px solid rgba(28, 107, 57, .08);
+}
+
+@media (max-width: 640px) {
+  .service-card,
+  .project-card,
+  .testimonial-card,
+  .article-card,
+  .sector-box,
+  .technology-list div,
+  .contact-card {
+    box-shadow: 0 6px 20px rgba(16, 55, 39, .08);
+  }
+}
