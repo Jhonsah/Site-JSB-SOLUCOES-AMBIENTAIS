@@ -2075,7 +2075,7 @@ h3 {
   margin-top: 34px;
   padding: 18px;
   display: grid;
-  grid-template-columns: minmax(0,1fr) 240px auto;
+  grid-template-columns: minmax(0,1fr) 210px 220px auto;
   gap: 10px;
   align-items: end;
   border: 1px solid rgba(255,255,255,.14);
@@ -2226,6 +2226,11 @@ h3 {
 .legal-result-scope.state {
   background: #e8f3e9;
   color: var(--green-700);
+}
+
+.legal-result-scope.municipal {
+  background: #f3eee3;
+  color: #735d2d;
 }
 
 .legal-result-card h3 {
