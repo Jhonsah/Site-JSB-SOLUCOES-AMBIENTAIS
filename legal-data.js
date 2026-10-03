@@ -222,6 +222,58 @@ window.JSB_LEGAL_DATABASE = [
   },
 
   {
+    id: "ba-11612-2009",
+    title: "Lei Estadual nº 11.612/2009 — Política Estadual de Recursos Hídricos",
+    scope: "Estadual",
+    uf: "BA",
+    authority: "Estado da Bahia",
+    themes: ["recursos_hidricos", "outorga", "agua", "licenciamento"],
+    keywords: ["bahia", "recursos hidricos", "agua", "outorga", "captacao", "lancamento", "barramento", "poco", "irrigacao"],
+    summary: "Institui a Política Estadual de Recursos Hídricos e o Sistema Estadual de Gerenciamento de Recursos Hídricos da Bahia, estruturando instrumentos de gestão como planejamento, outorga, cadastro, monitoramento e demais mecanismos previstos na política estadual.",
+    relevance: "É uma referência central para demandas que envolvam uso de águas superficiais ou subterrâneas, intervenções em corpos hídricos e regularização de usos da água na Bahia.",
+    url: "https://www.ba.gov.br/meioambiente/220/legislacao-ferhba",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-inema-22078-2021",
+    title: "Portaria INEMA nº 22.078/2021 — Reserva Legal",
+    scope: "Estadual",
+    uf: "BA",
+    authority: "INEMA",
+    themes: ["rural", "reserva legal", "flora", "regularizacao"],
+    keywords: ["bahia", "reserva legal", "rl", "imovel rural", "cefir", "realocacao", "compensacao"],
+    summary: "Estabelece procedimentos e critérios para aprovação da localização da Reserva Legal no Estado da Bahia. O texto consolidado disponibilizado pelo INEMA registra alteração pela Portaria INEMA nº 27.646/2022.",
+    relevance: "É relevante para imóveis rurais que precisem cadastrar, aprovar, realocar ou tratar situações relacionadas à Reserva Legal no âmbito estadual.",
+    url: "https://www.ba.gov.br/inema/sites/site-inema/files/migracao_2024/arquivos/wp-content/files/PORTARIA_RL_alterao_consolidada_formatada_para_site.pdf",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-cefir-car",
+    title: "INEMA — CAR Bahia / CEFIR",
+    scope: "Estadual",
+    uf: "BA",
+    authority: "INEMA",
+    themes: ["rural", "cefir", "car", "reserva legal", "regularizacao"],
+    keywords: ["bahia", "cefir", "car", "cadastro ambiental rural", "imovel rural", "reserva legal", "app", "regularizacao ambiental"],
+    summary: "Na Bahia, o Cadastro Ambiental Rural é implementado por meio do Cadastro Estadual Florestal de Imóveis Rurais — CEFIR. O INEMA informa que o cadastro integra informações ambientais do imóvel rural e se relaciona a autorizações e procedimentos ambientais estaduais.",
+    relevance: "É uma referência prática para proprietários e possuidores rurais que precisam entender cadastro ambiental, APP, Reserva Legal e regularização do imóvel na Bahia.",
+    url: "https://www.ba.gov.br/inema/iniciativas/car-bahia-cefir",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-inema-in-002-2021",
+    title: "IN INEMA nº 002/2021 — Desativação e Reabilitação de Áreas",
+    scope: "Estadual",
+    uf: "BA",
+    authority: "INEMA",
+    themes: ["recuperacao", "licenciamento", "area degradada", "desativacao"],
+    keywords: ["bahia", "desativacao empreendimento", "encerramento atividade", "reabilitacao area", "remediacao", "area contaminada", "prad"],
+    summary: "Estabelece procedimentos para desativação total ou parcial de empreendimentos potencialmente poluidores, encerramento de atividades e reabilitação de áreas no contexto do licenciamento ambiental.",
+    relevance: "Pode ser relevante em encerramento de operações, descomissionamento, áreas contaminadas e demandas de recuperação ou reabilitação ambiental.",
+    url: "https://www.ba.gov.br/inema/sites/site-inema/files/migracao_2024/arquivos/wp-content/files/INEMA_-_Instrucao_Normativa_002_-_Desativaco_Total_ou_Parcial_de_Empreendimentos_potencialmente_poluidores_-_Desativao_de_Plantas.pdf",
+    verified: "out/2026"
+  },
+  {
     id: "ba-10431-2006",
     title: "Lei Estadual nº 10.431/2006 — Bahia",
     scope: "Estadual",
