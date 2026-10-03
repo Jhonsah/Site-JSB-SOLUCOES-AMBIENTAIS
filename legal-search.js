@@ -97,7 +97,7 @@ function renderResults(query, uf) {
   }
 
   const scored = legalDatabase
-    .filter(law => !uf || law.uf === "BR" || law.uf === uf)
+    .filter(law => uf ? (law.uf === "BR" || law.uf === uf) : law.uf === "BR")
     .map(law => ({ law, score: scoreLaw(law, query, topics) }))
     .filter(item => item.score > 0)
     .sort((a, b) => b.score - a.score || (a.law.scope === "Estadual" ? -1 : 1));
@@ -106,7 +106,7 @@ function renderResults(query, uf) {
     ? scored.length + (scored.length === 1 ? " referência encontrada" : " referências encontradas")
     : "Nenhuma referência cadastrada foi localizada";
 
-  const stateText = uf ? " • Estado selecionado: " + legalStateNames[uf] : "";
+  const stateText = uf ? " • Estado selecionado: " + legalStateNames[uf] : " • Abrangência: federal";
   const topicText = topics.length ? " • Temas identificados: " + topics.join(", ") : "";
   contextEl.hidden = false;
   contextEl.innerHTML = "<strong>Busca:</strong> " + query.replace(/[<>]/g, "") + stateText + topicText;
