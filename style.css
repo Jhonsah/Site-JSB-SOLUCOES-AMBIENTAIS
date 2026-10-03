@@ -3632,3 +3632,18 @@ h3 {
 .not-found-actions { margin-top: 26px; }
 .not-found-links { margin-top: 22px; }
 .not-found-links a { color: #d7f0bd; font-size: .8rem; font-weight: 700; }
+
+
+/* Links de aprofundamento nos serviços */
+.service-card-action {
+  display: inline-flex;
+  margin-top: 18px;
+  color: var(--green-500);
+  font-size: .78rem;
+  font-weight: 700;
+  transition: transform .18s ease, color .18s ease;
+}
+.service-card-action:hover {
+  transform: translateX(3px);
+  color: var(--green-700);
+}
