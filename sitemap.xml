@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://SEU-USUARIO.github.io/Site/</loc>
-  </url>
+  <url><loc>https://jhonsah.github.io/Site-JSB-SOLUCOES-AMBIENTAIS/</loc><lastmod>2026-10-03</lastmod><priority>1.0</priority></url>
+  <url><loc>https://jhonsah.github.io/Site-JSB-SOLUCOES-AMBIENTAIS/projetos.html</loc><lastmod>2026-10-03</lastmod><priority>0.9</priority></url>
+  <url><loc>https://jhonsah.github.io/Site-JSB-SOLUCOES-AMBIENTAIS/base-legal-ambiental.html</loc><lastmod>2026-10-03</lastmod><priority>0.9</priority></url>
+  <url><loc>https://jhonsah.github.io/Site-JSB-SOLUCOES-AMBIENTAIS/duvidas-frequentes.html</loc><lastmod>2026-10-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jhonsah.github.io/Site-JSB-SOLUCOES-AMBIENTAIS/projeto-manejo-fauna.html</loc><lastmod>2026-10-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jhonsah.github.io/Site-JSB-SOLUCOES-AMBIENTAIS/afugentamento-fauna.html</loc><lastmod>2026-10-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jhonsah.github.io/Site-JSB-SOLUCOES-AMBIENTAIS/projeto-monitoramento-fauna.html</loc><lastmod>2026-10-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jhonsah.github.io/Site-JSB-SOLUCOES-AMBIENTAIS/levantamento-faunistico.html</loc><lastmod>2026-10-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jhonsah.github.io/Site-JSB-SOLUCOES-AMBIENTAIS/plano-salvamento-fauna-silvestre.html</loc><lastmod>2026-10-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jhonsah.github.io/Site-JSB-SOLUCOES-AMBIENTAIS/projeto-inventario-florestal.html</loc><lastmod>2026-10-03</lastmod><priority>0.8</priority></url>
+  <url><loc>https://jhonsah.github.io/Site-JSB-SOLUCOES-AMBIENTAIS/projeto-mapeamento-drones.html</loc><lastmod>2026-10-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://jhonsah.github.io/Site-JSB-SOLUCOES-AMBIENTAIS/projeto-elaboracao-mapas.html</loc><lastmod>2026-10-03</lastmod><priority>0.8</priority></url>
 </urlset>
