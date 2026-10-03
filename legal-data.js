@@ -856,7 +856,7 @@ window.JSB_LEGAL_DATABASE = [
     keywords: ["paraiba", "paraíba", "recursos hidricos", "outorga", "agua", "bacia hidrografica", "aesa"],
     summary: "Institui a Política Estadual de Recursos Hídricos e suas diretrizes, estruturando a gestão das águas no Estado da Paraíba.",
     relevance: "É referência estadual para uso, planejamento e regularização de recursos hídricos na Paraíba.",
-    url: "https://sudema.pb.gov.br/informacoes-ao-cidadao-1/unidades-de-conservacao/arquivos/mata-do-xem-xem/pm_mata_xemxem_revisadofinal.pdf",
+    url: "https://www.aesa.pb.gov.br/assets/uploads/2024/09/lei_E_11.pdf",
     verified: "out/2026"
   },
   {
@@ -986,7 +986,7 @@ window.JSB_LEGAL_DATABASE = [
     keywords: ["rio grande do norte", "rn", "igarn", "recursos hidricos", "outorga", "agua", "bacia hidrografica"],
     summary: "Institui a Política Estadual de Recursos Hídricos e o Sistema Integrado de Gestão dos Recursos Hídricos do Rio Grande do Norte.",
     relevance: "É referência estadual para planejamento, proteção e regularização dos usos de água no Rio Grande do Norte.",
-    url: "https://webdisk.diariooficial.rn.gov.br/Jornal/12026-04-17.pdf",
+    url: "https://www.gov.br/ana/pt-br/assuntos/gestao-das-aguas/politica-nacional-de-recursos-hidricos/cobranca/normativos-cobranca",
     verified: "out/2026"
   },
   {
@@ -1775,6 +1775,73 @@ window.JSB_LEGAL_DATABASE = [
     summary: "Estabelece padrões nacionais de qualidade do ar e diretrizes para sua aplicação. Revogou dispositivos específicos da Resolução CONAMA nº 491/2018 e da Resolução CONAMA nº 5/1989.",
     relevance: "É a principal referência nacional cadastrada para padrões de qualidade do ar, devendo ser considerada juntamente com a Lei nº 14.850/2024 e normas locais aplicáveis.",
     url: "https://conama.mma.gov.br/?id=827&option=com_sisconama&task=arquivo.download",
+    verified: "out/2026"
+  }
+,
+
+  {
+    id: "ba-12050-2011",
+    title: "Lei Estadual nº 12.050/2011 — Política sobre Mudança do Clima da Bahia",
+    scope: "Estadual",
+    uf: "BA",
+    authority: "Estado da Bahia / SEMA",
+    themes: ["clima", "gestao ambiental", "recuperacao"],
+    keywords: ["bahia", "mudanca do clima", "mudança do clima", "clima", "adaptacao climatica", "mitigacao", "gases efeito estufa", "gee"],
+    summary: "Institui a Política sobre Mudança do Clima do Estado da Bahia e estabelece princípios e instrumentos para mitigação, adaptação e integração das ações climáticas ao desenvolvimento sustentável.",
+    relevance: "É a referência estadual para políticas e planejamento relacionados à mudança do clima na Bahia. A SEMA registrou processo de revisão da política e o Plano Estadual do Meio Ambiente de 2024 ainda identifica a Lei nº 12.050/2011 como marco vigente.",
+    url: "https://www.ba.gov.br/meioambiente/noticia/2024-02/16205/governo-baiano-atualiza-politica-sobre-mudanca-do-clima-do-estado",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-13223-2015",
+    title: "Lei Estadual nº 13.223/2015 — Pagamento por Serviços Ambientais da Bahia",
+    scope: "Estadual",
+    uf: "BA",
+    authority: "Estado da Bahia / SEMA",
+    themes: ["servicos_ambientais", "conservacao", "recuperacao", "rural"],
+    keywords: ["bahia", "pagamento por servicos ambientais", "pagamento por serviços ambientais", "psa", "pepsa", "servicos ecossistemicos", "agricultura familiar"],
+    summary: "Institui a Política Estadual de Pagamento por Serviços Ambientais e o Programa Estadual de Pagamento por Serviços Ambientais da Bahia.",
+    relevance: "É referência para iniciativas de incentivo à conservação, restauração e uso sustentável de ecossistemas no estado. A SEMA informa que a regulamentação da lei vem sendo estruturada e o programa está em implementação.",
+    url: "https://www.ba.gov.br/meioambiente/588/programa-estadual-de-pagamento-por-servicos-ambientais-pepsa",
+    verified: "out/2026"
+  },
+  {
+    id: "pe-12789-2005",
+    title: "Lei Estadual nº 12.789/2005 e Decreto nº 28.558/2005 — Ruídos Urbanos em Pernambuco",
+    scope: "Estadual",
+    uf: "PE",
+    authority: "Estado de Pernambuco / CPRH",
+    themes: ["ruido", "qualidade ambiental", "monitoramento"],
+    keywords: ["pernambuco", "ruido", "ruído", "poluicao sonora", "poluição sonora", "sossego", "monitoramento ruido", "lei 12789"],
+    summary: "A Lei nº 12.789/2005 dispõe sobre ruídos urbanos, poluição sonora e proteção do bem-estar e do sossego público em Pernambuco. O Decreto nº 28.558/2005 regulamenta a lei.",
+    relevance: "É referência estadual para avaliações e controle de ruído em Pernambuco, sem afastar normas municipais e critérios técnicos aplicáveis ao local e à atividade.",
+    url: "https://www2.cprh.pe.gov.br/2005/04/28/lei-no-12-789-de-28-de-abril-de-2005/",
+    verified: "out/2026"
+  },
+  {
+    id: "pi-in-07-2021",
+    title: "IN SEMAR nº 07/2021 — Procedimentos do Licenciamento Ambiental no Piauí",
+    scope: "Estadual",
+    uf: "PI",
+    authority: "SEMARH Piauí",
+    themes: ["licenciamento", "estudos ambientais", "regularizacao"],
+    keywords: ["piaui", "piauí", "in 07 2021", "licenciamento ambiental", "documentos licenciamento", "eia", "autorizacao ambiental", "dispensa licenciamento"],
+    summary: "Estabelece procedimentos, informações e documentos necessários à instrução de processos de licenciamento ambiental e outros atos emitidos pela SEMARH no Piauí.",
+    relevance: "É referência operacional relevante para a documentação e o fluxo de processos estaduais de licenciamento. Alterações posteriores da instrução devem ser consideradas conforme o procedimento solicitado.",
+    url: "https://siga.semarh.pi.gov.br/arquivo/7a332492-4b2e-4a2f-8442-7a77a1a13190/",
+    verified: "out/2026"
+  },
+  {
+    id: "pi-in-23-2024",
+    title: "IN SEMARH nº 23/2024 — Autorizações Florestais no Piauí",
+    scope: "Estadual",
+    uf: "PI",
+    authority: "SEMARH Piauí",
+    themes: ["flora", "supressao", "florestal", "licenciamento"],
+    keywords: ["piaui", "piauí", "in 23 2024", "autorizacao florestal", "asv", "supressao vegetacao", "arvore isolada", "reposicao florestal", "sinaflor"],
+    summary: "Dispõe sobre autorizações florestais no âmbito da SEMARH do Piauí, incluindo procedimentos relacionados a supressão de vegetação, árvores isoladas, limpeza de área, reposição florestal e integração com o Sinaflor.",
+    relevance: "É referência estadual atual para instrução de pedidos de autorizações florestais no Piauí e aparece sendo aplicada em processos e licenças ambientais emitidos após 2024.",
+    url: "https://siga.semarh.pi.gov.br/media/uploads/2024/05/29/c90177a1-6947-47d9-bb78-38a733233025.pdf",
     verified: "out/2026"
   }
 
