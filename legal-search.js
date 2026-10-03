@@ -7,17 +7,16 @@ const legalStateNames = {
   RS:"Rio Grande do Sul", RO:"Rondônia", RR:"Roraima", SC:"Santa Catarina", SP:"São Paulo", SE:"Sergipe", TO:"Tocantins"
 };
 
-const legalMunicipalities = {
-  AL: ["Maceió"],
-  BA: ["Salvador", "Barreiras", "Camaçari", "Feira de Santana", "Ilhéus", "Itabuna", "Lauro de Freitas", "Simões Filho", "Vitória da Conquista"],
-  CE: ["Fortaleza"],
-  MA: ["São Luís"],
-  PB: ["João Pessoa"],
-  PE: ["Recife"],
-  PI: ["Teresina"],
-  RN: ["Natal"],
-  SE: ["Aracaju"]
-};
+const legalMunicipalities = legalDatabase.reduce((acc, law) => {
+  if (law.scope !== "Municipal" || !law.uf || !law.municipality) return acc;
+  if (!acc[law.uf]) acc[law.uf] = [];
+  if (!acc[law.uf].includes(law.municipality)) acc[law.uf].push(law.municipality);
+  return acc;
+}, {});
+
+Object.values(legalMunicipalities).forEach(cities =>
+  cities.sort((a, b) => a.localeCompare(b, "pt-BR"))
+);
 
 const normalizeLegalText = (value = "") =>
   value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
