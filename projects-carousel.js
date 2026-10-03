@@ -1,7 +1,7 @@
 const projectCarousel = document.querySelector("[data-project-carousel]");
 const projectTrack = document.querySelector("[data-project-carousel-track]");
-const projectPrev = document.querySelector("[data-project-carousel-prev]");
-const projectNext = document.querySelector("[data-project-carousel-next]");
+const projectPrevButtons = Array.from(document.querySelectorAll("[data-project-carousel-prev]"));
+const projectNextButtons = Array.from(document.querySelectorAll("[data-project-carousel-next]"));
 const projectDots = document.querySelector("[data-project-carousel-dots]");
 
 if (projectCarousel && projectTrack) {
@@ -77,14 +77,18 @@ if (projectCarousel && projectTrack) {
     autoTimer = window.setInterval(() => goToPage(activePage + 1), 7000);
   };
 
-  projectPrev?.addEventListener("click", () => {
-    goToPage(activePage - 1);
-    startAuto();
+  projectPrevButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      goToPage(activePage - 1);
+      startAuto();
+    });
   });
 
-  projectNext?.addEventListener("click", () => {
-    goToPage(activePage + 1);
-    startAuto();
+  projectNextButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      goToPage(activePage + 1);
+      startAuto();
+    });
   });
 
   projectCarousel.addEventListener("mouseenter", stopAuto);
