@@ -2156,5 +2156,90 @@ window.JSB_LEGAL_DATABASE = [
     url: "https://doem.org.br/ba/itapetinga/arquivos/download/dc41cc2770e9ba9a19b4c489e9cf89ff/3448b4495084802fa7456c836320a82d.pdf",
     verified: "out/2026"
   }
+,
+  {
+    id: "ba-formosa-262-2020",
+    title: "Lei Municipal nº 262/2020 — Política Municipal de Meio Ambiente de Formosa do Rio Preto",
+    scope: "Municipal",
+    uf: "BA",
+    municipality: "Formosa do Rio Preto",
+    authority: "Município de Formosa do Rio Preto",
+    themes: ["licenciamento", "gestao ambiental", "biodiversidade", "recuperacao"],
+    keywords: ["formosa do rio preto", "lei 262 2020", "politica municipal meio ambiente", "política municipal meio ambiente", "sismuma", "gestao ambiental"],
+    summary: "Institui a Política Municipal de Meio Ambiente, seus princípios, objetivos e diretrizes, cria o Sistema Municipal de Meio Ambiente — SISMUMA e estabelece instrumentos para a gestão ambiental municipal.",
+    relevance: "Complementa a base ambiental municipal de Formosa do Rio Preto e deve ser consultada juntamente com o Código Municipal do Meio Ambiente e as normas estaduais e federais aplicáveis.",
+    url: "https://www.ba.gov.br/sihs/sites/site-sihs/files/2025-07/MSB%2003%20BACIA%20DO%20RIO%20GRANDE_Rev_Nizete_10.04.2025%20D.pdf",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-lem-251-2007",
+    title: "Lei Municipal nº 251/2007 — Código do Meio Ambiente de Luís Eduardo Magalhães",
+    scope: "Municipal",
+    uf: "BA",
+    municipality: "Luís Eduardo Magalhães",
+    authority: "Município de Luís Eduardo Magalhães",
+    themes: ["licenciamento", "gestao ambiental", "fauna", "flora", "supressao", "biodiversidade"],
+    keywords: ["luis eduardo magalhaes", "luís eduardo magalhães", "lem", "lei 251 2007", "codigo meio ambiente", "código meio ambiente", "licenciamento ambiental"],
+    summary: "Institui o Código do Meio Ambiente de Luís Eduardo Magalhães, conforme levantamento oficial de legislação municipal consolidado pelo Governo do Estado da Bahia.",
+    relevance: "É uma referência estrutural para consultas ambientais locais no município e deve ser lida em conjunto com as normas estaduais e federais e eventuais atos municipais posteriores.",
+    url: "https://www.ba.gov.br/sihs/sites/site-sihs/files/2025-07/MSB%2003%20BACIA%20DO%20RIO%20GRANDE_Rev_Nizete_10.04.2025%20D.pdf",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-guanambi-1107-2017",
+    title: "Lei Municipal nº 1.107/2017 — Política Municipal de Meio Ambiente de Guanambi",
+    scope: "Municipal",
+    uf: "BA",
+    municipality: "Guanambi",
+    authority: "Município de Guanambi",
+    themes: ["licenciamento", "gestao ambiental", "biodiversidade", "recuperacao"],
+    keywords: ["guanambi", "lei 1107 2017", "politica municipal meio ambiente", "política municipal meio ambiente", "sismuma", "gestao ambiental"],
+    summary: "Institui a Política Municipal de Meio Ambiente de Guanambi, seus princípios, objetivos e diretrizes, cria o SISMUMA e estabelece instrumentos para a gestão ambiental municipal.",
+    relevance: "É uma referência estrutural da gestão ambiental municipal de Guanambi e pode orientar a identificação dos instrumentos locais aplicáveis a atividades e empreendimentos.",
+    url: "https://www.ba.gov.br/sihs/sites/site-sihs/files/2024-08/RELAT%C3%93RIO%20DE%20DIAGN%C3%93STICO%20MSB%20ALGOD%C3%83O.pdf",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-juazeiro-1703-2003",
+    title: "Lei Municipal nº 1.703/2003 — Código do Meio Ambiente de Juazeiro",
+    scope: "Municipal",
+    uf: "BA",
+    municipality: "Juazeiro",
+    authority: "Município de Juazeiro / Câmara Municipal",
+    themes: ["licenciamento", "gestao ambiental", "fauna", "flora", "supressao", "biodiversidade"],
+    keywords: ["juazeiro bahia", "lei 1703 2003", "codigo meio ambiente", "código meio ambiente", "sistema municipal gestao ambiente", "supressao vegetal"],
+    summary: "Institui o Código do Meio Ambiente de Juazeiro e dispõe sobre o Sistema Municipal de Gestão do Ambiente.",
+    relevance: "É uma referência central para a gestão ambiental municipal. Atos oficiais recentes do município continuam citando a Lei nº 1.703/2003 em processos de autorização de supressão vegetal.",
+    url: "https://sapl.juazeiro.ba.leg.br/sistema/relatorios/relatorio-por-mes?ano=2003",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-juazeiro-366-2005",
+    title: "Decreto Municipal nº 366/2005 — Regulamentação do Código Ambiental de Juazeiro",
+    scope: "Municipal",
+    uf: "BA",
+    municipality: "Juazeiro",
+    authority: "Prefeitura Municipal de Juazeiro",
+    themes: ["licenciamento", "gestao ambiental", "supressao"],
+    keywords: ["juazeiro bahia", "decreto 366 2005", "regulamentacao codigo ambiental", "regulamentação código ambiental", "lei 1703 2003", "supressao vegetal"],
+    summary: "Regulamenta o Código Municipal de Meio Ambiente de Juazeiro. A vigência operacional do decreto é confirmada por atos municipais recentes que o citam em conjunto com a Lei nº 1.703/2003.",
+    relevance: "Complementa o Código Ambiental municipal e é especialmente relevante para compreender procedimentos locais vinculados a autorizações e controle ambiental.",
+    url: "https://diario.indap.org.br/publicacoes/6894e9136ae99/anexo/62126",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-pauloafonso-906-2000",
+    title: "Lei Municipal nº 906/2000 — Código do Meio Ambiente de Paulo Afonso",
+    scope: "Municipal",
+    uf: "BA",
+    municipality: "Paulo Afonso",
+    authority: "Câmara Municipal de Paulo Afonso",
+    themes: ["licenciamento", "gestao ambiental", "ruido", "fauna", "flora", "biodiversidade"],
+    keywords: ["paulo afonso", "lei 906 2000", "codigo meio ambiente", "código meio ambiente", "sistema municipal gestao ambiental", "poluicao sonora", "poluição sonora"],
+    summary: "Institui o Código do Meio Ambiente de Paulo Afonso e dispõe sobre o Sistema Municipal de Gestão Ambiental. A base oficial da Câmara registra a Lei nº 906/2000 como sancionada, sem marcação de revogação.",
+    relevance: "É uma referência municipal estrutural e continua sendo citada em atos e recomendações relacionadas a controle ambiental, inclusive poluição sonora e proteção de bens ambientais e culturais.",
+    url: "https://www.cmpa.ba.gov.br/internas/arquivo/?ano=2000&tipo=3",
+    verified: "out/2026"
+  }
 
 ];
