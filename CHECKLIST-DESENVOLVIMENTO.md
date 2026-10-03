@@ -59,3 +59,15 @@ Estes itens não devem ser tratados como tarefas a refazer:
 - 03/10/2026: catálogo de Projetos reformulado com 8 frentes, escopos e produtos técnicos; layout com 2 colunas em desktop e 1 em telas até 640px.
 - 03/10/2026: Home integrada ao catálogo; nomes alinhados e Análise e Coleta de Água incluída no carrossel.
 - Validação realizada: estrutura HTML, títulos, IDs únicos, nomes, links, âncoras locais e sintaxe dos scripts. A revisão visual e interativa permanece pendente.
+
+## Serviços em carrossel — solicitação de 03/10/2026
+
+- [x] Transformar os 8 cards de Serviços da Home em carrossel, preservando textos, ordem e links.
+- [x] Implementar setas, navegação por teclado e rolagem horizontal nativa para toque.
+- [x] Definir 4 cards em desktop, 2 até 1100px e 1 até 640px.
+- [x] Verificar a lógica com simulações de desktop, tablet e celular, incluindo limites, rolagem, redimensionamento e movimento reduzido.
+- [x] Conferir estrutura HTML, IDs, links, âncoras e dependências.
+- [ ] Concluir revisão visual em navegador.
+- [ ] Ajustar o layout conforme as preferências do usuário após inserir as fotografias.
+
+Os testes de lógica foram simulados; não substituem a revisão visual e os testes de toque em dispositivo real.
