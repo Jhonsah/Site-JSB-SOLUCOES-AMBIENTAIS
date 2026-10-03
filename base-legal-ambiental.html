@@ -43,7 +43,7 @@
         <div class="legal-search-hero-copy reveal">
           <div class="eyebrow-pill">Consulta Ambiental • Fontes Oficiais</div>
           <h1>Base Legal Ambiental</h1>
-          <p>Pesquise uma atividade, uma dúvida ou descreva o que pretende fazer. Sem estado selecionado, a ferramenta mostra referências federais. Ao escolher uma UF, acrescenta as normas estaduais cadastradas para aquele local.</p>
+          <p>Pesquise uma atividade, uma dúvida ou descreva o que pretende fazer. Sem estado selecionado, a ferramenta mostra referências federais. Ao escolher uma UF, acrescenta normas estaduais; quando houver município cadastrado, você também pode incluir referências municipais.</p>
         </div>
 
         <form class="legal-search-form reveal" data-legal-search-form>
@@ -69,8 +69,14 @@
               <option value="" disabled>Demais estados — cobertura em expansão</option>
             </select>
           </div>
+          <div class="legal-search-field legal-search-municipality" data-legal-municipality-wrap hidden>
+            <label for="legal-municipality">Município</label>
+            <select id="legal-municipality" name="municipio" data-legal-municipality disabled>
+              <option value="">Estado inteiro — não incluir normas municipais</option>
+            </select>
+          </div>
           <button class="btn btn-primary legal-search-submit" type="submit">Pesquisar referências</button>
-          <p class="legal-search-scope-note">A cobertura estadual inicial contempla os 9 estados do Nordeste. A Bahia permanece em aprofundamento. Referências municipais serão incorporadas progressivamente em uma etapa própria.</p>
+          <p class="legal-search-scope-note">A cobertura estadual inicial contempla os 9 estados do Nordeste. A camada municipal começou pelas 9 capitais nordestinas e será ampliada progressivamente para outros municípios.</p>
         </form>
 
         <div class="legal-quick-search reveal" aria-label="Pesquisas sugeridas">
@@ -105,7 +111,7 @@
             <div class="section-kicker">Referências relacionadas</div>
             <h2 data-legal-results-title>Faça uma busca para consultar a base</h2>
           </div>
-          <div class="legal-verified-badge">Federal + Nordeste • cobertura estadual inicial • out/2026</div>
+          <div class="legal-verified-badge">Federal + Nordeste + capitais • base em expansão • out/2026</div>
         </div>
 
         <div class="legal-query-context" data-legal-query-context hidden></div>
