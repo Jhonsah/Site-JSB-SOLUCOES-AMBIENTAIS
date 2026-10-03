@@ -2241,5 +2241,76 @@ window.JSB_LEGAL_DATABASE = [
     url: "https://www.cmpa.ba.gov.br/internas/arquivo/?ano=2000&tipo=3",
     verified: "out/2026"
   }
+,
+  {
+    id: "ba-seabra-lc814-2024",
+    title: "Lei Complementar Municipal nº 814/2024 — Código Municipal do Meio Ambiente de Seabra",
+    scope: "Municipal",
+    uf: "BA",
+    municipality: "Seabra",
+    authority: "Prefeitura Municipal de Seabra",
+    themes: ["licenciamento", "gestao ambiental", "fauna", "flora", "supressao", "recuperacao", "biodiversidade"],
+    keywords: ["seabra", "lei complementar 814 2024", "codigo municipal meio ambiente", "código municipal meio ambiente", "sismuma", "conselho meio ambiente", "fundo meio ambiente"],
+    summary: "Institui o Código Municipal do Meio Ambiente de Seabra, estabelece diretrizes sobre o Conselho e o Fundo Municipal de Meio Ambiente e dispõe sobre a Política e o Sistema Municipal de Meio Ambiente — SISMUMA.",
+    relevance: "É a referência municipal atual cadastrada para a estrutura de gestão, controle e proteção ambiental de Seabra.",
+    url: "https://sai.io.org.br/Handler.ashx?c=735&f=diario&m=0&query=5219",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-brumado-lc006-2014",
+    title: "Lei Complementar Municipal nº 06/2014 — Código Municipal do Meio Ambiente de Brumado",
+    scope: "Municipal",
+    uf: "BA",
+    municipality: "Brumado",
+    authority: "Prefeitura Municipal de Brumado",
+    themes: ["licenciamento", "gestao ambiental", "fauna", "flora", "supressao", "recuperacao", "biodiversidade"],
+    keywords: ["brumado", "lei complementar 06 2014", "codigo municipal meio ambiente", "código municipal meio ambiente", "politica ambiental", "licenciamento"],
+    summary: "Institui o novo Código Municipal do Meio Ambiente de Brumado e disciplina a Política Ambiental municipal, abrangendo prevenção, fiscalização, controle, recuperação e manutenção da qualidade ambiental.",
+    relevance: "É uma referência municipal central para consultas sobre gestão e controle ambiental em Brumado.",
+    url: "https://sai.io.org.br/ba/brumado/site/LeiMunicipal/43023",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-ibicoara-110-2003",
+    title: "Lei Municipal nº 110/2003 — Código Municipal do Meio Ambiente de Ibicoara",
+    scope: "Municipal",
+    uf: "BA",
+    municipality: "Ibicoara",
+    authority: "Prefeitura Municipal de Ibicoara",
+    themes: ["licenciamento", "gestao ambiental", "unidades_conservacao", "fauna", "flora", "biodiversidade"],
+    keywords: ["ibicoara", "lei 110 2003", "codigo municipal meio ambiente", "código municipal meio ambiente", "parque natural municipal", "meio ambiente"],
+    summary: "Institui o Código Municipal do Meio Ambiente de Ibicoara. Atos municipais posteriores continuam citando a Lei nº 110/2003 como fundamento ambiental local.",
+    relevance: "É referência estrutural da legislação ambiental municipal e se relaciona também à gestão de áreas protegidas locais.",
+    url: "https://sai.io.org.br/Handler.ashx?c=297&f=download_inativos&query=2741",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-pindobacu-096-2013",
+    title: "Lei Municipal nº 096/2013 — Código Municipal em Defesa do Meio Ambiente de Pindobaçu",
+    scope: "Municipal",
+    uf: "BA",
+    municipality: "Pindobaçu",
+    authority: "Prefeitura Municipal de Pindobaçu",
+    themes: ["licenciamento", "gestao ambiental", "fauna", "flora", "supressao"],
+    keywords: ["pindobacu", "pindobaçu", "lei 096 2013", "codigo municipal meio ambiente", "código municipal meio ambiente", "condema", "fundo municipal meio ambiente", "licenciamento"],
+    summary: "Institui o Código Municipal em Defesa do Meio Ambiente, o Conselho Municipal em Defesa do Meio Ambiente — CONDEMA, o Fundo Municipal do Meio Ambiente e o Sistema Municipal de Meio Ambiente de Pindobaçu.",
+    relevance: "É referência municipal utilizada em atos oficiais recentes de dispensa e licenciamento ambiental no município.",
+    url: "https://sai.io.org.br/Handler.ashx?c=601&f=download_inativos&query=1334",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-urucuca-544-2014",
+    title: "Lei Municipal nº 544/2014 — Código Municipal do Meio Ambiente de Uruçuca",
+    scope: "Municipal",
+    uf: "BA",
+    municipality: "Uruçuca",
+    authority: "Prefeitura Municipal de Uruçuca",
+    themes: ["licenciamento", "gestao ambiental", "fauna", "flora", "supressao", "unidades_conservacao"],
+    keywords: ["urucuca", "uruçuca", "lei 544 2014", "codigo municipal meio ambiente", "código municipal meio ambiente", "fiscalizacao ambiental", "fiscalização ambiental"],
+    summary: "Institui o Código Municipal do Meio Ambiente de Uruçuca. Atos oficiais municipais publicados posteriormente continuam citando a Lei nº 544/2014 como referência para fiscalização e infrações ambientais.",
+    relevance: "É referência municipal para gestão, fiscalização e proteção ambiental no território de Uruçuca.",
+    url: "https://sai.io.org.br/Handler.ashx?c=806&f=diario&m=0&query=3204",
+    verified: "out/2026"
+  }
 
 ];
