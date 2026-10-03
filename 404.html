@@ -3,15 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#123f4d" />
   <title>Página não encontrada | JSB Soluções Ambientais</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body style="background:#10271f;color:white;min-height:100vh;display:grid;place-items:center;">
-  <main style="width:min(90%,720px);text-align:center;">
-    <p style="text-transform:uppercase;letter-spacing:.14em;color:#cbd8b9;font-weight:700;">Erro 404</p>
-    <h1 style="font-family:Montserrat,Arial,sans-serif;font-size:clamp(3rem,10vw,6rem);line-height:1;margin:.2em 0;">Página não encontrada.</h1>
-    <p style="color:rgba(255,255,255,.7);">O endereço acessado não existe ou foi alterado.</p>
-    <a class="btn btn-primary" href="./" style="margin-top:18px;">Voltar para o início</a>
+<body>
+  <main class="not-found-page">
+    <div class="not-found-inner">
+      <span class="not-found-code">404</span>
+      <div class="section-kicker light">Página não encontrada</div>
+      <h1>O endereço pode ter sido alterado.</h1>
+      <p>Você pode voltar ao início ou continuar navegando pelas áreas técnicas da JSB.</p>
+      <div class="not-found-actions">
+        <a class="btn btn-primary" href="./">Voltar ao início</a>
+        <a class="btn btn-ghost" href="projetos.html">Ver projetos</a>
+        <a class="btn btn-ghost" href="base-legal-ambiental.html">Consultar Base Legal</a>
+      </div>
+      <div class="not-found-links">
+        <a href="duvidas-frequentes.html">Dúvidas Frequentes →</a>
+        <a href="index.html#contato">Falar com a JSB →</a>
+      </div>
+    </div>
   </main>
 </body>
 </html>
