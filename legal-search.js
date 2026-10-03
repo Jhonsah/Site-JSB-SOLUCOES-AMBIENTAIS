@@ -31,6 +31,7 @@ const relatedServicesByTopic = {
     ["plano-salvamento-fauna-silvestre.html", "Plano para Salvamento de Fauna"]
   ],
   supressao: [
+    ["flora-supressao-vegetal.html", "Flora e Supressão Vegetal"],
     ["projeto-inventario-florestal.html", "Inventário Florestal"],
     ["projeto-elaboracao-mapas.html", "Elaboração de Mapas"],
     ["index.html#contato", "Avaliação técnica da demanda"]
@@ -42,7 +43,8 @@ const relatedServicesByTopic = {
   ],
   levantamento: [
     ["levantamento-faunistico.html", "Levantamento Faunístico"],
-    ["projeto-monitoramento-fauna.html", "Monitoramento de Fauna"]
+    ["projeto-monitoramento-fauna.html", "Monitoramento de Fauna"],
+    ["biomonitoramento-ambiental.html", "Biomonitoramento Ambiental"]
   ],
   recursos_hidricos: [
     ["index.html#servicos", "Soluções Ambientais"],
