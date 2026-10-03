@@ -39,7 +39,17 @@ const topicRules = [
   { topic: "unidades_conservacao", terms: ["unidade de conservacao","unidade de conservação","uc","parque","apa","rppn","snuc","zona de amortecimento"] },
   { topic: "pesquisa_uc", terms: ["pesquisa cientifica","pesquisa científica","coleta biologica","coleta biológica","atividade didatica","atividade didática","pesquisa em uc"] },
   { topic: "emergencia", terms: ["emergencia ambiental","emergência ambiental","acidente ambiental","vazamento","derramamento","grave risco","iminente perigo"] },
-  { topic: "florestal", terms: ["politica florestal","política florestal","manejo florestal","produto florestal","reposicao florestal","reposição florestal","codigo florestal estadual"] }
+  { topic: "florestal", terms: ["politica florestal","política florestal","manejo florestal","produto florestal","reposicao florestal","reposição florestal","codigo florestal estadual"] },
+  { topic: "clima", terms: ["mudanca do clima","mudança do clima","clima","gases de efeito estufa","gee","carbono","mitigacao climatica","adaptação climática"] },
+  { topic: "saneamento", terms: ["saneamento","esgotamento sanitario","esgotamento sanitário","esgoto","abastecimento de agua","drenagem urbana"] },
+  { topic: "zona_costeira", terms: ["zona costeira","orla","praia","manguezal","restinga","duna","estuário","gerenciamento costeiro"] },
+  { topic: "patrimonio_genetico", terms: ["patrimonio genetico","patrimônio genético","sisgen","conhecimento tradicional associado","reparticao de beneficios","repartição de benefícios"] },
+  { topic: "servicos_ambientais", terms: ["pagamento por servicos ambientais","pagamento por serviços ambientais","psa","servicos ecossistemicos","serviços ecossistêmicos"] },
+  { topic: "qualidade_agua", terms: ["qualidade da agua","qualidade da água","classe de agua","classe de água","corpo hidrico","corpo hídrico","enquadramento de agua"] },
+  { topic: "efluentes", terms: ["efluente","efluentes","lancamento de efluente","lançamento de efluente","corpo receptor","tratamento de esgoto"] },
+  { topic: "qualidade_ar", terms: ["qualidade do ar","poluicao atmosferica","poluição atmosférica","emissao atmosferica","emissão atmosférica","mp2 5","mp10"] },
+  { topic: "areas_contaminadas", terms: ["area contaminada","área contaminada","solo contaminado","remediacao","remediação","valores orientadores de solo","agua subterranea contaminada"] },
+  { topic: "residuos_construcao", terms: ["residuo da construcao","resíduo da construção","rcc","pgrcc","entulho","demolicao","demolição"] }
 ];
 
 const relatedServicesByTopic = {
@@ -120,6 +130,53 @@ const relatedServicesByTopic = {
     ["flora-supressao-vegetal.html", "Flora e Supressão Vegetal"],
     ["projeto-inventario-florestal.html", "Inventário Florestal"],
     ["projeto-elaboracao-mapas.html", "Elaboração de Mapas"]
+  ],
+  clima: [
+    ["licenciamento-ambiental.html", "Licenciamento Ambiental"],
+    ["recuperacao-areas-degradadas.html", "Recuperação de Áreas Degradadas"],
+    ["projeto-elaboracao-mapas.html", "Elaboração de Mapas"]
+  ],
+  saneamento: [
+    ["analises-ambientais.html", "Análises e Monitoramentos Ambientais"],
+    ["licenciamento-ambiental.html", "Licenciamento Ambiental"],
+    ["index.html#contato", "Avaliação técnica da demanda"]
+  ],
+  zona_costeira: [
+    ["licenciamento-ambiental.html", "Licenciamento Ambiental"],
+    ["projeto-elaboracao-mapas.html", "Elaboração de Mapas"],
+    ["servicos-fauna.html", "Serviços de Fauna"]
+  ],
+  patrimonio_genetico: [
+    ["servicos-fauna.html", "Serviços de Fauna"],
+    ["biomonitoramento-ambiental.html", "Biomonitoramento Ambiental"],
+    ["index.html#contato", "Avaliação técnica da demanda"]
+  ],
+  servicos_ambientais: [
+    ["recuperacao-areas-degradadas.html", "Recuperação de Áreas Degradadas"],
+    ["flora-supressao-vegetal.html", "Flora e Supressão Vegetal"],
+    ["index.html#contato", "Avaliação técnica da demanda"]
+  ],
+  qualidade_agua: [
+    ["analises-ambientais.html", "Análises e Monitoramentos Ambientais"],
+    ["licenciamento-ambiental.html", "Licenciamento Ambiental"]
+  ],
+  efluentes: [
+    ["analises-ambientais.html", "Análises e Monitoramentos Ambientais"],
+    ["licenciamento-ambiental.html", "Licenciamento Ambiental"]
+  ],
+  qualidade_ar: [
+    ["analises-ambientais.html", "Análises e Monitoramentos Ambientais"],
+    ["licenciamento-ambiental.html", "Licenciamento Ambiental"]
+  ],
+  areas_contaminadas: [
+    ["recuperacao-areas-degradadas.html", "Recuperação de Áreas Degradadas"],
+    ["analises-ambientais.html", "Análises e Monitoramentos Ambientais"],
+    ["index.html#contato", "Avaliação técnica da demanda"]
+  ],
+  residuos_construcao: [
+    ["licenciamento-ambiental.html", "Licenciamento Ambiental"],
+    ["analises-ambientais.html", "Análises e Monitoramentos Ambientais"],
+    ["index.html#contato", "Avaliação técnica da demanda"]
   ]
 };
 
@@ -193,7 +250,10 @@ function renderResults(query, uf, municipality = "") {
     })
     .map(law => ({ law, score: scoreLaw(law, query, topics) }))
     .filter(item => item.score > 0)
-    .sort((a, b) => b.score - a.score || (a.law.scope === "Estadual" ? -1 : 1));
+    .sort((a, b) => {
+      const scopeRank = { Municipal: 3, Estadual: 2, Federal: 1 };
+      return b.score - a.score || (scopeRank[b.law.scope] || 0) - (scopeRank[a.law.scope] || 0);
+    });
 
   resultsTitle.textContent = scored.length
     ? scored.length + (scored.length === 1 ? " referência encontrada" : " referências encontradas")
