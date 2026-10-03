@@ -65,3 +65,21 @@ Os créditos públicos estão na Home, em “Créditos das fotografias”. Os ar
 - Fotografia fornecida pelo usuário; não é imagem de banco público nem licenciada pela Unsplash.
 - Legenda descritiva da atividade, sem atribuição do registro a contrato executado pela JSB.
 - As outras fotografias deste lote com logos/carimbos permanecem fora do site: as tentativas de remoção com IA alteraram detalhes além das áreas solicitadas.
+
+
+## Lote de fotografias próprias — 03/10/2026 (fauna e campo)
+
+Fotografias enviadas pelo usuário e publicadas no site sem retoque de cena, remoção de elementos ou geração de conteúdo. Os arquivos binários utilizados no repositório correspondem aos arquivos recebidos.
+
+- `assets/img/jsb-equipe-campo-01.jpeg` — seção “Quem Somos” e registro de atividade de campo.
+- `assets/img/jsb-fauna-perereca-campo-01.jpeg` — páginas de fauna.
+- `assets/img/jsb-fauna-perereca-campo-02.jpeg` — Levantamento Faunístico.
+- `assets/img/jsb-fauna-pequeno-mamifero-01.jpeg` — páginas de fauna.
+- `assets/img/jsb-fauna-serpente-campo-01.jpeg` — Resgate/Manejo de Fauna.
+- `assets/img/jsb-monitoramento-fauna-camera-01.jpg` — Levantamento Faunístico.
+- `assets/img/jsb-monitoramento-fauna-camera-02.jpg` — Monitoramento de Fauna.
+- `assets/img/jsb-fauna-ave-campo-01.webp` — Levantamento Faunístico.
+- `assets/img/jsb-fauna-ave-campo-02.webp` — Monitoramento de Fauna.
+- `assets/img/jsb-monitoramento-ruido-campo-02.jpeg` — Análises e Monitoramentos Ambientais.
+
+Origem: arquivos encaminhados pelo usuário durante o desenvolvimento do site. Não são imagens de banco público.
