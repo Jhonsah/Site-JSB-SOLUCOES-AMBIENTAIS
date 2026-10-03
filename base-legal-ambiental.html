@@ -55,18 +55,22 @@
             <label for="legal-uf">Estado do empreendimento</label>
             <select id="legal-uf" name="uf" data-legal-uf>
               <option value="">Somente legislação federal</option>
-              <option value="BA">Bahia</option>
-              <option value="AC">Acre</option><option value="AL">Alagoas</option><option value="AP">Amapá</option><option value="AM">Amazonas</option>
-              <option value="CE">Ceará</option><option value="DF">Distrito Federal</option><option value="ES">Espírito Santo</option><option value="GO">Goiás</option>
-              <option value="MA">Maranhão</option><option value="MT">Mato Grosso</option><option value="MS">Mato Grosso do Sul</option><option value="MG">Minas Gerais</option>
-              <option value="PA">Pará</option><option value="PB">Paraíba</option><option value="PR">Paraná</option><option value="PE">Pernambuco</option>
-              <option value="PI">Piauí</option><option value="RJ">Rio de Janeiro</option><option value="RN">Rio Grande do Norte</option><option value="RS">Rio Grande do Sul</option>
-              <option value="RO">Rondônia</option><option value="RR">Roraima</option><option value="SC">Santa Catarina</option><option value="SP">São Paulo</option>
-              <option value="SE">Sergipe</option><option value="TO">Tocantins</option>
+              <optgroup label="Nordeste — cobertura estadual inicial">
+                <option value="AL">Alagoas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="MA">Maranhão</option>
+                <option value="PB">Paraíba</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="SE">Sergipe</option>
+              </optgroup>
+              <option value="" disabled>Demais estados — cobertura em expansão</option>
             </select>
           </div>
           <button class="btn btn-primary legal-search-submit" type="submit">Pesquisar referências</button>
-          <p class="legal-search-scope-note">Normas estaduais só aparecem após a seleção do estado. Referências municipais serão exibidas futuramente quando o município também puder ser informado.</p>
+          <p class="legal-search-scope-note">A cobertura estadual inicial contempla os 9 estados do Nordeste. A Bahia permanece em aprofundamento. Referências municipais serão incorporadas progressivamente em uma etapa própria.</p>
         </form>
 
         <div class="legal-quick-search reveal" aria-label="Pesquisas sugeridas">
@@ -79,6 +83,9 @@
           <button type="button" data-legal-example="CEFIR reserva legal imóvel rural">CEFIR e Reserva Legal</button>
           <button type="button" data-legal-example="monitoramento de ruído">Monitoramento de ruído</button>
           <button type="button" data-legal-example="educação ambiental">Educação ambiental</button>
+          <button type="button" data-legal-example="resíduos sólidos PGRS">Resíduos e PGRS</button>
+          <button type="button" data-legal-example="unidade de conservação zona de amortecimento">Unidades de Conservação</button>
+          <button type="button" data-legal-example="Apis mellifera espécie exótica invasora">Apis mellifera / espécie exótica</button>
         </div>
 
         <div class="legal-faq-bridge reveal">
@@ -98,7 +105,7 @@
             <div class="section-kicker">Referências relacionadas</div>
             <h2 data-legal-results-title>Faça uma busca para consultar a base</h2>
           </div>
-          <div class="legal-verified-badge">Base inicial verificada • out/2026</div>
+          <div class="legal-verified-badge">Federal + Nordeste • cobertura estadual inicial • out/2026</div>
         </div>
 
         <div class="legal-query-context" data-legal-query-context hidden></div>
