@@ -182,6 +182,32 @@ window.JSB_LEGAL_DATABASE = [
     verified: "out/2026"
   },
   {
+    id: "conama-01-1990",
+    title: "Resolução CONAMA nº 01/1990 — Emissão de Ruídos",
+    scope: "Federal",
+    uf: "BR",
+    authority: "CONAMA / Ibama",
+    themes: ["ruido", "qualidade ambiental", "monitoramento"],
+    keywords: ["ruido", "ruído", "poluicao sonora", "pressao sonora", "monitoramento de ruido", "niveis de ruido", "nbr 10151"],
+    summary: "Estabelece critérios de referência para emissão de ruídos decorrentes de atividades e remete à norma técnica aplicável à avaliação do ruído em áreas habitadas.",
+    relevance: "É uma referência federal para avaliações de ruído ambiental associadas a atividades industriais, comerciais, sociais ou recreativas.",
+    url: "https://www.gov.br/ibama/pt-br/assuntos/emissoes-e-residuos/emissoes/programa-silencio",
+    verified: "out/2026"
+  },
+  {
+    id: "conama-02-1990",
+    title: "Resolução CONAMA nº 02/1990 — Programa Silêncio",
+    scope: "Federal",
+    uf: "BR",
+    authority: "CONAMA / Ibama",
+    themes: ["ruido", "qualidade ambiental", "educacao ambiental"],
+    keywords: ["programa silencio", "ruido", "ruído", "poluicao sonora", "educacao controle ruido"],
+    summary: "Institui o Programa Nacional de Educação e Controle da Poluição Sonora — Programa Silêncio, coordenado pelo Ibama.",
+    relevance: "Complementa a referência federal sobre controle da poluição sonora e organização de ações de educação e controle de ruído.",
+    url: "https://www.gov.br/ibama/pt-br/assuntos/emissoes-e-residuos/emissoes/programa-silencio",
+    verified: "out/2026"
+  },
+  {
     id: "anac-rbac-100-2026",
     title: "RBAC nº 100/2026 — Aeronaves Não Tripuladas",
     scope: "Federal",
@@ -221,6 +247,32 @@ window.JSB_LEGAL_DATABASE = [
     verified: "out/2026"
   },
 
+  {
+    id: "ba-12056-2011",
+    title: "Lei Estadual nº 12.056/2011 — Política de Educação Ambiental da Bahia",
+    scope: "Estadual",
+    uf: "BA",
+    authority: "Estado da Bahia",
+    themes: ["educacao ambiental", "licenciamento", "socioambiental"],
+    keywords: ["bahia", "educacao ambiental", "programa educacao ambiental", "pea", "treinamento", "oficina", "comunidade"],
+    summary: "Institui a Política de Educação Ambiental do Estado da Bahia e estabelece princípios, objetivos, diretrizes e instrumentos para ações de educação ambiental.",
+    relevance: "É a principal referência estadual cadastrada nesta base para programas e ações de educação ambiental na Bahia.",
+    url: "https://www.ba.gov.br/meioambiente/sites/site-sema/files/migracao_2024/arquivos/File/Publicacoes/Livros/PoliticaEducacaoAmbiental.pdf",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-decreto-19083-2019",
+    title: "Decreto Estadual nº 19.083/2019 — Educação Ambiental",
+    scope: "Estadual",
+    uf: "BA",
+    authority: "Estado da Bahia",
+    themes: ["educacao ambiental", "licenciamento", "socioambiental"],
+    keywords: ["bahia", "educacao ambiental", "pea", "programa estadual", "licenciamento ambiental", "socioambiental"],
+    summary: "Regulamenta a Lei Estadual nº 12.056/2011 e disciplina instrumentos da Política Estadual de Educação Ambiental da Bahia.",
+    relevance: "Complementa a política estadual e orienta a implementação de seus instrumentos no território baiano.",
+    url: "https://www.ba.gov.br/meioambiente/sites/site-sema/files/migracao_2024/arquivos/File/Ascom/00Decreto_EA.pdf",
+    verified: "out/2026"
+  },
   {
     id: "ba-11612-2009",
     title: "Lei Estadual nº 11.612/2009 — Política Estadual de Recursos Hídricos",
