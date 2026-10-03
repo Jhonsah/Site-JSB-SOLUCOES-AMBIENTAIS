@@ -1670,3 +1670,161 @@ h3 {
     width: 100%;
   }
 }
+
+
+/* Resgate de fauna: requisitos prévios e integração de serviços */
+.rescue-prereq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.rescue-prereq-card {
+  min-height: 210px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 16px;
+  border: 1px solid #d4dfd7;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.rescue-prereq-card > span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #e8f3e9;
+  color: var(--green-700);
+  font-size: .72rem;
+  font-weight: 700;
+}
+
+.rescue-prereq-card strong {
+  display: block;
+  color: var(--ink);
+  font-size: .94rem;
+}
+
+.rescue-prereq-card p {
+  margin: 8px 0 0;
+  color: var(--text);
+  font-size: .82rem;
+  line-height: 1.6;
+}
+
+.rescue-prereq-card a {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--green-500);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.rescue-legal-note {
+  margin-top: 16px;
+  padding: 17px 18px;
+  border-left: 4px solid #d1a43a;
+  border-radius: 0 12px 12px 0;
+  background: #fff8e8;
+}
+
+.rescue-legal-note strong {
+  color: #6b531a;
+  font-size: .82rem;
+}
+
+.rescue-legal-note p {
+  margin: 5px 0 0;
+  color: #6a6251;
+  font-size: .78rem;
+  line-height: 1.6;
+}
+
+.integrated-service-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.integrated-service-links a {
+  padding: 17px 18px;
+  border: 1px solid #d7e1da;
+  border-radius: 14px;
+  background: #fbfdfb;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+.integrated-service-links a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(28,107,57,.35);
+  box-shadow: 0 8px 20px rgba(16,55,39,.07);
+}
+
+.integrated-service-links strong,
+.integrated-service-links span {
+  display: block;
+}
+
+.integrated-service-links strong {
+  color: var(--ink);
+  font-size: .88rem;
+}
+
+.integrated-service-links span {
+  margin-top: 4px;
+  color: var(--text);
+  font-size: .76rem;
+}
+
+.soltura-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.soltura-grid > div {
+  padding: 17px 18px;
+  border: 1px solid #d8e2dc;
+  border-radius: 14px;
+  background: #fbfdfb;
+}
+
+.soltura-grid strong,
+.soltura-grid span {
+  display: block;
+}
+
+.soltura-grid strong {
+  color: var(--ink);
+  font-size: .87rem;
+}
+
+.soltura-grid span {
+  margin-top: 5px;
+  color: var(--text);
+  font-size: .77rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 640px) {
+  .rescue-prereq-grid,
+  .integrated-service-links,
+  .soltura-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rescue-prereq-card {
+    grid-template-columns: 36px 1fr;
+  }
+
+  .rescue-prereq-card > span {
+    width: 36px;
+    height: 36px;
+  }
+}
