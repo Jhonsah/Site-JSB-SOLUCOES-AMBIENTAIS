@@ -38,7 +38,7 @@
         <div class="legal-search-hero-copy reveal">
           <div class="eyebrow-pill">Consulta Ambiental • Fontes Oficiais</div>
           <h1>Base Legal Ambiental</h1>
-          <p>Pesquise uma atividade, uma dúvida ou descreva o que pretende fazer. A ferramenta organiza referências legais relacionadas para você consultar diretamente nas fontes oficiais.</p>
+          <p>Pesquise uma atividade, uma dúvida ou descreva o que pretende fazer. Sem estado selecionado, a ferramenta mostra referências federais. Ao escolher uma UF, acrescenta as normas estaduais cadastradas para aquele local.</p>
         </div>
 
         <form class="legal-search-form reveal" data-legal-search-form>
@@ -49,7 +49,7 @@
           <div class="legal-search-field legal-search-state">
             <label for="legal-uf">Estado do empreendimento</label>
             <select id="legal-uf" name="uf" data-legal-uf>
-              <option value="">Todos / não informado</option>
+              <option value="">Somente legislação federal</option>
               <option value="BA">Bahia</option>
               <option value="AC">Acre</option><option value="AL">Alagoas</option><option value="AP">Amapá</option><option value="AM">Amazonas</option>
               <option value="CE">Ceará</option><option value="DF">Distrito Federal</option><option value="ES">Espírito Santo</option><option value="GO">Goiás</option>
@@ -61,6 +61,7 @@
             </select>
           </div>
           <button class="btn btn-primary legal-search-submit" type="submit">Pesquisar referências</button>
+          <p class="legal-search-scope-note">Normas estaduais só aparecem após a seleção do estado. Referências municipais serão exibidas futuramente quando o município também puder ser informado.</p>
         </form>
 
         <div class="legal-quick-search reveal" aria-label="Pesquisas sugeridas">
