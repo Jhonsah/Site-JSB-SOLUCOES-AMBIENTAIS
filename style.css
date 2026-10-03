@@ -696,3 +696,83 @@ h3 {
     box-shadow: 0 6px 20px rgba(16, 55, 39, .08);
   }
 }
+
+
+/* Hero v2 — alinhado ao layout de referência */
+.hero {
+  min-height: 715px;
+}
+
+.hero-inner {
+  max-width: 1180px;
+  padding-top: 86px;
+  padding-bottom: 86px;
+}
+
+.eyebrow-pill {
+  margin-bottom: 44px;
+}
+
+.hero-company {
+  max-width: 900px;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.95rem, 2.8vw, 2.65rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.035em !important;
+  color: #ffffff;
+}
+
+.hero-company span {
+  color: #ffffff;
+}
+
+.hero-company em {
+  font-style: normal;
+  color: var(--green-500);
+}
+
+.hero-tagline {
+  max-width: 850px;
+  margin: 22px 0 0;
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: clamp(1.65rem, 2.5vw, 2.25rem) !important;
+  font-weight: 600;
+  line-height: 1.22 !important;
+  letter-spacing: -.025em !important;
+  color: #ffffff;
+}
+
+.hero-lead {
+  max-width: 760px;
+  margin-top: 24px;
+  font-size: clamp(1rem, 1.35vw, 1.12rem);
+  line-height: 1.62;
+}
+
+.hero-actions {
+  margin-top: 30px;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 650px;
+  }
+
+  .hero-inner {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .eyebrow-pill {
+    margin-bottom: 30px;
+  }
+
+  .hero-company {
+    font-size: clamp(1.65rem, 8vw, 2.1rem) !important;
+  }
+
+  .hero-tagline {
+    font-size: clamp(1.45rem, 7vw, 1.9rem) !important;
+  }
+}
