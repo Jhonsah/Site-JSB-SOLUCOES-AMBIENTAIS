@@ -59,6 +59,12 @@ if (stateLawSelect && stateLawResult) {
         url: "https://www.ba.gov.br/meioambiente/sites/site-sema/files/migracao_2024/arquivos/File/FERFA/Legislacao/novo14024.pdf"
       },
       {
+        badge: "Bahia · Fauna Ameaçada",
+        title: "Portaria SEMA nº 37/2017",
+        text: "Torna pública a Lista Oficial das Espécies da Fauna Ameaçadas de Extinção do Estado da Bahia, referência estadual para identificação de espécies ameaçadas em estudos e levantamentos faunísticos.",
+        url: "https://gestor.meioambiente.ba.gov.br/Consultas/ConsultaPublicacao/index.php?PaginaMostrada=28&alt=0&ano=&classificacao=&colegiado=&dt_publicacao_inicio=&dt_publicacao_termino=&num_processo=&numero=&order=4&texto=&tipoPublicacao=22&typeOrder=0"
+      },
+      {
         badge: "Bahia · INEMA",
         title: "IN INEMA nº 001/2016",
         text: "Estabelece diretrizes, critérios e procedimentos para a Autorização para Manejo de Fauna Silvestre no licenciamento ambiental estadual, incluindo levantamento, salvamento, afugentamento, monitoramento, soltura e ações correlatas.",
