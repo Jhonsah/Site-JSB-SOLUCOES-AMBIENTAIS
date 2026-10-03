@@ -2099,5 +2099,62 @@ window.JSB_LEGAL_DATABASE = [
     url: "https://sapl.jequie.ba.leg.br/materia/7303",
     verified: "out/2026"
   }
+,
+  {
+    id: "ba-formosa-070-2009",
+    title: "Lei Municipal nº 070/2009 — Código Municipal do Meio Ambiente de Formosa do Rio Preto",
+    scope: "Municipal",
+    uf: "BA",
+    municipality: "Formosa do Rio Preto",
+    authority: "Prefeitura Municipal de Formosa do Rio Preto",
+    themes: ["licenciamento", "gestao ambiental", "fauna", "flora", "supressao", "recuperacao", "biodiversidade"],
+    keywords: ["formosa do rio preto", "lei 070 2009", "codigo municipal meio ambiente", "código municipal meio ambiente", "sismuma", "licenciamento", "recursos ambientais"],
+    summary: "Institui o Código Municipal do Meio Ambiente de Formosa do Rio Preto e dispõe sobre o Sistema Municipal de Meio Ambiente — SISMUMA, estabelecendo normas de gestão, preservação, conservação, recuperação e controle ambiental.",
+    relevance: "É uma referência estrutural da gestão ambiental municipal de Formosa do Rio Preto e deve ser considerada em consultas sobre instrumentos ambientais locais e controle de atividades de impacto local.",
+    url: "https://sai.io.org.br/Handler.ashx?f=f&query=c6c2ee58-5ff9-415b-8e7d-d89e505f5593.pdf",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-ibotirama-014-2013",
+    title: "Lei Municipal nº 014/2013 — Código do Meio Ambiente de Ibotirama",
+    scope: "Municipal",
+    uf: "BA",
+    municipality: "Ibotirama",
+    authority: "Prefeitura Municipal de Ibotirama / SEMMA",
+    themes: ["licenciamento", "gestao ambiental", "supressao", "residuos", "ruido"],
+    keywords: ["ibotirama", "lei 014 2013", "codigo meio ambiente", "código meio ambiente", "semma", "licenciamento ambiental", "supressao", "ruido", "residuos"],
+    summary: "É o Código do Meio Ambiente citado pela Secretaria Municipal de Meio Ambiente e Recursos Hídricos de Ibotirama em atos oficiais de licenciamento ambiental.",
+    relevance: "Serve como referência municipal para procedimentos ambientais conduzidos pela SEMMA de Ibotirama. Atos recentes de licenciamento continuam citando a Lei nº 014/2013 como fundamento local.",
+    url: "https://www.ibotirama.ba.gov.br/HandlerPublicacao.ashx?mixed=ZG9jdW1lbnRvc1NFUC8zMTcvMjAyNC8zLzEzLzI3NjkwMzIucGRm",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-morro-1419-2024",
+    title: "Lei Municipal nº 1.419/2024 — Código Municipal de Meio Ambiente de Morro do Chapéu",
+    scope: "Municipal",
+    uf: "BA",
+    municipality: "Morro do Chapéu",
+    authority: "Prefeitura Municipal de Morro do Chapéu",
+    themes: ["licenciamento", "gestao ambiental", "fauna", "flora", "supressao", "biodiversidade"],
+    keywords: ["morro do chapeu", "morro do chapéu", "lei 1419 2024", "codigo municipal meio ambiente", "código municipal meio ambiente", "sismuma"],
+    summary: "Institui o Código Municipal de Meio Ambiente e dispõe sobre o Sistema Municipal de Meio Ambiente — SISMUMA de Morro do Chapéu.",
+    relevance: "É a referência municipal atual cadastrada para a estrutura de gestão ambiental de Morro do Chapéu e para consultas sobre instrumentos ambientais locais.",
+    url: "https://doem.org.br/ba/morrodochapeu/diarios/2024/12",
+    verified: "out/2026"
+  },
+  {
+    id: "ba-itapetinga-1181-2012",
+    title: "Lei Municipal nº 1.181/2012 — Código Municipal do Meio Ambiente de Itapetinga",
+    scope: "Municipal",
+    uf: "BA",
+    municipality: "Itapetinga",
+    authority: "Prefeitura Municipal de Itapetinga",
+    themes: ["licenciamento", "gestao ambiental", "fauna", "flora", "supressao", "residuos", "recuperacao"],
+    keywords: ["itapetinga", "lei 1181 2012", "codigo municipal meio ambiente", "código municipal meio ambiente", "licenciamento", "semma", "areas verdes", "residuos"],
+    summary: "Institui o Código Municipal do Meio Ambiente de Itapetinga e disciplina a Política Municipal do Meio Ambiente, incluindo princípios e instrumentos de gestão e proteção ambiental local.",
+    relevance: "É uma referência central para o licenciamento e a gestão ambiental municipal. Atos de licenciamento publicados em 2026 continuam citando expressamente a Lei nº 1.181/2012.",
+    url: "https://doem.org.br/ba/itapetinga/arquivos/download/dc41cc2770e9ba9a19b4c489e9cf89ff/3448b4495084802fa7456c836320a82d.pdf",
+    verified: "out/2026"
+  }
 
 ];
