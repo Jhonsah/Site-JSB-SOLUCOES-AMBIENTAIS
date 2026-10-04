@@ -1080,8 +1080,31 @@ h3 {
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-top: 20px;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.project-gallery-section {
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid var(--line);
+}
+
+.project-gallery-section > p {
+  max-width: 760px;
+}
+
+.project-gallery-section .project-gallery-photo {
+  min-height: 260px;
+  box-shadow: 0 12px 30px rgba(75, 53, 38, .10);
+}
+
+.project-gallery-section .project-gallery-photo img {
+  transition: transform .28s ease;
+}
+
+.project-gallery-section .project-gallery-photo:hover img {
+  transform: scale(1.025);
 }
 
 .project-gallery-item {
