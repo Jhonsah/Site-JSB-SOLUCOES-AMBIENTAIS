@@ -373,10 +373,13 @@ h3 {
   gap: 20px;
 }
 .project-card {
+  position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: white;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 .project-visual {
   min-height: 210px;
@@ -399,6 +402,20 @@ h3 {
 .project-body h3 { margin: 0; font-size: 1.05rem; line-height: 1.35; }
 .project-body p { color: var(--text); font-size: .9rem; }
 .project-body a { color: var(--green-500); font-weight: 700; font-size: .9rem; }
+.project-card > .project-body > a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+}
+.project-card:hover {
+  transform: translateY(-2px);
+}
+.project-card:focus-within {
+  outline: 2px solid rgba(28, 107, 57, .38);
+  outline-offset: 3px;
+}
 
 .sector-grid {
   display: grid;
