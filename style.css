@@ -354,16 +354,18 @@ h3 {
   border: 1px solid rgba(255,255,255,.08);
 }
 .differential-item span {
-  width: 46px;
-  height: 46px;
-  flex: 0 0 46px;
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
   display: grid;
   place-items: center;
   border-radius: 12px;
-  background: rgba(60,171,72,.16);
-  color: var(--green-500);
-  font-size: .75rem;
-  font-weight: 700;
+  background: linear-gradient(145deg, #77733a, #5f622f);
+  border: 1px solid rgba(183, 166, 126, .34);
+  color: #f8f5ee;
+  font-size: .82rem;
+  font-weight: 800;
+  box-shadow: 0 6px 16px rgba(17, 47, 39, .18);
 }
 .differential-item strong { font-size: .9rem; }
 
