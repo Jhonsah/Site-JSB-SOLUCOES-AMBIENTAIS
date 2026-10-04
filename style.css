@@ -464,9 +464,7 @@ h3 {
   padding: 120px 0;
   color: white;
   text-align: center;
-  background:
-    linear-gradient(rgba(15,91,39,.88), rgba(13,79,43,.90)),
-    var(--green-900);
+  background: var(--blue-950);
 }
 .sustainability-inner { max-width: 820px; }
 .sustainability-inner p {
