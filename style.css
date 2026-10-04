@@ -1094,6 +1094,10 @@ h3 {
   max-width: 760px;
 }
 
+.project-gallery-section .project-gallery-item {
+  min-height: 240px;
+}
+
 .project-gallery-section .project-gallery-photo {
   min-height: 260px;
   box-shadow: 0 12px 30px rgba(75, 53, 38, .10);
