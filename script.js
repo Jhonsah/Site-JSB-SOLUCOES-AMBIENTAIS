@@ -162,3 +162,86 @@ if (stateLawSelect && stateLawResult) {
 
   stateLawSelect.addEventListener("change", renderStateLaw);
 }
+
+
+/* Galeria ampliável — páginas técnicas */
+const projectGalleryPhotos = Array.from(document.querySelectorAll(".project-gallery-photo"));
+
+if (projectGalleryPhotos.length) {
+  const lightbox = document.createElement("div");
+  lightbox.className = "gallery-lightbox";
+  lightbox.setAttribute("role", "dialog");
+  lightbox.setAttribute("aria-modal", "true");
+  lightbox.setAttribute("aria-label", "Visualização ampliada da fotografia");
+  lightbox.innerHTML =
+    '<div class="gallery-lightbox-panel">' +
+      '<button class="gallery-lightbox-close" type="button" aria-label="Fechar imagem ampliada">×</button>' +
+      '<img class="gallery-lightbox-image" alt="" draggable="false" />' +
+      '<div class="gallery-lightbox-caption"></div>' +
+    '</div>';
+
+  document.body.appendChild(lightbox);
+
+  const lightboxImage = lightbox.querySelector(".gallery-lightbox-image");
+  const lightboxCaption = lightbox.querySelector(".gallery-lightbox-caption");
+  const closeButton = lightbox.querySelector(".gallery-lightbox-close");
+  let lastFocusedElement = null;
+
+  const closeLightbox = () => {
+    lightbox.classList.remove("open");
+    document.body.classList.remove("gallery-lightbox-open");
+    lightboxImage.removeAttribute("src");
+    if (lastFocusedElement) lastFocusedElement.focus();
+  };
+
+  const openLightbox = (figure) => {
+    const image = figure.querySelector("img");
+    if (!image) return;
+
+    lastFocusedElement = figure;
+    lightboxImage.src = image.currentSrc || image.src;
+    lightboxImage.alt = image.alt || "";
+    const caption = figure.querySelector("figcaption");
+    lightboxCaption.textContent = caption ? caption.textContent : (image.alt || "");
+
+    lightbox.classList.add("open");
+    document.body.classList.add("gallery-lightbox-open");
+    closeButton.focus();
+  };
+
+  projectGalleryPhotos.forEach((figure) => {
+    const image = figure.querySelector("img");
+    if (!image) return;
+
+    image.draggable = false;
+    image.addEventListener("dragstart", (event) => event.preventDefault());
+    image.addEventListener("contextmenu", (event) => event.preventDefault());
+
+    figure.setAttribute("role", "button");
+    figure.setAttribute("tabindex", "0");
+    figure.setAttribute("aria-label", "Ampliar fotografia: " + (image.alt || "registro de campo"));
+
+    figure.addEventListener("click", () => openLightbox(figure));
+    figure.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openLightbox(figure);
+      }
+    });
+  });
+
+  lightboxImage.addEventListener("dragstart", (event) => event.preventDefault());
+  lightboxImage.addEventListener("contextmenu", (event) => event.preventDefault());
+
+  closeButton.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox.classList.contains("open")) {
+      closeLightbox();
+    }
+  });
+}
