@@ -4279,3 +4279,107 @@ a.project-card:focus-visible {
   outline: 2px solid rgba(28, 107, 57, .45);
   outline-offset: 3px;
 }
+
+
+/* Hero Flora e Supressão Vegetal — foto original */
+.project-page-hero--flora {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.project-page-hero--flora .container {
+  position: relative;
+  z-index: 3;
+}
+
+.flora-hero-clip-svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.flora-hero-media {
+  position: absolute;
+  z-index: 1;
+  inset: 0 0 0 auto;
+  width: min(58vw, 1120px);
+  pointer-events: none;
+}
+
+.flora-hero-layer,
+.flora-hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: url(#floraHeroClip);
+}
+
+.flora-hero-layer {
+  z-index: 0;
+  transform: translateX(-28px);
+  background: rgba(89, 99, 47, .12);
+}
+
+.flora-hero-photo {
+  z-index: 1;
+  display: block;
+  object-fit: cover;
+  object-position: center 34%;
+  filter: brightness(1.05);
+}
+
+.project-page-hero--flora::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(248, 250, 248, 1) 0%,
+    rgba(248, 250, 248, .98) 35%,
+    rgba(248, 250, 248, .86) 47%,
+    rgba(248, 250, 248, .28) 58%,
+    rgba(248, 250, 248, 0) 69%
+  );
+}
+
+@media (max-width: 900px) {
+  .flora-hero-media {
+    width: 72%;
+    opacity: .72;
+  }
+
+  .project-page-hero--flora::after {
+    background: linear-gradient(
+      90deg,
+      rgba(248, 250, 248, 1) 0%,
+      rgba(248, 250, 248, .98) 48%,
+      rgba(248, 250, 248, .72) 70%,
+      rgba(248, 250, 248, .18) 100%
+    );
+  }
+}
+
+@media (max-width: 640px) {
+  .flora-hero-media {
+    width: 100%;
+    opacity: .34;
+  }
+
+  .flora-hero-layer {
+    display: none;
+  }
+
+  .flora-hero-photo {
+    clip-path: none;
+    object-position: center 28%;
+  }
+
+  .project-page-hero--flora::after {
+    background: rgba(248, 250, 248, .78);
+  }
+}
