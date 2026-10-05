@@ -4259,3 +4259,23 @@ body.gallery-lightbox-open {
     transform-origin: center 36%;
   }
 }
+
+
+/* Cards inteiros clicáveis — Frentes Técnicas */
+a.project-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+a.project-card .project-card-action {
+  display: inline-block;
+  color: var(--green-500);
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+a.project-card:focus-visible {
+  outline: 2px solid rgba(28, 107, 57, .45);
+  outline-offset: 3px;
+}
