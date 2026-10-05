@@ -4143,3 +4143,106 @@ body.gallery-lightbox-open {
     height: 42px;
   }
 }
+
+
+/* Hero Monitoramento de Fauna — foto original */
+.project-page-hero--monitoramento {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.project-page-hero--monitoramento .container {
+  position: relative;
+  z-index: 3;
+}
+
+.monitoramento-hero-clip-svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.monitoramento-hero-media {
+  position: absolute;
+  z-index: 1;
+  inset: 0 0 0 auto;
+  width: min(58vw, 1120px);
+  pointer-events: none;
+}
+
+.monitoramento-hero-layer,
+.monitoramento-hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: url(#monitoramentoHeroClip);
+}
+
+.monitoramento-hero-layer {
+  z-index: 0;
+  transform: translateX(-28px);
+  background: rgba(89, 99, 47, .12);
+}
+
+.monitoramento-hero-photo {
+  z-index: 1;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  filter: brightness(1.08);
+}
+
+.project-page-hero--monitoramento::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(248, 250, 248, 1) 0%,
+    rgba(248, 250, 248, .98) 35%,
+    rgba(248, 250, 248, .86) 47%,
+    rgba(248, 250, 248, .28) 58%,
+    rgba(248, 250, 248, 0) 69%
+  );
+}
+
+@media (max-width: 900px) {
+  .monitoramento-hero-media {
+    width: 72%;
+    opacity: .72;
+  }
+
+  .project-page-hero--monitoramento::after {
+    background: linear-gradient(
+      90deg,
+      rgba(248, 250, 248, 1) 0%,
+      rgba(248, 250, 248, .98) 48%,
+      rgba(248, 250, 248, .72) 70%,
+      rgba(248, 250, 248, .18) 100%
+    );
+  }
+}
+
+@media (max-width: 640px) {
+  .monitoramento-hero-media {
+    width: 100%;
+    opacity: .34;
+  }
+
+  .monitoramento-hero-layer {
+    display: none;
+  }
+
+  .monitoramento-hero-photo {
+    clip-path: none;
+  }
+
+  .project-page-hero--monitoramento::after {
+    background: rgba(248, 250, 248, .78);
+  }
+}
