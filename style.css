@@ -4246,3 +4246,16 @@ body.gallery-lightbox-open {
     background: rgba(248, 250, 248, .78);
   }
 }
+
+
+/* Ajuste do hero inicial — trilha de campo */
+.hero-photo-trilha {
+  object-position: center 42%;
+}
+
+@media (max-width: 640px) {
+  .hero-photo-trilha {
+    transform: scale(1.35);
+    transform-origin: center 36%;
+  }
+}
