@@ -4449,28 +4449,11 @@ a.project-card:focus-visible {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  min-height: 590px;
-  display: flex;
-  align-items: center;
-  background: #f8faf8;
 }
 
 .project-page-hero--resgate .container {
   position: relative;
   z-index: 3;
-  width: 100%;
-}
-
-.project-page-hero--resgate .section-kicker {
-  color: var(--jsb-olive);
-}
-
-.project-page-hero--resgate h1 {
-  max-width: 790px;
-}
-
-.project-page-hero--resgate p {
-  max-width: 790px;
 }
 
 .resgate-hero-clip-svg {
@@ -4485,7 +4468,7 @@ a.project-card:focus-visible {
   z-index: 1;
   inset: 0 0 0 auto;
   width: min(58vw, 1120px);
-  overflow: hidden;
+  pointer-events: none;
 }
 
 .resgate-hero-layer,
@@ -4527,12 +4510,9 @@ a.project-card:focus-visible {
 }
 
 @media (max-width: 900px) {
-  .project-page-hero--resgate {
-    min-height: 540px;
-  }
-
   .resgate-hero-media {
     width: 72%;
+    opacity: .72;
   }
 
   .project-page-hero--resgate::after {
@@ -4547,15 +4527,8 @@ a.project-card:focus-visible {
 }
 
 @media (max-width: 640px) {
-  .project-page-hero--resgate {
-    min-height: 620px;
-    align-items: flex-end;
-    padding-bottom: 54px;
-  }
-
   .resgate-hero-media {
     width: 100%;
-    height: 100%;
     opacity: .34;
   }
 
@@ -4565,7 +4538,6 @@ a.project-card:focus-visible {
 
   .resgate-hero-photo {
     clip-path: none;
-    object-position: center center;
   }
 
   .project-page-hero--resgate::after {
