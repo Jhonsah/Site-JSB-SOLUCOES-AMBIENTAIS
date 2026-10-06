@@ -197,6 +197,7 @@ const ufSelect = document.querySelector("[data-legal-uf]");
 const municipalitySelect = document.querySelector("[data-legal-municipality]");
 const municipalityWrap = document.querySelector("[data-legal-municipality-wrap]");
 const resultsEl = document.querySelector("[data-legal-results]");
+const resultsSection = document.querySelector(".legal-results-section");
 const resultsTitle = document.querySelector("[data-legal-results-title]");
 const contextEl = document.querySelector("[data-legal-query-context]");
 const professionalNote = document.querySelector("[data-professional-note]");
@@ -357,12 +358,21 @@ function updateUrl(query, uf, municipality) {
   window.history.replaceState({}, "", url);
 }
 
-function runSearch() {
+function runSearch({ scrollToResults = false } = {}) {
   const query = queryInput.value.trim();
   const uf = ufSelect.value;
   const municipality = municipalitySelect && !municipalitySelect.disabled ? municipalitySelect.value : "";
   updateUrl(query, uf, municipality);
   renderResults(query, uf, municipality);
+
+  if (scrollToResults && resultsSection) {
+    window.requestAnimationFrame(() => {
+      resultsSection.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+        block: "start"
+      });
+    });
+  }
 }
 
 if (searchForm && queryInput && ufSelect) {
@@ -384,14 +394,14 @@ if (searchForm && queryInput && ufSelect) {
 
   searchForm.addEventListener("submit", event => {
     event.preventDefault();
-    runSearch();
+    runSearch({ scrollToResults: true });
   });
 
   exampleButtons.forEach(button => {
     button.addEventListener("click", () => {
       queryInput.value = button.dataset.legalExample || "";
       queryInput.focus();
-      runSearch();
+      runSearch({ scrollToResults: true });
     });
   });
 
