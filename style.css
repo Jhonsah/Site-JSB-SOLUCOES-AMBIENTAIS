@@ -4430,3 +4430,15 @@ a.project-card:focus-visible {
     min-height: 230px;
   }
 }
+
+
+/* Cards de navegação clicáveis por toda a superfície */
+.service-card.card-clickable,
+.project-card.card-clickable {
+  cursor: pointer;
+}
+
+.service-card.card-clickable:hover,
+.project-card.card-clickable:hover {
+  transform: translateY(-4px);
+}
