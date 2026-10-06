@@ -4572,3 +4572,133 @@ a.project-card:focus-visible {
     background: rgba(248, 250, 248, .78);
   }
 }
+
+
+/* Hero Levantamento Faunístico — fotografia original da galeria */
+.project-page-hero--levantamento {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  background: #f8faf8;
+}
+
+.project-page-hero--levantamento .container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.project-page-hero--levantamento .section-kicker {
+  color: var(--jsb-olive);
+}
+
+.project-page-hero--levantamento h1 {
+  max-width: 790px;
+}
+
+.project-page-hero--levantamento p {
+  max-width: 790px;
+}
+
+.levantamento-hero-clip-svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.levantamento-hero-media {
+  position: absolute;
+  z-index: 1;
+  inset: 0 0 0 auto;
+  width: min(58vw, 1120px);
+  overflow: hidden;
+}
+
+.levantamento-hero-layer,
+.levantamento-hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: url(#levantamentoHeroClip);
+}
+
+.levantamento-hero-layer {
+  z-index: 0;
+  transform: translateX(-28px);
+  background: rgba(89, 99, 47, .12);
+}
+
+.levantamento-hero-photo {
+  z-index: 1;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.project-page-hero--levantamento::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(248, 250, 248, 1) 0%,
+    rgba(248, 250, 248, .98) 35%,
+    rgba(248, 250, 248, .86) 47%,
+    rgba(248, 250, 248, .28) 58%,
+    rgba(248, 250, 248, 0) 69%
+  );
+}
+
+@media (max-width: 900px) {
+  .project-page-hero--levantamento {
+    min-height: 540px;
+  }
+
+  .levantamento-hero-media {
+    width: 72%;
+  }
+
+  .project-page-hero--levantamento::after {
+    background: linear-gradient(
+      90deg,
+      rgba(248, 250, 248, 1) 0%,
+      rgba(248, 250, 248, .98) 48%,
+      rgba(248, 250, 248, .72) 70%,
+      rgba(248, 250, 248, .18) 100%
+    );
+  }
+}
+
+@media (max-width: 640px) {
+  .project-page-hero--levantamento {
+    min-height: 620px;
+    align-items: flex-end;
+    padding-bottom: 54px;
+  }
+
+  .levantamento-hero-media {
+    width: 100%;
+    height: 100%;
+    opacity: .34;
+  }
+
+  .levantamento-hero-layer {
+    display: none;
+  }
+
+  .levantamento-hero-photo {
+    clip-path: none;
+    object-position: center center;
+  }
+
+  .project-page-hero--levantamento::after {
+    background: rgba(248, 250, 248, .78);
+  }
+}
