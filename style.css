@@ -4673,7 +4673,7 @@ a.project-card:focus-visible {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(90deg, rgba(8, 49, 36, .93) 0%, rgba(8, 49, 36, .80) 38%, rgba(8, 49, 36, .40) 62%, rgba(8, 49, 36, .18) 100%);
+    linear-gradient(90deg, rgba(8, 49, 36, .86) 0%, rgba(8, 49, 36, .72) 38%, rgba(8, 49, 36, .32) 62%, rgba(8, 49, 36, .10) 100%);
   pointer-events: none;
 }
 
@@ -4685,7 +4685,7 @@ a.project-card:focus-visible {
   height: 100%;
   max-width: none;
   object-fit: cover;
-  object-position: center 48%;
+  object-position: center 34%;
   pointer-events: none;
 }
 
