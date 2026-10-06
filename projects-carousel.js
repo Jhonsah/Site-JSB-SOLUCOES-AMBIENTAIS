@@ -74,7 +74,7 @@ if (projectCarousel && projectTrack) {
     stopAuto();
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     if (pageCount() <= 1) return;
-    autoTimer = window.setInterval(() => goToPage(activePage + 1), 7000);
+    autoTimer = window.setInterval(() => goToPage(activePage + 1), 5000);
   };
 
   projectPrevButtons.forEach(button => {
@@ -91,10 +91,16 @@ if (projectCarousel && projectTrack) {
     });
   });
 
-  projectCarousel.addEventListener("mouseenter", stopAuto);
-  projectCarousel.addEventListener("mouseleave", startAuto);
   projectCarousel.addEventListener("focusin", stopAuto);
   projectCarousel.addEventListener("focusout", startAuto);
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAuto();
+    } else {
+      startAuto();
+    }
+  });
 
   let resizeTimer;
   window.addEventListener("resize", () => {
