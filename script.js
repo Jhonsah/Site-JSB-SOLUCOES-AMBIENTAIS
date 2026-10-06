@@ -245,3 +245,18 @@ if (projectGalleryPhotos.length) {
     }
   });
 }
+
+
+// Cards de navegação clicáveis por toda a superfície
+document.querySelectorAll(".service-card, .project-card").forEach((card) => {
+  if (card.matches("a, button")) return;
+
+  const primaryLink = card.querySelector("a[href]");
+  if (!primaryLink) return;
+
+  card.classList.add("card-clickable");
+  card.addEventListener("click", (event) => {
+    if (event.target.closest("a, button, input, select, textarea, label")) return;
+    window.location.href = primaryLink.href;
+  });
+});
