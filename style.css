@@ -4874,3 +4874,9 @@ a.project-card:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Base Legal — posiciona os resultados abaixo do cabeçalho ao pesquisar */
+.legal-results-section {
+  scroll-margin-top: 88px;
+}
