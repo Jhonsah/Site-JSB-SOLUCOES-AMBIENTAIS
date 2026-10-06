@@ -4685,7 +4685,8 @@ a.project-card:focus-visible {
   height: 100%;
   max-width: none;
   object-fit: cover;
-  object-position: center 34%;
+  object-position: center 46%;
+  filter: saturate(1.02) contrast(1.03);
   pointer-events: none;
 }
 
@@ -4848,4 +4849,33 @@ a.project-card:focus-visible {
 /* Base Legal — posiciona os resultados abaixo do cabeçalho ao pesquisar */
 .legal-results-section {
   scroll-margin-top: 88px;
+}
+
+
+/* Base Legal — remove ícones decorativos e preserva alinhamento */
+.knowledge-search-teaser--approved .knowledge-search-examples--approved a::before,
+.knowledge-search-teaser--approved .knowledge-search-examples--approved a::after,
+.knowledge-search-teaser--approved .knowledge-search-form--approved label::before,
+.knowledge-search-teaser--approved .knowledge-search-form--approved label::after,
+.knowledge-search-teaser--approved .knowledge-search-form--approved .btn::before,
+.knowledge-search-teaser--approved .knowledge-search-form--approved .btn::after {
+  content: none !important;
+  display: none !important;
+}
+
+.knowledge-search-teaser--approved .knowledge-search-form--approved input,
+.knowledge-search-teaser--approved .knowledge-search-form--approved select {
+  background-image: none !important;
+}
+
+.knowledge-search-teaser--approved .knowledge-search-form--approved input {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.knowledge-search-teaser--approved .knowledge-search-form--approved input::-webkit-search-decoration,
+.knowledge-search-teaser--approved .knowledge-search-form--approved input::-webkit-search-cancel-button,
+.knowledge-search-teaser--approved .knowledge-search-form--approved input::-webkit-search-results-button,
+.knowledge-search-teaser--approved .knowledge-search-form--approved input::-webkit-search-results-decoration {
+  -webkit-appearance: none;
 }
