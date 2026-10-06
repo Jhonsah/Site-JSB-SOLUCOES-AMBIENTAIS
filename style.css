@@ -4442,3 +4442,133 @@ a.project-card:focus-visible {
 .project-card.card-clickable:hover {
   transform: translateY(-4px);
 }
+
+
+/* Hero Resgate de Fauna Silvestre — fotografia original da galeria */
+.project-page-hero--resgate {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  background: #f8faf8;
+}
+
+.project-page-hero--resgate .container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.project-page-hero--resgate .section-kicker {
+  color: var(--jsb-olive);
+}
+
+.project-page-hero--resgate h1 {
+  max-width: 790px;
+}
+
+.project-page-hero--resgate p {
+  max-width: 790px;
+}
+
+.resgate-hero-clip-svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.resgate-hero-media {
+  position: absolute;
+  z-index: 1;
+  inset: 0 0 0 auto;
+  width: min(58vw, 1120px);
+  overflow: hidden;
+}
+
+.resgate-hero-layer,
+.resgate-hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: url(#resgateHeroClip);
+}
+
+.resgate-hero-layer {
+  z-index: 0;
+  transform: translateX(-28px);
+  background: rgba(89, 99, 47, .12);
+}
+
+.resgate-hero-photo {
+  z-index: 1;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.project-page-hero--resgate::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(248, 250, 248, 1) 0%,
+    rgba(248, 250, 248, .98) 35%,
+    rgba(248, 250, 248, .86) 47%,
+    rgba(248, 250, 248, .28) 58%,
+    rgba(248, 250, 248, 0) 69%
+  );
+}
+
+@media (max-width: 900px) {
+  .project-page-hero--resgate {
+    min-height: 540px;
+  }
+
+  .resgate-hero-media {
+    width: 72%;
+  }
+
+  .project-page-hero--resgate::after {
+    background: linear-gradient(
+      90deg,
+      rgba(248, 250, 248, 1) 0%,
+      rgba(248, 250, 248, .98) 48%,
+      rgba(248, 250, 248, .72) 70%,
+      rgba(248, 250, 248, .18) 100%
+    );
+  }
+}
+
+@media (max-width: 640px) {
+  .project-page-hero--resgate {
+    min-height: 620px;
+    align-items: flex-end;
+    padding-bottom: 54px;
+  }
+
+  .resgate-hero-media {
+    width: 100%;
+    height: 100%;
+    opacity: .34;
+  }
+
+  .resgate-hero-layer {
+    display: none;
+  }
+
+  .resgate-hero-photo {
+    clip-path: none;
+    object-position: center center;
+  }
+
+  .project-page-hero--resgate::after {
+    background: rgba(248, 250, 248, .78);
+  }
+}
