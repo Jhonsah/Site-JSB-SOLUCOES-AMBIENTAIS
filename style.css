@@ -4653,13 +4653,13 @@ a.project-card:focus-visible {
 .knowledge-search-teaser--approved {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, .94fr) minmax(500px, 1.06fr);
-  gap: 30px;
+  grid-template-columns: minmax(0, 1.04fr) minmax(450px, .96fr);
+  gap: 34px;
   align-items: center;
   overflow: hidden;
-  min-height: 316px;
+  min-height: 296px;
   margin: 4px 0 34px;
-  padding: 34px 40px;
+  padding: 32px 38px;
   border: 0;
   border-radius: 20px;
   background: #123f2f;
@@ -4729,10 +4729,10 @@ a.project-card:focus-visible {
 .knowledge-search-form--approved {
   position: relative;
   z-index: 3;
-  width: 108%;
-  max-width: 660px;
+  width: 100%;
+  max-width: 590px;
   justify-self: end;
-  padding: 24px 24px 23px;
+  padding: 20px;
   border: 1px solid rgba(205, 216, 208, .95);
   border-radius: 16px;
   background: rgba(255,255,255,.985);
@@ -4748,23 +4748,23 @@ a.project-card:focus-visible {
 
 .knowledge-search-form--approved input,
 .knowledge-search-form--approved select {
-  min-height: 54px;
+  min-height: 50px;
   border-color: #cbd7cf;
   background: #fff;
   color: var(--ink);
 }
 
 .knowledge-search-form--approved .knowledge-search-row {
-  grid-template-columns: minmax(0, 1fr) 142px;
-  gap: 13px;
-  margin-top: 12px;
+  grid-template-columns: minmax(0, 1fr) 132px;
+  gap: 12px;
+  margin-top: 10px;
 }
 
 .knowledge-search-form--approved .btn {
-  min-height: 54px;
-  padding: 0 22px;
+  min-height: 50px;
+  padding: 0 18px;
   background: #59632f;
-  font-size: .86rem;
+  font-size: .84rem;
 }
 
 .knowledge-search-form--approved .btn:hover {
@@ -4925,16 +4925,26 @@ a.project-card:focus-visible {
 
 .knowledge-search-form--approved .btn,
 .knowledge-search-form--approved select {
-  height: 54px;
+  height: 50px;
 }
 
 @media (max-width: 1180px) and (min-width: 901px) {
   .knowledge-search-teaser--approved {
-    grid-template-columns: minmax(0, .9fr) minmax(460px, 1.1fr);
-    gap: 24px;
+    grid-template-columns: minmax(0, 1fr) minmax(430px, 1fr);
+    gap: 26px;
   }
 
   .knowledge-search-form--approved {
-    width: 104%;
+    width: 100%;
+    max-width: 560px;
+  }
+}
+
+
+/* Base Legal — proporção compacta final */
+@media (min-width: 1181px) {
+  .knowledge-search-form--approved {
+    width: 100%;
+    max-width: 590px;
   }
 }
