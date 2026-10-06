@@ -4674,3 +4674,203 @@ a.project-card:focus-visible {
     background: rgba(248, 250, 248, .78);
   }
 }
+
+
+/* Base Legal Ambiental — banner visual aprovado na home */
+.knowledge-search-teaser--approved {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 842 / 202;
+  min-height: 250px;
+  margin: 4px 0 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 20px;
+  background: #123f2f;
+  box-shadow: 0 14px 34px rgba(16, 55, 39, .14);
+}
+
+.knowledge-search-approved-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+.knowledge-search-semantic {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.knowledge-search-form--approved {
+  position: absolute;
+  z-index: 3;
+  top: 22%;
+  right: 3.2%;
+  width: 40.5%;
+  padding: 16px 17px;
+  border: 1px solid rgba(205, 216, 208, .95);
+  border-radius: 16px;
+  background: rgba(255,255,255,.985);
+  box-shadow: 0 12px 28px rgba(7, 31, 24, .12);
+}
+
+.knowledge-search-form--approved label {
+  margin-bottom: 8px;
+  color: #1c2923;
+  font-size: .74rem;
+  font-weight: 700;
+}
+
+.knowledge-search-form--approved input,
+.knowledge-search-form--approved select {
+  min-height: 43px;
+  border-color: #cbd7cf;
+  background: #fff;
+  color: var(--ink);
+}
+
+.knowledge-search-form--approved .knowledge-search-row {
+  grid-template-columns: minmax(0, 1fr) 112px;
+  gap: 9px;
+  margin-top: 9px;
+}
+
+.knowledge-search-form--approved .btn {
+  min-height: 43px;
+  padding: 0 15px;
+  background: #59632f;
+  font-size: .8rem;
+}
+
+.knowledge-search-form--approved .btn:hover {
+  background: #6b7639;
+}
+
+.knowledge-search-examples--approved {
+  position: absolute;
+  z-index: 4;
+  left: 4.2%;
+  bottom: 10%;
+  margin: 0;
+  gap: 9px;
+}
+
+.knowledge-search-examples--approved a {
+  min-height: 31px;
+  padding: 6px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(202, 220, 166, .78);
+  border-radius: 999px;
+  background: rgba(22, 75, 55, .97);
+  color: #fff;
+  box-shadow: 0 3px 12px rgba(6, 30, 22, .12);
+  font-size: .7rem;
+  font-weight: 600;
+}
+
+.knowledge-search-examples--approved a:hover {
+  background: rgba(35, 92, 66, .98);
+  border-color: rgba(218, 232, 187, .96);
+}
+
+@media (max-width: 900px) {
+  .knowledge-search-teaser--approved {
+    aspect-ratio: auto;
+    min-height: 360px;
+  }
+
+  .knowledge-search-approved-bg {
+    opacity: .72;
+    object-position: 38% center;
+  }
+
+  .knowledge-search-form--approved {
+    top: 24px;
+    right: 24px;
+    width: min(48%, 430px);
+  }
+
+  .knowledge-search-examples--approved {
+    left: 24px;
+    bottom: 24px;
+  }
+}
+
+@media (max-width: 680px) {
+  .knowledge-search-teaser--approved {
+    min-height: 0;
+    padding: 24px;
+    background: linear-gradient(145deg, #123f2f, #1f3b2e);
+  }
+
+  .knowledge-search-approved-bg {
+    opacity: .16;
+    object-position: center;
+  }
+
+  .knowledge-search-semantic {
+    position: relative;
+    z-index: 2;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    color: #fff;
+  }
+
+  .knowledge-search-semantic .knowledge-search-badge {
+    margin-bottom: 12px;
+    background: rgba(218, 232, 187, .18);
+    color: #eef5df;
+  }
+
+  .knowledge-search-semantic h3 {
+    margin: 0;
+    font-size: clamp(1.65rem, 8vw, 2.25rem);
+    line-height: 1.05;
+    color: #fff;
+  }
+
+  .knowledge-search-semantic p {
+    margin: 12px 0 0;
+    color: rgba(255,255,255,.82);
+    line-height: 1.6;
+  }
+
+  .knowledge-search-examples--approved,
+  .knowledge-search-form--approved {
+    position: relative;
+    inset: auto;
+    width: 100%;
+  }
+
+  .knowledge-search-examples--approved {
+    margin-top: 18px;
+  }
+
+  .knowledge-search-form--approved {
+    margin-top: 20px;
+  }
+
+  .knowledge-search-form--approved .knowledge-search-row {
+    grid-template-columns: 1fr;
+  }
+}
