@@ -4592,7 +4592,7 @@ a.project-card:focus-visible {
   z-index: 1;
   display: block;
   object-fit: cover;
-  object-position: center 24%;
+  object-position: center 38%;
 }
 
 .project-page-hero--levantamento::after {
@@ -4640,7 +4640,7 @@ a.project-card:focus-visible {
 
   .levantamento-hero-photo {
     clip-path: none;
-    object-position: center 22%;
+    object-position: center 36%;
   }
 
   .project-page-hero--levantamento::after {
