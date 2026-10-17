@@ -1,10 +1,8 @@
 const legalCarousel = document.querySelector("[data-legal-carousel]");
 const legalCarouselTrack = document.querySelector("[data-legal-carousel-track]");
-const legalCarouselPrev = document.querySelector("[data-legal-carousel-prev]");
-const legalCarouselNext = document.querySelector("[data-legal-carousel-next]");
-const legalCarouselDots = document.querySelector("[data-legal-carousel-dots]");
+const legalCarouselProgress = document.querySelector("[data-legal-carousel-progress]");
 
-if (legalCarousel && legalCarouselTrack && window.JSB_LEGAL_DATABASE) {
+if (legalCarousel && legalCarouselTrack && Array.isArray(window.JSB_LEGAL_DATABASE) && window.JSB_LEGAL_DATABASE.length) {
   const featuredIds = [
     "lei-15190-2025",
     "cf-225",
@@ -27,7 +25,10 @@ if (legalCarousel && legalCarouselTrack && window.JSB_LEGAL_DATABASE) {
     return "base-legal-ambiental.html?" + params.toString();
   };
 
-  legalCarouselTrack.innerHTML = laws.map((law, index) => `
+  if (!laws.length) {
+    // Mantém o fallback estático do HTML quando os registros esperados não estão disponíveis.
+  } else {
+    legalCarouselTrack.innerHTML = laws.map((law, index) => `
     <article class="law-carousel-card${index === 0 ? " featured" : ""}">
       <div class="law-carousel-meta">
         <span class="law-carousel-badge">${index === 0 ? "Atualização regulatória" : "Âmbito federal"}</span>
@@ -46,16 +47,7 @@ if (legalCarousel && legalCarouselTrack && window.JSB_LEGAL_DATABASE) {
   `).join("");
 
   const cards = Array.from(legalCarouselTrack.querySelectorAll(".law-carousel-card"));
-  let activeIndex = 0;
-  let autoTimer;
-
-  const cardsPerView = () => {
-    if (window.innerWidth <= 640) return 1;
-    if (window.innerWidth <= 960) return 2;
-    return 3;
-  };
-
-  const pageCount = () => Math.max(1, Math.ceil(cards.length / cardsPerView()));
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   const cardStep = () => {
     const first = cards[0];
@@ -65,71 +57,72 @@ if (legalCarousel && legalCarouselTrack && window.JSB_LEGAL_DATABASE) {
     return first.getBoundingClientRect().width + gap;
   };
 
-  const renderDots = () => {
-    const count = pageCount();
-    activeIndex = Math.min(activeIndex, count - 1);
-    legalCarouselDots.innerHTML = Array.from({ length: count }, (_, i) =>
-      '<button type="button" aria-label="Ir para grupo ' + (i + 1) + '" class="' + (i === activeIndex ? 'active' : '') + '"></button>'
-    ).join("");
+  const updateProgress = () => {
+    if (!legalCarouselProgress) return;
+    const thumb = legalCarouselProgress.querySelector("span");
+    if (!thumb) return;
 
-    Array.from(legalCarouselDots.querySelectorAll("button")).forEach((dot, i) => {
-      dot.addEventListener("click", () => goToPage(i));
+    const total = legalCarouselTrack.scrollWidth;
+    const visible = legalCarouselTrack.clientWidth;
+    const maxScroll = Math.max(0, total - visible);
+    const width = total > 0 ? Math.min(100, (visible / total) * 100) : 100;
+    const position = maxScroll > 0 ? (legalCarouselTrack.scrollLeft / maxScroll) * (100 - width) : 0;
+    const value = maxScroll > 0 ? Math.round((legalCarouselTrack.scrollLeft / maxScroll) * 100) : 100;
+
+    thumb.style.width = `${width}%`;
+    thumb.style.left = `${Math.max(0, Math.min(100 - width, position))}%`;
+    legalCarouselProgress.setAttribute("aria-valuenow", String(value));
+  };
+
+  const scrollByCard = direction => {
+    legalCarouselTrack.scrollBy({
+      left: direction * cardStep(),
+      behavior: reducedMotion.matches ? "auto" : "smooth"
     });
   };
 
-  const updateDots = () => {
-    Array.from(legalCarouselDots.querySelectorAll("button")).forEach((dot, i) => {
-      dot.classList.toggle("active", i === activeIndex);
-    });
-  };
-
-  const goToPage = index => {
-    const count = pageCount();
-    activeIndex = (index + count) % count;
-    legalCarouselTrack.scrollTo({
-      left: activeIndex * cardStep() * cardsPerView(),
-      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
-    });
-    updateDots();
-  };
-
-  const next = () => goToPage(activeIndex + 1);
-  const prev = () => goToPage(activeIndex - 1);
-
-  const stopAuto = () => {
-    if (autoTimer) window.clearInterval(autoTimer);
-  };
-
-  const startAuto = () => {
-    stopAuto();
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    autoTimer = window.setInterval(next, 8000);
-  };
-
-  legalCarouselNext?.addEventListener("click", () => {
-    next();
-    startAuto();
+  legalCarouselTrack.addEventListener("keydown", event => {
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      scrollByCard(1);
+    } else if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      scrollByCard(-1);
+    }
   });
 
-  legalCarouselPrev?.addEventListener("click", () => {
-    prev();
-    startAuto();
+  let dragging = false;
+  let dragStartX = 0;
+  let dragStartScroll = 0;
+
+  legalCarouselTrack.addEventListener("pointerdown", event => {
+    if (event.pointerType === "mouse" && event.button !== 0) return;
+    dragging = true;
+    dragStartX = event.clientX;
+    dragStartScroll = legalCarouselTrack.scrollLeft;
+    legalCarouselTrack.classList.add("is-dragging");
+    legalCarouselTrack.setPointerCapture?.(event.pointerId);
   });
 
-  legalCarousel.addEventListener("mouseenter", stopAuto);
-  legalCarousel.addEventListener("mouseleave", startAuto);
-  legalCarousel.addEventListener("focusin", stopAuto);
-  legalCarousel.addEventListener("focusout", startAuto);
-
-  let resizeTimer;
-  window.addEventListener("resize", () => {
-    window.clearTimeout(resizeTimer);
-    resizeTimer = window.setTimeout(() => {
-      renderDots();
-      goToPage(activeIndex);
-    }, 150);
+  legalCarouselTrack.addEventListener("pointermove", event => {
+    if (!dragging) return;
+    legalCarouselTrack.scrollLeft = dragStartScroll - (event.clientX - dragStartX);
   });
 
-  renderDots();
-  startAuto();
+  const endDrag = event => {
+    if (!dragging) return;
+    dragging = false;
+    legalCarouselTrack.classList.remove("is-dragging");
+    if (legalCarouselTrack.hasPointerCapture?.(event.pointerId)) {
+      legalCarouselTrack.releasePointerCapture(event.pointerId);
+    }
+  };
+
+  legalCarouselTrack.addEventListener("pointerup", endDrag);
+  legalCarouselTrack.addEventListener("pointercancel", endDrag);
+  legalCarouselTrack.addEventListener("scroll", updateProgress, { passive: true });
+  window.addEventListener("resize", updateProgress);
+
+  updateProgress();
+  }
 }
