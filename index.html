@@ -233,17 +233,12 @@
             <p>Conheça algumas das frentes que podem compor nossos escopos técnicos, de forma isolada ou integrada conforme as necessidades de cada empreendimento.</p>
           </div>
 
-          <div class="project-carousel-controls" aria-label="Controles das frentes técnicas">
-            <button type="button" data-project-carousel-prev aria-label="Frentes anteriores">←</button>
-            <button type="button" data-project-carousel-next aria-label="Próximas frentes">→</button>
-          </div>
         </div>
 
         <div class="project-carousel reveal" data-project-carousel>
           <div class="project-carousel-shell">
-            <button class="project-carousel-side project-carousel-side-prev" type="button" data-project-carousel-prev aria-label="Ver frentes anteriores">←</button>
             <div class="project-carousel-viewport">
-            <div class="project-carousel-track" data-project-carousel-track>
+            <div class="project-carousel-track" data-project-carousel-track tabindex="0" aria-label="Frentes técnicas. Deslize ou use as setas do teclado para navegar.">
               <a class="project-card" href="projeto-manejo-fauna.html" aria-label="Conhecer Resgate de Fauna Silvestre">
                 <div class="project-visual" style="position:relative;overflow:hidden;background:#dce7df;">
                   <img src="assets/img/jsb-manejo-fauna-cobra.webp" width="1600" height="1200" alt="Serpente registrada durante atividade de manejo de fauna silvestre em campo." loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;" />
@@ -327,11 +322,10 @@
               </a>
             </div>
             </div>
-            <button class="project-carousel-side project-carousel-side-next" type="button" data-project-carousel-next aria-label="Ver próximas frentes">→</button>
           </div>
 
           <div class="project-carousel-footer">
-            <div class="project-carousel-dots" data-project-carousel-dots aria-label="Posição do carrossel"></div>
+            <div class="carousel-progress" data-project-carousel-progress role="progressbar" aria-label="Posição nas frentes técnicas" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
             <a href="projetos.html">Explorar todas as frentes técnicas</a>
           </div>
         </div>
@@ -490,18 +484,22 @@
               <h3>Referências selecionadas da nossa Base Legal Ambiental</h3>
               <p>Referências de âmbito federal em rotação, com resumo inicial e acesso direto às fontes oficiais. Normas estaduais aparecem na Base Legal após a seleção do estado.</p>
             </div>
-            <div class="law-carousel-controls" aria-label="Controles do carrossel">
-              <button type="button" data-legal-carousel-prev aria-label="Legislação anterior">←</button>
-              <button type="button" data-legal-carousel-next aria-label="Próxima legislação">→</button>
-            </div>
+
           </div>
 
           <div class="law-carousel-viewport">
-            <div class="law-carousel-track" data-legal-carousel-track aria-live="polite"></div>
+            <div class="law-carousel-track" data-legal-carousel-track tabindex="0" aria-label="Legislação em destaque. Deslize ou use as setas do teclado para navegar.">
+              <article class="law-carousel-card law-carousel-fallback">
+                <div class="law-carousel-meta"><span class="law-carousel-badge">Base Legal Ambiental</span></div>
+                <h3>Consulte referências ambientais em fonte oficial</h3>
+                <p>A seleção dinâmica de referências está temporariamente indisponível, mas a Base Legal completa continua acessível.</p>
+                <div class="law-carousel-actions"><a href="base-legal-ambiental.html">Abrir Base Legal →</a></div>
+              </article>
+            </div>
           </div>
 
           <div class="law-carousel-footer">
-            <div class="law-carousel-dots" data-legal-carousel-dots aria-label="Posição do carrossel"></div>
+            <div class="carousel-progress" data-legal-carousel-progress role="progressbar" aria-label="Posição na legislação em destaque" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
             <a href="base-legal-ambiental.html">Explorar toda a Base Legal Ambiental →</a>
           </div>
         </div>

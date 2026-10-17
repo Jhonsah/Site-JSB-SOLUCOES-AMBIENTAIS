@@ -1,21 +1,10 @@
 const projectCarousel = document.querySelector("[data-project-carousel]");
 const projectTrack = document.querySelector("[data-project-carousel-track]");
-const projectPrevButtons = Array.from(document.querySelectorAll("[data-project-carousel-prev]"));
-const projectNextButtons = Array.from(document.querySelectorAll("[data-project-carousel-next]"));
-const projectDots = document.querySelector("[data-project-carousel-dots]");
+const projectProgress = document.querySelector("[data-project-carousel-progress]");
 
 if (projectCarousel && projectTrack) {
   const cards = Array.from(projectTrack.querySelectorAll(".project-card"));
-  let activePage = 0;
-  let autoTimer;
-
-  const cardsPerView = () => {
-    if (window.innerWidth <= 640) return 1;
-    if (window.innerWidth <= 960) return 2;
-    return 3;
-  };
-
-  const pageCount = () => Math.max(1, Math.ceil(cards.length / cardsPerView()));
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   const cardStep = () => {
     const first = cards[0];
@@ -25,93 +14,71 @@ if (projectCarousel && projectTrack) {
     return first.getBoundingClientRect().width + gap;
   };
 
-  const maxScroll = () => Math.max(0, projectTrack.scrollWidth - projectTrack.clientWidth);
+  const updateProgress = () => {
+    if (!projectProgress) return;
+    const thumb = projectProgress.querySelector("span");
+    if (!thumb) return;
 
-  const pageScrollLeft = page => {
-    const target = page * cardStep() * cardsPerView();
-    return Math.min(target, maxScroll());
+    const total = projectTrack.scrollWidth;
+    const visible = projectTrack.clientWidth;
+    const maxScroll = Math.max(0, total - visible);
+    const width = total > 0 ? Math.min(100, (visible / total) * 100) : 100;
+    const position = maxScroll > 0 ? (projectTrack.scrollLeft / maxScroll) * (100 - width) : 0;
+    const value = maxScroll > 0 ? Math.round((projectTrack.scrollLeft / maxScroll) * 100) : 100;
+
+    thumb.style.width = `${width}%`;
+    thumb.style.left = `${Math.max(0, Math.min(100 - width, position))}%`;
+    projectProgress.setAttribute("aria-valuenow", String(value));
   };
 
-  const updateDots = () => {
-    if (!projectDots) return;
-    Array.from(projectDots.querySelectorAll("button")).forEach((dot, index) => {
-      dot.classList.toggle("active", index === activePage);
+  const scrollByCard = direction => {
+    projectTrack.scrollBy({
+      left: direction * cardStep(),
+      behavior: reducedMotion.matches ? "auto" : "smooth"
     });
   };
 
-  const goToPage = page => {
-    const count = pageCount();
-    activePage = (page + count) % count;
-    projectTrack.scrollTo({
-      left: pageScrollLeft(activePage),
-      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
-    });
-    updateDots();
-  };
-
-  const renderDots = () => {
-    if (!projectDots) return;
-    const count = pageCount();
-    activePage = Math.min(activePage, count - 1);
-
-    projectDots.innerHTML = Array.from({ length: count }, (_, index) =>
-      '<button type="button" aria-label="Ir para grupo ' + (index + 1) + '" class="' + (index === activePage ? 'active' : '') + '"></button>'
-    ).join("");
-
-    Array.from(projectDots.querySelectorAll("button")).forEach((dot, index) => {
-      dot.addEventListener("click", () => {
-        goToPage(index);
-        startAuto();
-      });
-    });
-  };
-
-  const stopAuto = () => {
-    if (autoTimer) window.clearInterval(autoTimer);
-  };
-
-  const startAuto = () => {
-    stopAuto();
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    if (pageCount() <= 1) return;
-    autoTimer = window.setInterval(() => goToPage(activePage + 1), 5000);
-  };
-
-  projectPrevButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      goToPage(activePage - 1);
-      startAuto();
-    });
-  });
-
-  projectNextButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      goToPage(activePage + 1);
-      startAuto();
-    });
-  });
-
-  projectCarousel.addEventListener("focusin", stopAuto);
-  projectCarousel.addEventListener("focusout", startAuto);
-
-  document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-      stopAuto();
-    } else {
-      startAuto();
+  projectTrack.addEventListener("keydown", event => {
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      scrollByCard(1);
+    } else if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      scrollByCard(-1);
     }
   });
 
-  let resizeTimer;
-  window.addEventListener("resize", () => {
-    window.clearTimeout(resizeTimer);
-    resizeTimer = window.setTimeout(() => {
-      renderDots();
-      goToPage(activePage);
-      startAuto();
-    }, 160);
+  let dragging = false;
+  let dragStartX = 0;
+  let dragStartScroll = 0;
+
+  projectTrack.addEventListener("pointerdown", event => {
+    if (event.pointerType === "mouse" && event.button !== 0) return;
+    dragging = true;
+    dragStartX = event.clientX;
+    dragStartScroll = projectTrack.scrollLeft;
+    projectTrack.classList.add("is-dragging");
+    projectTrack.setPointerCapture?.(event.pointerId);
   });
 
-  renderDots();
-  startAuto();
+  projectTrack.addEventListener("pointermove", event => {
+    if (!dragging) return;
+    projectTrack.scrollLeft = dragStartScroll - (event.clientX - dragStartX);
+  });
+
+  const endDrag = event => {
+    if (!dragging) return;
+    dragging = false;
+    projectTrack.classList.remove("is-dragging");
+    if (projectTrack.hasPointerCapture?.(event.pointerId)) {
+      projectTrack.releasePointerCapture(event.pointerId);
+    }
+  };
+
+  projectTrack.addEventListener("pointerup", endDrag);
+  projectTrack.addEventListener("pointercancel", endDrag);
+  projectTrack.addEventListener("scroll", updateProgress, { passive: true });
+  window.addEventListener("resize", updateProgress);
+
+  updateProgress();
 }

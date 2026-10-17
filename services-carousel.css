@@ -58,3 +58,12 @@
   .service-carousel-heading { align-items: flex-start; flex-direction: column; gap: 16px; }
   .service-carousel-track .service-card { flex-basis: 100%; }
 }
+
+/* Remove a barra nativa sem remover rolagem, toque ou teclado. */
+.service-carousel-track {
+  scrollbar-width: none;
+  padding-bottom: 10px;
+}
+.service-carousel-track::-webkit-scrollbar {
+  display: none;
+}

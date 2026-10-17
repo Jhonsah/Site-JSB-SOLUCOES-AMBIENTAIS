@@ -1,4 +1,5 @@
-const legalDatabase = window.JSB_LEGAL_DATABASE || [];
+const legalDataAvailable = Array.isArray(window.JSB_LEGAL_DATABASE) && window.JSB_LEGAL_DATABASE.length > 0;
+const legalDatabase = legalDataAvailable ? window.JSB_LEGAL_DATABASE : [];
 
 const legalStateNames = {
   BA: "Bahia", AC:"Acre", AL:"Alagoas", AP:"Amapá", AM:"Amazonas", CE:"Ceará", DF:"Distrito Federal",
@@ -206,9 +207,9 @@ const servicesLinks = document.querySelector("[data-related-service-links]");
 const exampleButtons = document.querySelectorAll("[data-legal-example]");
 
 function detectTopics(query) {
-  const normalized = normalizeLegalText(query);
+  const normalized = " " + normalizeLegalText(query) + " ";
   return topicRules
-    .filter(rule => rule.terms.some(term => normalized.includes(normalizeLegalText(term))))
+    .filter(rule => rule.terms.some(term => normalized.includes(" " + normalizeLegalText(term) + " ")))
     .map(rule => rule.topic);
 }
 
@@ -222,7 +223,7 @@ function scoreLaw(law, query, topics) {
 
   let score = 0;
   topics.forEach(topic => {
-    if (themes.includes(topic)) score += 8;
+    if (themes.includes(normalizeLegalText(topic))) score += 8;
   });
 
   queryTokens.forEach(token => {
@@ -376,7 +377,15 @@ function runSearch({ scrollToResults = false } = {}) {
 }
 
 if (searchForm && queryInput && ufSelect) {
-  const params = new URLSearchParams(window.location.search);
+  if (!legalDataAvailable) {
+    resultsTitle.textContent = "Base temporariamente indisponível";
+    contextEl.hidden = true;
+    servicesBox.hidden = true;
+    resultsEl.innerHTML = '<div class="legal-search-empty legal-search-failure"><strong>Não foi possível carregar as referências da Base Legal.</strong><p>Isso é uma indisponibilidade de dados, não significa ausência de legislação aplicável. Tente novamente mais tarde ou consulte diretamente as fontes oficiais indicadas no site.</p></div>';
+    searchForm.querySelectorAll("input, select, button").forEach(control => { control.disabled = true; });
+    exampleButtons.forEach(button => { button.disabled = true; });
+  } else {
+    const params = new URLSearchParams(window.location.search);
   queryInput.value = params.get("q") || "";
   ufSelect.value = params.get("uf") || "";
   updateMunicipalityOptions(ufSelect.value, params.get("municipio") || "");
@@ -407,5 +416,6 @@ if (searchForm && queryInput && ufSelect) {
 
   if (queryInput.value) {
     renderResults(queryInput.value, ufSelect.value, municipalitySelect && !municipalitySelect.disabled ? municipalitySelect.value : "");
+  }
   }
 }
