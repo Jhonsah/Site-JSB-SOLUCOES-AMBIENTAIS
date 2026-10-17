@@ -1,28 +1,6 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
 
-// Mantém a navegação pública consistente em todas as páginas.
-if (mainNav) {
-  const oldProjectsLink = [...mainNav.querySelectorAll("a")].find(link =>
-    (link.getAttribute("href") || "").endsWith("projetos.html")
-  );
-  if (oldProjectsLink) {
-    oldProjectsLink.href = "areas-de-atuacao.html";
-    oldProjectsLink.textContent = "Atuação";
-  }
-
-  const knowledgeLink = [...mainNav.querySelectorAll("a")].find(link => {
-    const href = link.getAttribute("href") || "";
-    return href === "#conhecimento" || href === "index.html#conhecimento";
-  });
-
-  if (knowledgeLink) {
-    knowledgeLink.href = "base-legal-ambiental.html";
-    knowledgeLink.classList.add("nav-legal-link");
-    knowledgeLink.innerHTML = 'Base Legal <span class="nav-new-badge" aria-label="Novidade">Novo</span>';
-  }
-}
-
 const navLinks = document.querySelectorAll(".main-nav a");
 const yearEl = document.querySelector("#ano");
 const revealElements = document.querySelectorAll(".reveal");
@@ -66,23 +44,31 @@ if (menuToggle && mainNav) {
       menuToggle.focus();
     }
   });
+
+  document.documentElement.classList.add("nav-ready");
 }
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if (reducedMotion) {
+if (reducedMotion || !revealElements.length) {
   revealElements.forEach((element) => element.classList.add("visible"));
 } else {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
+  try {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
 
-  revealElements.forEach((element) => observer.observe(element));
+    document.documentElement.classList.add("reveal-armed");
+    revealElements.forEach((element) => observer.observe(element));
+  } catch (error) {
+    document.documentElement.classList.remove("reveal-armed");
+    revealElements.forEach((element) => element.classList.add("visible"));
+  }
 }
 
 // Consulta de referências estaduais nas páginas de serviços.
@@ -186,11 +172,26 @@ if (projectGalleryPhotos.length) {
   const lightboxCaption = lightbox.querySelector(".gallery-lightbox-caption");
   const closeButton = lightbox.querySelector(".gallery-lightbox-close");
   let lastFocusedElement = null;
+  let backgroundInertState = [];
+
+  const setBackgroundInert = (enabled) => {
+    if (enabled) {
+      backgroundInertState = Array.from(document.body.children)
+        .filter((element) => element !== lightbox)
+        .map((element) => ({ element, inert: element.inert }));
+      backgroundInertState.forEach(({ element }) => { element.inert = true; });
+      return;
+    }
+
+    backgroundInertState.forEach(({ element, inert }) => { element.inert = inert; });
+    backgroundInertState = [];
+  };
 
   const closeLightbox = () => {
     lightbox.classList.remove("open");
     document.body.classList.remove("gallery-lightbox-open");
     lightboxImage.removeAttribute("src");
+    setBackgroundInert(false);
     if (lastFocusedElement) lastFocusedElement.focus();
   };
 
@@ -206,6 +207,7 @@ if (projectGalleryPhotos.length) {
 
     lightbox.classList.add("open");
     document.body.classList.add("gallery-lightbox-open");
+    setBackgroundInert(true);
     closeButton.focus();
   };
 
@@ -240,8 +242,32 @@ if (projectGalleryPhotos.length) {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && lightbox.classList.contains("open")) {
+    if (!lightbox.classList.contains("open")) return;
+
+    if (event.key === "Escape") {
       closeLightbox();
+      return;
+    }
+
+    if (event.key === "Tab") {
+      const focusable = Array.from(lightbox.querySelectorAll(
+        'button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )).filter((element) => !element.hidden);
+
+      if (!focusable.length) {
+        event.preventDefault();
+        return;
+      }
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     }
   });
 }
